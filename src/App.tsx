@@ -1,4 +1,3 @@
-import { Button, Heading } from "@chakra-ui/react";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
@@ -10,9 +9,6 @@ i18n.use(initReactI18next).init(initI18n);
 function App() {
   return (
     <div className="App">
-      <Heading as="h1" color="brand.primary.regular" textStyle="h1">
-        Test
-      </Heading>
       <Routes>
         <Route path={PATHS.INDEX}>
           <Route index element={<p>test</p>} />
