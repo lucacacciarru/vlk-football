@@ -6,6 +6,8 @@
     "@chakra-ui/react": "^1.8.8",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@fontsource/nunito": "^4.5.8",
+    "@fontsource/poppins": "^4.5.8",
     "@reduxjs/toolkit": "^1.8.1",
     "@types/jest": "^27.5.0",
     "@types/node": "^16.11.33",
