@@ -1,10 +1,9 @@
-import { all, fork, ForkEffect } from "redux-saga/effects";
-
-type Sagas = (() => Generator<ForkEffect<never>, void, unknown>)[];
+import { all, fork } from "redux-saga/effects";
+import { playerRootSaga } from "../../player/store/saga/rootSaga";
 
 export const createRootSaga = () => {
-  const allSagas: Sagas = [];
   return function* rootSaga() {
+    const allSagas = [playerRootSaga];
     yield all(allSagas.map((saga) => fork(saga)));
   };
 };
