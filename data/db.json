@@ -1,0 +1,25 @@
+{
+  "players": [
+    {
+      "id": "a9609b8f-214d-4c02-bf57-61698383778d",
+      "name": "Enrico Porceddu",
+      "rating": 12,
+      "goalkeeper": false,
+      "avatar": "https://media-exp1.licdn.com/dms/image/C4E03AQH9e1LLKnKLEQ/profile-displayphoto-shrink_800_800/0/1568643335863?e=1657756800&v=beta&t=WVmn6to3BbEo4M-JW9iXWFyLZXD9-JhyVkzoo-dT5cI"
+    },
+    {
+      "id": "3c8e8708-3bab-4f52-b008-db0eab5a4d22",
+      "name": "Luca Cacciarru",
+      "rating": 8,
+      "goalkeeper": false,
+      "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQG33iWKxJy1dw/profile-displayphoto-shrink_800_800/0/1635170883433?e=1657756800&v=beta&t=mHJX56e_GPyvc6OmEnGq0V2Ymx6oOiGfpuThwxTQScU"
+    },
+    {
+      "id": "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+      "name": "Mauro Erta",
+      "rating": 12,
+      "goalkeeper": false,
+      "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4"
+    }
+  ]
+}
