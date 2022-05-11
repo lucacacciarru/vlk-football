@@ -10,7 +10,6 @@ For instance, if you need to run the `json-server` in a different port, you can 
 ```
 JSON_SERVER_PORT=3001
 REACT_APP_API_URL=http://localhost:3001
-
 ```
 
 ### Run the application
