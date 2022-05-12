@@ -1,6 +1,8 @@
+import { Heading, Text } from "@chakra-ui/react";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
+import { LandingLayout } from "./landing/components";
 import { initI18n } from "./_shared/i18n";
 import { PATHS } from "./_shared/types";
 
@@ -10,8 +12,15 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path={PATHS.INDEX}>
-          <Route index element={<>Landing</>} />
+        <Route path={PATHS.INDEX} element={<LandingLayout />}>
+          <Route
+            index
+            element={
+              <Heading textStyle="h1" color="white.0">
+                Landing
+              </Heading>
+            }
+          />
         </Route>
         <Route path={PATHS.CREATE_TEAM} element={<>Create team</>} />
         <Route path={PATHS.PRE_MATCH} element={<>Pre match</>} />
