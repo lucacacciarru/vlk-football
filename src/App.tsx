@@ -1,4 +1,4 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
