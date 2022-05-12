@@ -37,3 +37,5 @@ Launches the tests in watch mode
 ### `npm run test:coverage`
 
 Launches the tests and show the current coverage
+
+test
