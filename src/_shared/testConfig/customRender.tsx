@@ -5,7 +5,7 @@ import { DefaultRootState } from "react-redux";
 
 function customRender(
   ui: ReactElement,
-  options: { mocks?: Partial<DefaultRootState> }
+  options?: { mocks?: Partial<DefaultRootState> }
 ) {
   return render(ui, {
     wrapper: (args) => TestWrapper({ ...args }),
