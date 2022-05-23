@@ -1,3 +1,9 @@
+import { main } from "../../../landing/i18n/it/main";
+import { playerCard } from "./playerCard";
+
 export const it = {
-  translation: {},
+  translation: {
+    playerCard,
+    main,
+  },
 };

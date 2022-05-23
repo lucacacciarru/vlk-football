@@ -27,4 +27,7 @@ export const colors = {
     50: "#D1D1D1",
     80: "#C6C6C6",
   },
+  gradient: {
+    test: "linear(to-t, black.0 -20%, brand.secondary.regular 90%)",
+  },
 };

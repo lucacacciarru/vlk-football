@@ -1,6 +1,7 @@
 export const sizes = {
   xl: {
     paddingX: "16",
+    paddingY: "4",
   },
   lg: {
     minW: 40,

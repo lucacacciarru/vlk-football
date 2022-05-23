@@ -7,7 +7,7 @@ export const LandingLayout: React.FC = () => {
   return (
     <>
       <NavBar size={sizeNavBar} />
-      <Box pt={sizeNavBar} px="16">
+      <Box py={sizeNavBar} px={{ base: "8", xl: "16" }}>
         <Outlet />
       </Box>
     </>

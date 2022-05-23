@@ -3,7 +3,8 @@ export const outline = {
   borderWidth: "2px",
   borderColor: "brand.primary.regular",
   _hover: {
-    bg: "brand.primary.regular",
+    bg: "brand.primary.dark",
+    borderColor: "brand.primary.dark",
     color: "white.20",
   },
   _disabled: {
