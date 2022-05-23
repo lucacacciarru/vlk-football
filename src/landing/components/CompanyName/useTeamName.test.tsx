@@ -13,12 +13,12 @@ import { useTeamName } from "./useTeamName";
 describe("useCompany name hook", () => {
   test("if onClick is called, isVlkTeam should be change", async () => {
     const { result } = renderHook(() => useTeamName());
-    const { onClick, selectedName: previousSelectedName } = result.current;
+    const { onClick, selectedTeam: previousSelectedName } = result.current;
     render(<Button onClick={onClick} data-testid="button" />);
     const button = screen.getByTestId("button");
     fireEvent.click(button);
     await waitFor(() => {
-      expect(result.current.selectedName).not.toBe(previousSelectedName);
+      expect(result.current.selectedTeam).not.toBe(previousSelectedName);
     });
   });
 });

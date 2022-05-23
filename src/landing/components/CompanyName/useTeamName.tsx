@@ -1,16 +1,16 @@
 import { MotionProps } from "framer-motion";
-import { useMemo, useState } from "react";
+import { useContext, useMemo } from "react";
+import { LandingContext } from "../LandingContext";
 
 export const useTeamName = () => {
-  const [isVlkTeam, setIsVlkTeam] = useState<boolean>(true);
-  const selectedName = useMemo(() => (isVlkTeam ? "VLK" : "KLV"), [isVlkTeam]);
+  const { selectedTeam, setSelectedTeam } = useContext(LandingContext);
   const selectedColor = useMemo(
-    () => (isVlkTeam ? "#049752" : "#6d1cad"),
-    [isVlkTeam]
+    () => (selectedTeam === "vlk" ? "#049752" : "#6d1cad"),
+    [selectedTeam]
   );
 
   function onClick() {
-    setIsVlkTeam((prev) => !prev);
+    setSelectedTeam(selectedTeam === "vlk" ? "klv" : "vlk");
   }
 
   const motionSpanProps: MotionProps = {
@@ -27,7 +27,7 @@ export const useTeamName = () => {
 
   return {
     onClick,
-    selectedName,
+    selectedTeam: selectedTeam.toUpperCase(),
     motionSpanProps,
   };
 };
