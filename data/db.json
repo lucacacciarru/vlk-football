@@ -5,14 +5,14 @@
       "name": "Enrico Porceddu",
       "rating": 12,
       "goalkeeper": false,
-      "avatar": "https://media-exp1.licdn.com/dms/image/C4E03AQH9e1LLKnKLEQ/profile-displayphoto-shrink_800_800/0/1568643335863?e=1657756800&v=beta&t=WVmn6to3BbEo4M-JW9iXWFyLZXD9-JhyVkzoo-dT5cI"
+      "avatar": "https://miro.medium.com/max/3150/1*t4vTd1ZPRulr8yOEj-gFzA.png"
     },
     {
-      "id": "3c8e8708-3bab-4f52-b008-db0eab5a4d22",
+      "id": "3c8e8708-3bab-4f52-b008-211212",
       "name": "Luca Cacciarru",
       "rating": 8,
       "goalkeeper": false,
-      "avatar": "https://media-exp1.licdn.com/dms/image/C5603AQG33iWKxJy1dw/profile-displayphoto-shrink_800_800/0/1635170883433?e=1657756800&v=beta&t=mHJX56e_GPyvc6OmEnGq0V2Ymx6oOiGfpuThwxTQScU"
+      "avatar": "https://avatars.githubusercontent.com/u/86778250?v=4"
     },
     {
       "id": "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
@@ -22,76 +22,18 @@
       "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4"
     },
     {
-      "id": "new",
+      "id": "d1e4391d-30bc-4982-a4f9-dd",
       "name": "Franco",
+      "rating": 12,
       "goalkeeper": false,
-      "rating": 12
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500"
     },
     {
-      "id": "1652426756563",
-      "name": "Franco",
+      "id": "d1e4391d-30bc-4982-a4f9-aa",
+      "name": "Giovanni",
+      "rating": 12,
       "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652426758073",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652426759180",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652427137373",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652427147279",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652427149115",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652427958354",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652428347234",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652429558732",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652431999439",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
-    },
-    {
-      "id": "1652432617173",
-      "name": "Franco",
-      "goalkeeper": false,
-      "rating": 12
+      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
     }
   ]
 }

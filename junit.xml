@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" errors="0" time="25.347">
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-13T09:55:49" time="4.073" tests="1">
+<testsuites name="jest tests" tests="4" failures="0" errors="0" time="5.212">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="0.964" tests="1">
     <testcase classname="App Should be rendered" name="App Should be rendered" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-13T09:55:49" time="10.705" tests="1">
-    <testcase classname="Icon component test" name="Icon component test" time="0.078">
+  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.109" tests="1">
+    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.103">
+    </testcase>
+  </testsuite>
+  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.113" tests="1">
+    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.091">
+    </testcase>
+  </testsuite>
+  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.58" tests="1">
+    <testcase classname="useCompany name hook if onClick is called, isVlkTeam should be change" name="useCompany name hook if onClick is called, isVlkTeam should be change" time="0.15">
     </testcase>
   </testsuite>
 </testsuites>
