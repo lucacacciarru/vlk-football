@@ -1,10 +1,12 @@
 import { Box, StackProps } from "@chakra-ui/react";
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
 import { Player } from "../../../player/store";
 import { PlayerCard } from "../../../_shared/components";
 import { PlayerCardSkeleton } from "../../../_shared/components/PlayerCardSkeletonList";
+import { LandingContext } from "../LandingContext";
 
 export function useShowPlayer(data: Player[] | undefined) {
+  const { selectedTeam } = useContext(LandingContext);
   const pickRandomPlayer = useMemo(
     () =>
       data?.length
@@ -29,14 +31,14 @@ export function useShowPlayer(data: Player[] | undefined) {
               }}
               key={`${selectedPlayer.id}${i}`}
             >
-              <PlayerCard {...selectedPlayer} team="vlk" />
+              <PlayerCard {...selectedPlayer} team={selectedTeam} />
             </Box>
           );
         })
       ) : (
         <PlayerCardSkeleton numberOfItems={4} />
       ),
-    [data, pickRandomPlayer]
+    [data, pickRandomPlayer, selectedTeam]
   );
 
   const stackProps: StackProps = {

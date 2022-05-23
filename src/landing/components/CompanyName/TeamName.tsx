@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useTeamName } from "./useTeamName";
 
 export const TeamName: React.FC = () => {
-  const { onClick, selectedName, motionSpanProps } = useTeamName();
+  const { onClick, selectedTeam, motionSpanProps } = useTeamName();
   return (
     <Box
       userSelect="none"
@@ -12,7 +12,7 @@ export const TeamName: React.FC = () => {
       cursor="pointer"
       onClick={onClick}
     >
-      <motion.span {...motionSpanProps}>{selectedName}</motion.span>
+      <motion.span {...motionSpanProps}>{selectedTeam}</motion.span>
     </Box>
   );
 };

@@ -8,12 +8,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { Player } from "../../../player/store";
+import { Teams } from "../../types/general";
 import { Icon } from "../Icon";
 import { useFrontCard } from "./useFrontCard";
 
 type Props = {
   player: Omit<Player, "id" | "sports">;
-  team: "vlk" | "klv";
+  team: Teams;
 } & BoxProps;
 
 export const PlayerFrontCard: React.FC<Props> = ({
