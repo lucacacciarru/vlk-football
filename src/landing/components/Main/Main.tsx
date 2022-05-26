@@ -2,7 +2,7 @@ import { Button, Flex, Stack, StackProps, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { PATHS } from "../../../_shared/types";
-import { TeamName } from "../CompanyName";
+import { TeamName } from "../TeamName";
 
 const stackProps: StackProps = {
   gap: "4",
