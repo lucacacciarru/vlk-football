@@ -1,9 +1,9 @@
-import { main } from "../../../landing/i18n/it/main";
+import { landing } from "../../../landing/i18n/it";
 import { playerCard } from "./playerCard";
 
 export const it = {
   translation: {
     playerCard,
-    main,
+    landing,
   },
 };

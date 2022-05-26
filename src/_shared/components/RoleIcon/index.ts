@@ -1,1 +1,1 @@
-export * from "./PlayerRoleIcon";
+export * from "./RoleIcon";

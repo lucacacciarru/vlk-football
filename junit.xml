@@ -1,138 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="1" errors="0" time="6.784">
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="1.086" tests="1">
-    <testcase classname="App Should be rendered" name="App Should be rendered" time="0">
+<testsuites name="jest tests" tests="19" failures="0" errors="0" time="14.379">
+  <testsuite name="PlayerFrontCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.588" tests="1">
+    <testcase classname="PlayerFrontCard component Should be rendered" name="PlayerFrontCard component Should be rendered" time="0.611">
     </testcase>
   </testsuite>
-  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="2.414" tests="1">
-    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.18">
+  <testsuite name="Main component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.77" tests="1">
+    <testcase classname="Main component Should be rendered" name="Main component Should be rendered" time="0.707">
     </testcase>
   </testsuite>
-  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="2.422" tests="1">
-    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.198">
+  <testsuite name="ColumnPlayerContent component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="7.962" tests="1">
+    <testcase classname="ColumnPlayerContent component Should be rendered" name="ColumnPlayerContent component Should be rendered" time="0.939">
     </testcase>
   </testsuite>
-  <testsuite name="useCompany name hook" errors="0" failures="1" skipped="0" timestamp="2022-05-26T09:08:17" time="3.553" tests="1">
-    <testcase classname="useCompany name hook if onClick is called, isVlkTeam should be change" name="useCompany name hook if onClick is called, isVlkTeam should be change" time="1.308">
-      <failure>Error: expect(received).not.toBe(expected) // Object.is equality
-
-Expected: not &quot;VLK&quot;
-
-Ignored nodes: comments, &lt;script /&gt;, &lt;style /&gt;
-&lt;html
-  data-theme=&quot;light&quot;
-  style=&quot;color-scheme: light;&quot;
-&gt;
-  &lt;head /&gt;
-  &lt;body
-    class=&quot;chakra-ui-light&quot;
-  &gt;
-    &lt;div&gt;
-      &lt;span
-        class=&quot;chakra-env&quot;
-        hidden=&quot;&quot;
-      /&gt;
-    &lt;/div&gt;
-    &lt;div
-      class=&quot;chakra-portal&quot;
-    &gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top-left&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top-right&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom-left&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom-right&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-    &lt;/div&gt;
-    &lt;div&gt;
-      &lt;button
-        class=&quot;chakra-button css-unxw24&quot;
-        data-testid=&quot;button&quot;
-        type=&quot;button&quot;
-      /&gt;
-      &lt;span
-        class=&quot;chakra-env&quot;
-        hidden=&quot;&quot;
-      /&gt;
-    &lt;/div&gt;
-    &lt;div
-      class=&quot;chakra-portal&quot;
-    &gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top-left&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-top-right&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom-left&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
-      /&gt;
-      &lt;ul
-        aria-live=&quot;polite&quot;
-        id=&quot;chakra-toast-manager-bottom-right&quot;
-        role=&quot;region&quot;
-        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
-      /&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;...
-    at D:\VLK studio\vlk-football\src\landing\components\CompanyName\useTeamName.test.tsx:22:47
-    at runWithExpensiveErrorDiagnosticsDisabled (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\config.js:50:12)
-    at checkCallback (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\wait-for.js:141:77)
-    at checkRealTimersCallback (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\wait-for.js:133:16)
-    at Timeout.task [as _onTimeout] (D:\VLK studio\vlk-football\node_modules\jsdom\lib\jsdom\browser\Window.js:516:19)
-    at listOnTimeout (node:internal/timers:557:17)
-    at processTimers (node:internal/timers:500:7)</failure>
+  <testsuite name="useShowPlayer hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.766" tests="1">
+    <testcase classname="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" name="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" time="0.611">
+    </testcase>
+  </testsuite>
+  <testsuite name="PlayerCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.747" tests="1">
+    <testcase classname="PlayerCard component Should be rendered" name="PlayerCard component Should be rendered" time="0.706">
+    </testcase>
+  </testsuite>
+  <testsuite name="ColumnPlayerItem component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="8.183" tests="1">
+    <testcase classname="ColumnPlayerItem component Should be rendered" name="ColumnPlayerItem component Should be rendered" time="1.032">
+    </testcase>
+  </testsuite>
+  <testsuite name="Column component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.159" tests="1">
+    <testcase classname="Column component Should be rendered" name="Column component Should be rendered" time="1.03">
+    </testcase>
+  </testsuite>
+  <testsuite name="ShowPlayer component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.431" tests="1">
+    <testcase classname="ShowPlayer component Should be rendered" name="ShowPlayer component Should be rendered" time="1.384">
+    </testcase>
+  </testsuite>
+  <testsuite name="Landing page" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="8.91" tests="1">
+    <testcase classname="Landing page Should be rendered" name="Landing page Should be rendered" time="1.566">
+    </testcase>
+  </testsuite>
+  <testsuite name="ContainerColumns component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.638" tests="1">
+    <testcase classname="ContainerColumns component Should be rendered" name="ContainerColumns component Should be rendered" time="1.521">
+    </testcase>
+  </testsuite>
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="9.099" tests="1">
+    <testcase classname="App Should be rendered" name="App Should be rendered" time="1.639">
+    </testcase>
+  </testsuite>
+  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:08" time="1.77" tests="1">
+    <testcase classname="useCompany name hook selected team should be VLK" name="useCompany name hook selected team should be VLK" time="0.294">
+    </testcase>
+  </testsuite>
+  <testsuite name="RoleIcon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.595" tests="1">
+    <testcase classname="RoleIcon component Should be rendered" name="RoleIcon component Should be rendered" time="0.297">
+    </testcase>
+  </testsuite>
+  <testsuite name="PlayerBackCard.test" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.885" tests="1">
+    <testcase classname="PlayerBackCard.test Should be rendered" name="PlayerBackCard.test Should be rendered" time="0.366">
+    </testcase>
+  </testsuite>
+  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.718" tests="1">
+    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.369">
+    </testcase>
+  </testsuite>
+  <testsuite name="usePlayerCard hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.752" tests="1">
+    <testcase classname="usePlayerCard hook If onclick is called, props should be change" name="usePlayerCard hook If onclick is called, props should be change" time="0.369">
+    </testcase>
+  </testsuite>
+  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.581" tests="1">
+    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.254">
+    </testcase>
+  </testsuite>
+  <testsuite name="PlayerCardSkeleton component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.637" tests="1">
+    <testcase classname="PlayerCardSkeleton component Should be rendered" name="PlayerCardSkeleton component Should be rendered" time="0.291">
+    </testcase>
+  </testsuite>
+  <testsuite name="LandingContext component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.404" tests="1">
+    <testcase classname="LandingContext component Should be rendered" name="LandingContext component Should be rendered" time="0.125">
     </testcase>
   </testsuite>
 </testsuites>
