@@ -17,18 +17,19 @@ export const Main: React.FC = () => {
   return (
     <Stack {...stackProps}>
       <Text color="white.0" as="h1" textStyle="main">
-        {t("main.firstTitle")} <br /> <TeamName /> {t("main.secondTitle")}
+        {t("landing.main.firstTitle")} <br /> <TeamName />{" "}
+        {t("landing.main.secondTitle")}
       </Text>
-      <Text color="white.50">{t("main.body")} </Text>
+      <Text color="white.50">{t("landing.main.body")} </Text>
       <Flex
         gap={{ base: "2", xl: "4" }}
         flexDir={{ base: "column", xl: "row" }}
       >
         <Link to={PATHS.CREATE_TEAM}>
-          <Button size="xl">{t("main.createTeamsButton")}</Button>
+          <Button size="xl">{t("landing.main.createTeamsButton")}</Button>
         </Link>
         <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
-          {t("main.previousGamesButton")}
+          {t("landing.main.previousGamesButton")}
         </Button>
       </Flex>
     </Stack>
