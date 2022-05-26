@@ -1,9 +1,11 @@
 import { ConfigureStoreOptions } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
+import { builderGameRootReducer } from "../../builderGame/store";
 import { playerApi } from "../../player/store";
 
 const reducers = {
   [playerApi.reducerPath]: playerApi.reducer,
+  builderGame: builderGameRootReducer,
 };
 
 const middleware: ConfigureStoreOptions["middleware"] = (

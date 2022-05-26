@@ -17,6 +17,7 @@ describe("useCompany name hook", () => {
     render(<Button onClick={onClick} data-testid="button" />);
     const button = screen.getByTestId("button");
     fireEvent.click(button);
+    console.log(result.current.selectedTeam);
     await waitFor(() => {
       expect(result.current.selectedTeam).not.toBe(previousSelectedName);
     });

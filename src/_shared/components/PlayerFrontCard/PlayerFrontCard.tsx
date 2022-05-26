@@ -10,6 +10,7 @@ import {
 import { Player } from "../../../player/store";
 import { Teams } from "../../types/general";
 import { Icon } from "../Icon";
+import { RoleIcon } from "../RoleIcon";
 import { useFrontCard } from "./useFrontCard";
 
 type Props = {
@@ -23,17 +24,14 @@ export const PlayerFrontCard: React.FC<Props> = ({
   ...boxProps
 }) => {
   const { goalkeeper, name, rating, avatar } = player;
-  const { positionPlayerIcon, ratingText } = useFrontCard({
-    goalkeeper,
-    rating,
-  });
+  const { ratingText } = useFrontCard({ rating });
 
   return (
     <Box {...boxProps}>
       <Stack w="full" h="full" alignItems="center">
         <HStack w="full" justifyContent="space-between">
           <Icon name={team} size="12" />
-          <Icon name={positionPlayerIcon} size="8" />
+          <RoleIcon goalkeeper={goalkeeper} size="12" />
         </HStack>
         <Flex boxSize="40" borderRadius="full" overflow="hidden">
           <Image src={avatar} fit="cover" w="full" h="full" />
