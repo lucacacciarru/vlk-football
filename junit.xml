@@ -1,19 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="4" failures="0" errors="0" time="5.212">
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="0.964" tests="1">
-    <testcase classname="App Should be rendered" name="App Should be rendered" time="0.001">
+<testsuites name="jest tests" tests="4" failures="1" errors="0" time="6.784">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="1.086" tests="1">
+    <testcase classname="App Should be rendered" name="App Should be rendered" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.109" tests="1">
-    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.103">
+  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="2.414" tests="1">
+    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.18">
     </testcase>
   </testsuite>
-  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.113" tests="1">
-    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.091">
+  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T09:08:17" time="2.422" tests="1">
+    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.198">
     </testcase>
   </testsuite>
-  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-16T10:07:07" time="2.58" tests="1">
-    <testcase classname="useCompany name hook if onClick is called, isVlkTeam should be change" name="useCompany name hook if onClick is called, isVlkTeam should be change" time="0.15">
+  <testsuite name="useCompany name hook" errors="0" failures="1" skipped="0" timestamp="2022-05-26T09:08:17" time="3.553" tests="1">
+    <testcase classname="useCompany name hook if onClick is called, isVlkTeam should be change" name="useCompany name hook if onClick is called, isVlkTeam should be change" time="1.308">
+      <failure>Error: expect(received).not.toBe(expected) // Object.is equality
+
+Expected: not &quot;VLK&quot;
+
+Ignored nodes: comments, &lt;script /&gt;, &lt;style /&gt;
+&lt;html
+  data-theme=&quot;light&quot;
+  style=&quot;color-scheme: light;&quot;
+&gt;
+  &lt;head /&gt;
+  &lt;body
+    class=&quot;chakra-ui-light&quot;
+  &gt;
+    &lt;div&gt;
+      &lt;span
+        class=&quot;chakra-env&quot;
+        hidden=&quot;&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;div
+      class=&quot;chakra-portal&quot;
+    &gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top-left&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top-right&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom-left&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom-right&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;button
+        class=&quot;chakra-button css-unxw24&quot;
+        data-testid=&quot;button&quot;
+        type=&quot;button&quot;
+      /&gt;
+      &lt;span
+        class=&quot;chakra-env&quot;
+        hidden=&quot;&quot;
+      /&gt;
+    &lt;/div&gt;
+    &lt;div
+      class=&quot;chakra-portal&quot;
+    &gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top-left&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-top-right&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom-left&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column; margin: 0px auto;&quot;
+      /&gt;
+      &lt;ul
+        aria-live=&quot;polite&quot;
+        id=&quot;chakra-toast-manager-bottom-right&quot;
+        role=&quot;region&quot;
+        style=&quot;position: fixed; z-index: 5500; pointer-events: none; display: flex; flex-direction: column;&quot;
+      /&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;...
+    at D:\VLK studio\vlk-football\src\landing\components\CompanyName\useTeamName.test.tsx:22:47
+    at runWithExpensiveErrorDiagnosticsDisabled (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\config.js:50:12)
+    at checkCallback (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\wait-for.js:141:77)
+    at checkRealTimersCallback (D:\VLK studio\vlk-football\node_modules\@testing-library\dom\dist\wait-for.js:133:16)
+    at Timeout.task [as _onTimeout] (D:\VLK studio\vlk-football\node_modules\jsdom\lib\jsdom\browser\Window.js:516:19)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)</failure>
     </testcase>
   </testsuite>
 </testsuites>

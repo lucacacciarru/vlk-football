@@ -2,13 +2,13 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { Player } from "../types";
 
 export const playerApi = createApi({
-  reducerPath: "player",
+  reducerPath: "players",
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API_URL }),
-  tagTypes: ["Player"],
+  tagTypes: ["Players"],
   endpoints: (builder) => ({
     getPlayer: builder.query<Player[], void>({
       query: () => "/players",
-      providesTags: ["Player"],
+      providesTags: ["Players"],
     }),
     postPlayer: builder.mutation<Player, Partial<Player>>({
       query: (body) => ({
@@ -16,7 +16,7 @@ export const playerApi = createApi({
         method: "POST",
         body,
       }),
-      invalidatesTags: ["Player"],
+      invalidatesTags: ["Players"],
     }),
   }),
 });

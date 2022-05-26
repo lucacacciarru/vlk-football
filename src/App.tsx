@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
+import { ContainerColumn } from "./builderGame/components";
 import { LandingLayout } from "./landing/components";
 import { Landing } from "./landing/pages";
 import { initI18n } from "./_shared/i18n";
@@ -16,7 +17,7 @@ function App() {
         <Route path={PATHS.INDEX} element={<LandingLayout />}>
           <Route index element={<Landing />} />
         </Route>
-        <Route path={PATHS.CREATE_TEAM} element={<>Create team</>} />
+        <Route path={PATHS.CREATE_TEAM} element={<ContainerColumn />} />
         <Route path={PATHS.PRE_MATCH} element={<>Pre match</>} />
         <Route path={PATHS.PREVIEW_MATCH} element={<>Preview Match</>} />
       </Routes>

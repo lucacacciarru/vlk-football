@@ -1,5 +1,7 @@
 import { Button, Flex, Stack, StackProps, Text } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import { PATHS } from "../../../_shared/types";
 import { TeamName } from "../CompanyName";
 
 const stackProps: StackProps = {
@@ -22,7 +24,9 @@ export const Main: React.FC = () => {
         gap={{ base: "2", xl: "4" }}
         flexDir={{ base: "column", xl: "row" }}
       >
-        <Button size="xl">{t("main.createTeamsButton")}</Button>
+        <Link to={PATHS.CREATE_TEAM}>
+          <Button size="xl">{t("main.createTeamsButton")}</Button>
+        </Link>
         <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
           {t("main.previousGamesButton")}
         </Button>
