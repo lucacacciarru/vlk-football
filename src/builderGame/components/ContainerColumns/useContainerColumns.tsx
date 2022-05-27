@@ -34,7 +34,7 @@ export function useContainerColumns() {
         availablePlayers: filteredDataIds,
       });
     }
-  }, [data, updateChosenPlayers]);
+  }, [data, updateChosenPlayers]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sensors = useSensors(useSensor(PointerSensor));
 
