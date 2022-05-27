@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="19" failures="0" errors="0" time="14.379">
-  <testsuite name="PlayerFrontCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.588" tests="1">
-    <testcase classname="PlayerFrontCard component Should be rendered" name="PlayerFrontCard component Should be rendered" time="0.611">
+<testsuites name="jest tests" tests="19" failures="0" errors="0" time="28.968">
+  <testsuite name="PlayerFrontCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.593" tests="1">
+    <testcase classname="PlayerFrontCard component Should be rendered" name="PlayerFrontCard component Should be rendered" time="0.624">
     </testcase>
   </testsuite>
-  <testsuite name="Main component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.77" tests="1">
-    <testcase classname="Main component Should be rendered" name="Main component Should be rendered" time="0.707">
+  <testsuite name="useShowPlayer hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.534" tests="1">
+    <testcase classname="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" name="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" time="0.734">
     </testcase>
   </testsuite>
-  <testsuite name="ColumnPlayerContent component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="7.962" tests="1">
-    <testcase classname="ColumnPlayerContent component Should be rendered" name="ColumnPlayerContent component Should be rendered" time="0.939">
+  <testsuite name="PlayerCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.534" tests="1">
+    <testcase classname="PlayerCard component Should be rendered" name="PlayerCard component Should be rendered" time="0.9">
     </testcase>
   </testsuite>
-  <testsuite name="useShowPlayer hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.766" tests="1">
-    <testcase classname="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" name="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" time="0.611">
+  <testsuite name="ColumnPlayerContent component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.702" tests="1">
+    <testcase classname="ColumnPlayerContent component Should be rendered" name="ColumnPlayerContent component Should be rendered" time="1.177">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="7.747" tests="1">
-    <testcase classname="PlayerCard component Should be rendered" name="PlayerCard component Should be rendered" time="0.706">
+  <testsuite name="ColumnPlayerItem component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.172" tests="1">
+    <testcase classname="ColumnPlayerItem component Should be rendered" name="ColumnPlayerItem component Should be rendered" time="1.185">
     </testcase>
   </testsuite>
-  <testsuite name="ColumnPlayerItem component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="8.183" tests="1">
-    <testcase classname="ColumnPlayerItem component Should be rendered" name="ColumnPlayerItem component Should be rendered" time="1.032">
+  <testsuite name="Column component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.356" tests="1">
+    <testcase classname="Column component Should be rendered" name="Column component Should be rendered" time="1.353">
     </testcase>
   </testsuite>
-  <testsuite name="Column component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.159" tests="1">
-    <testcase classname="Column component Should be rendered" name="Column component Should be rendered" time="1.03">
+  <testsuite name="ContainerColumns component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.791" tests="1">
+    <testcase classname="ContainerColumns component Should be rendered" name="ContainerColumns component Should be rendered" time="1.886">
     </testcase>
   </testsuite>
-  <testsuite name="ShowPlayer component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.431" tests="1">
-    <testcase classname="ShowPlayer component Should be rendered" name="ShowPlayer component Should be rendered" time="1.384">
+  <testsuite name="ShowPlayer component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.817" tests="1">
+    <testcase classname="ShowPlayer component Should be rendered" name="ShowPlayer component Should be rendered" time="1.954">
     </testcase>
   </testsuite>
-  <testsuite name="Landing page" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:00" time="8.91" tests="1">
-    <testcase classname="Landing page Should be rendered" name="Landing page Should be rendered" time="1.566">
+  <testsuite name="Main component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="21.125" tests="1">
+    <testcase classname="Main component Should be rendered" name="Main component Should be rendered" time="1.176">
     </testcase>
   </testsuite>
-  <testsuite name="ContainerColumns component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="8.638" tests="1">
-    <testcase classname="ContainerColumns component Should be rendered" name="ContainerColumns component Should be rendered" time="1.521">
+  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.437" tests="1">
+    <testcase classname="useCompany name hook selected team should be VLK" name="useCompany name hook selected team should be VLK" time="0.604">
     </testcase>
   </testsuite>
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:01" time="9.099" tests="1">
-    <testcase classname="App Should be rendered" name="App Should be rendered" time="1.639">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="21.696" tests="1">
+    <testcase classname="App Should be rendered" name="App Should be rendered" time="2.1">
     </testcase>
   </testsuite>
-  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:08" time="1.77" tests="1">
-    <testcase classname="useCompany name hook selected team should be VLK" name="useCompany name hook selected team should be VLK" time="0.294">
+  <testsuite name="PlayerBackCard.test" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.886" tests="1">
+    <testcase classname="PlayerBackCard.test Should be rendered" name="PlayerBackCard.test Should be rendered" time="0.84">
     </testcase>
   </testsuite>
-  <testsuite name="RoleIcon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.595" tests="1">
-    <testcase classname="RoleIcon component Should be rendered" name="RoleIcon component Should be rendered" time="0.297">
+  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.412" tests="1">
+    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.755">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerBackCard.test" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.885" tests="1">
-    <testcase classname="PlayerBackCard.test Should be rendered" name="PlayerBackCard.test Should be rendered" time="0.366">
+  <testsuite name="PlayerCardSkeleton component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.314" tests="1">
+    <testcase classname="PlayerCardSkeleton component Should be rendered" name="PlayerCardSkeleton component Should be rendered" time="0.472">
     </testcase>
   </testsuite>
-  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.718" tests="1">
-    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.369">
+  <testsuite name="usePlayerCard hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="3.036" tests="1">
+    <testcase classname="usePlayerCard hook If onclick is called, props should be change" name="usePlayerCard hook If onclick is called, props should be change" time="0.554">
     </testcase>
   </testsuite>
-  <testsuite name="usePlayerCard hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.752" tests="1">
-    <testcase classname="usePlayerCard hook If onclick is called, props should be change" name="usePlayerCard hook If onclick is called, props should be change" time="0.369">
+  <testsuite name="RoleIcon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.3" tests="1">
+    <testcase classname="RoleIcon component Should be rendered" name="RoleIcon component Should be rendered" time="0.412">
     </testcase>
   </testsuite>
-  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.581" tests="1">
-    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.254">
+  <testsuite name="Landing page" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="22.151" tests="1">
+    <testcase classname="Landing page Should be rendered" name="Landing page Should be rendered" time="2.1">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerCardSkeleton component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.637" tests="1">
-    <testcase classname="PlayerCardSkeleton component Should be rendered" name="PlayerCardSkeleton component Should be rendered" time="0.291">
+  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.193" tests="1">
+    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.362">
     </testcase>
   </testsuite>
-  <testsuite name="LandingContext component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T12:04:09" time="1.404" tests="1">
-    <testcase classname="LandingContext component Should be rendered" name="LandingContext component Should be rendered" time="0.125">
+  <testsuite name="LandingContext component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.247" tests="1">
+    <testcase classname="LandingContext component Should be rendered" name="LandingContext component Should be rendered" time="0.259">
     </testcase>
   </testsuite>
 </testsuites>

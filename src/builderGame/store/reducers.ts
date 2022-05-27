@@ -6,5 +6,8 @@ export const addSelectedPlayersCase: CaseReducer<
   AddSelectedPlayers
 > = (state, action) => ({
   ...state,
-  selectedPlayers: action.payload,
+  chosenPlayers: {
+    availablePlayers: action.payload.availablePlayers,
+    selectedPlayers: action.payload.selectedPlayers,
+  },
 });

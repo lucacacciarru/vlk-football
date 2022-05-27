@@ -5,10 +5,16 @@ export enum BUILDER_GAME_ACTION_TYPES {
 }
 
 export type BuilderGameState = {
-  selectedPlayers: string[];
+  chosenPlayers: {
+    availablePlayers: string[];
+    selectedPlayers: string[];
+  };
 };
 
-export type AddSelectedPlayersPayload = string[];
+export type AddSelectedPlayersPayload = {
+  availablePlayers: string[];
+  selectedPlayers: string[];
+};
 
 export type AddSelectedPlayers = PayloadAction<
   AddSelectedPlayersPayload,

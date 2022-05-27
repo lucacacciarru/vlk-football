@@ -1,106 +1,80 @@
 import {
   closestCorners,
   DndContextProps,
-  DragEndEvent,
   DragOverEvent,
   PointerSensor,
-  UniqueIdentifier,
   useSensor,
   useSensors,
 } from "@dnd-kit/core";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { useGetPlayerQuery } from "../../../player/store";
-import { useBuilderGame } from "../../hook";
-import { removeSameElementInTwoList } from "../../utils";
-import { Column } from "../Column";
+import { useUpdateChosenPlayers } from "../../hook";
+import { getChosenPlayers } from "../../store/selectors";
+import { findContainer, removeSameElementInTwoList } from "../../utils/";
 
-type ColumnList = {
+export type ColumnList = {
   availablePlayers: string[];
   selectedPlayers: string[];
 };
 
 export function useContainerColumns() {
   const { data } = useGetPlayerQuery();
-  const { selectPlayers } = useBuilderGame();
+  const columnList = useSelector(getChosenPlayers);
+  const updateChosenPlayers = useUpdateChosenPlayers();
 
-  const [columnList, setColumnList] = useState<ColumnList>({
-    availablePlayers: [],
-    selectedPlayers: [],
-  });
+  useEffect(() => {
+    if (data?.length) {
+      const filteredDataIds = removeSameElementInTwoList(
+        data?.map((player) => player.id) || [],
+        columnList.selectedPlayers
+      );
+      updateChosenPlayers({
+        ...columnList,
+        availablePlayers: filteredDataIds,
+      });
+    }
+  }, [data, updateChosenPlayers]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sensors = useSensors(useSensor(PointerSensor));
-
-  function findContainer(id: UniqueIdentifier) {
-    if (id in columnList) {
-      return id;
-    }
-
-    return Object.keys(columnList).find((key) =>
-      columnList[key as keyof ColumnList].includes(id as string)
-    );
-  }
 
   function onDragOver(event: DragOverEvent) {
     const { active, over } = event;
     const { id } = active;
     const overId = over?.id || "";
 
-    const activeContainer = findContainer(id) as keyof ColumnList;
-    const overContainer = findContainer(overId) as keyof ColumnList;
+    const activeContainer = findContainer(id, columnList) as keyof ColumnList;
+    const overContainer = findContainer(overId, columnList) as keyof ColumnList;
 
     if (activeContainer === overContainer) return;
 
-    setColumnList((prev) => {
-      const activeItems = prev[activeContainer];
-      const activeIndex = activeItems.indexOf(id as string);
-
-      return {
-        ...prev,
-        [activeContainer]: [
-          ...prev[activeContainer].filter((item) => item !== active.id),
-        ],
-        [overContainer]: [
-          prev[activeContainer][activeIndex],
-          ...prev[overContainer],
-        ],
-      };
-    });
-  }
-
-  function onDragEnd(event: DragEndEvent) {
-    const { over } = event;
-    const overContainerData = over?.data?.current?.sortable.items;
-    selectPlayers(overContainerData);
+    const activeItems = columnList[activeContainer];
+    const activeIndex = activeItems.indexOf(id as string);
+    const changedColumns: ColumnList = {
+      ...columnList,
+      [activeContainer]: Array.from(
+        new Set(
+          columnList[activeContainer].filter((item) => item !== active.id)
+        )
+      ),
+      [overContainer]: Array.from(
+        new Set([
+          columnList[activeContainer][activeIndex],
+          ...columnList[overContainer],
+        ])
+      ),
+    };
+    updateChosenPlayers(changedColumns);
   }
 
   const dndContextProps: DndContextProps = {
     sensors,
     collisionDetection: closestCorners,
     onDragOver,
-    onDragEnd,
   };
-
-  const renderColumns = useMemo(
-    () =>
-      Object.entries(columnList).map((column) => (
-        <Column id={column[0]} items={column[1]} key={column[0]} />
-      )),
-    [columnList]
-  );
-
-  useEffect(() => {
-    const filteredDataIds = removeSameElementInTwoList(
-      data?.map((player) => player.id) || [],
-      columnList.selectedPlayers
-    );
-    setColumnList((prev) => ({
-      ...prev,
-      availablePlayers: filteredDataIds,
-    }));
-  }, [columnList.selectedPlayers, data]);
 
   return {
     dndContextProps,
-    renderColumns,
+    columnList,
   };
 }
