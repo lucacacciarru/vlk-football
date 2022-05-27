@@ -1,14 +1,17 @@
+import { useCallback } from "react";
 import { useDispatch } from "react-redux";
 import { addSelectedPlayers } from "../store/actions";
 
-export function useBuilderGame() {
+type SelectedPlayerParams = {
+  availablePlayers: string[];
+  selectedPlayers: string[];
+};
+
+export function useUpdateChosenPlayers() {
   const dispatch = useDispatch();
-
-  function selectPlayers(selectedPlayersId: string[]) {
-    dispatch(addSelectedPlayers(selectedPlayersId));
-  }
-
-  return {
-    selectPlayers,
-  };
+  return useCallback(
+    (playersList: SelectedPlayerParams) =>
+      dispatch(addSelectedPlayers(playersList)),
+    [dispatch]
+  );
 }

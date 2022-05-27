@@ -4,7 +4,10 @@ import { addSelectedPlayersCase } from "./reducers";
 import { BuilderGameState } from "./types";
 
 const INITIAL_STATE: BuilderGameState = {
-  selectedPlayers: [],
+  chosenPlayers: {
+    availablePlayers: [],
+    selectedPlayers: [],
+  },
 };
 
 export const builderGameRootReducer = createReducer(
