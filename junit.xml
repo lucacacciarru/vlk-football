@@ -1,79 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="19" failures="0" errors="0" time="28.968">
-  <testsuite name="PlayerFrontCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.593" tests="1">
-    <testcase classname="PlayerFrontCard component Should be rendered" name="PlayerFrontCard component Should be rendered" time="0.624">
+<testsuites name="jest tests" tests="22" failures="0" errors="0" time="86.3">
+  <testsuite name="PlayerFrontCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.386" tests="1">
+    <testcase classname="PlayerFrontCard component Should be rendered" name="PlayerFrontCard component Should be rendered" time="0.684">
     </testcase>
   </testsuite>
-  <testsuite name="useShowPlayer hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.534" tests="1">
-    <testcase classname="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" name="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" time="0.734">
+  <testsuite name="useShowPlayer hook" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.424" tests="1">
+    <testcase classname="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" name="useShowPlayer hook If hook attributes is not undefined, renderPlayers should contains JSX element" time="0.605">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.534" tests="1">
-    <testcase classname="PlayerCard component Should be rendered" name="PlayerCard component Should be rendered" time="0.9">
+  <testsuite name="Main component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.473" tests="1">
+    <testcase classname="Main component Should be rendered" name="Main component Should be rendered" time="0.783">
     </testcase>
   </testsuite>
-  <testsuite name="ColumnPlayerContent component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="18.702" tests="1">
-    <testcase classname="ColumnPlayerContent component Should be rendered" name="ColumnPlayerContent component Should be rendered" time="1.177">
+  <testsuite name="PlayerCard component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.656" tests="1">
+    <testcase classname="PlayerCard component Should be rendered" name="PlayerCard component Should be rendered" time="0.831">
     </testcase>
   </testsuite>
-  <testsuite name="ColumnPlayerItem component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.172" tests="1">
-    <testcase classname="ColumnPlayerItem component Should be rendered" name="ColumnPlayerItem component Should be rendered" time="1.185">
+  <testsuite name="ColumnPlayerContent component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.768" tests="1">
+    <testcase classname="ColumnPlayerContent component Should be rendered" name="ColumnPlayerContent component Should be rendered" time="1.06">
     </testcase>
   </testsuite>
-  <testsuite name="Column component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.356" tests="1">
-    <testcase classname="Column component Should be rendered" name="Column component Should be rendered" time="1.353">
+  <testsuite name="ColumnPlayerItem component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="45.975" tests="1">
+    <testcase classname="ColumnPlayerItem component Should be rendered" name="ColumnPlayerItem component Should be rendered" time="0.973">
     </testcase>
   </testsuite>
-  <testsuite name="ContainerColumns component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.791" tests="1">
-    <testcase classname="ContainerColumns component Should be rendered" name="ContainerColumns component Should be rendered" time="1.886">
+  <testsuite name="Landing page" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="46.708" tests="1">
+    <testcase classname="Landing page Should be rendered" name="Landing page Should be rendered" time="1.776">
     </testcase>
   </testsuite>
-  <testsuite name="ShowPlayer component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="19.817" tests="1">
-    <testcase classname="ShowPlayer component Should be rendered" name="ShowPlayer component Should be rendered" time="1.954">
+  <testsuite name="ShowPlayer component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="47.031" tests="1">
+    <testcase classname="ShowPlayer component Should be rendered" name="ShowPlayer component Should be rendered" time="2.191">
     </testcase>
   </testsuite>
-  <testsuite name="Main component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="21.125" tests="1">
-    <testcase classname="Main component Should be rendered" name="Main component Should be rendered" time="1.176">
+  <testsuite name="Column component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="47.513" tests="1">
+    <testcase classname="Column component Should be rendered" name="Column component Should be rendered" time="1.016">
     </testcase>
   </testsuite>
-  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.437" tests="1">
-    <testcase classname="useCompany name hook selected team should be VLK" name="useCompany name hook selected team should be VLK" time="0.604">
+  <testsuite name="PlayerCardSkeleton component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:27" time="1.935" tests="1">
+    <testcase classname="PlayerCardSkeleton component Should be rendered" name="PlayerCardSkeleton component Should be rendered" time="0.523">
     </testcase>
   </testsuite>
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="21.696" tests="1">
-    <testcase classname="App Should be rendered" name="App Should be rendered" time="2.1">
+  <testsuite name="usePlayerCard hook" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:27" time="2.057" tests="1">
+    <testcase classname="usePlayerCard hook If onclick is called, props should be change" name="usePlayerCard hook If onclick is called, props should be change" time="0.595">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerBackCard.test" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.886" tests="1">
-    <testcase classname="PlayerBackCard.test Should be rendered" name="PlayerBackCard.test Should be rendered" time="0.84">
+  <testsuite name="PlayerBackCard.test" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:27" time="2.084" tests="1">
+    <testcase classname="PlayerBackCard.test Should be rendered" name="PlayerBackCard.test Should be rendered" time="0.565">
     </testcase>
   </testsuite>
-  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="2.412" tests="1">
-    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.755">
+  <testsuite name="removeSameElementInTwoList function" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:29" time="0.518" tests="1">
+    <testcase classname="removeSameElementInTwoList function test" name="removeSameElementInTwoList function test" time="0.004">
     </testcase>
   </testsuite>
-  <testsuite name="PlayerCardSkeleton component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.314" tests="1">
-    <testcase classname="PlayerCardSkeleton component Should be rendered" name="PlayerCardSkeleton component Should be rendered" time="0.472">
+  <testsuite name="useCompany name hook" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:27" time="2.201" tests="1">
+    <testcase classname="useCompany name hook selected team should be VLK" name="useCompany name hook selected team should be VLK" time="0.586">
     </testcase>
   </testsuite>
-  <testsuite name="usePlayerCard hook" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:52" time="3.036" tests="1">
-    <testcase classname="usePlayerCard hook If onclick is called, props should be change" name="usePlayerCard hook If onclick is called, props should be change" time="0.554">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="48.414" tests="1">
+    <testcase classname="App Should be rendered" name="App Should be rendered" time="2.025">
     </testcase>
   </testsuite>
-  <testsuite name="RoleIcon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.3" tests="1">
-    <testcase classname="RoleIcon component Should be rendered" name="RoleIcon component Should be rendered" time="0.412">
+  <testsuite name="ContainerColumns component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:17:41" time="48.59" tests="1">
+    <testcase classname="ContainerColumns component Should be rendered" name="ContainerColumns component Should be rendered" time="1.773">
     </testcase>
   </testsuite>
-  <testsuite name="Landing page" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:33" time="22.151" tests="1">
-    <testcase classname="Landing page Should be rendered" name="Landing page Should be rendered" time="2.1">
+  <testsuite name="findContainer function" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:30" time="0.363" tests="2">
+    <testcase classname="findContainer function If the fist parameter is a id inside one column, it should return the container key" name="findContainer function If the fist parameter is a id inside one column, it should return the container key" time="0.003">
+    </testcase>
+    <testcase classname="findContainer function If the fist parameter column id, it should return the same id" name="findContainer function If the fist parameter column id, it should return the same id" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.193" tests="1">
-    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.362">
+  <testsuite name="LandingContext component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:28" time="1.766" tests="1">
+    <testcase classname="LandingContext component Should be rendered" name="LandingContext component Should be rendered" time="0.317">
     </testcase>
   </testsuite>
-  <testsuite name="LandingContext component" errors="0" failures="0" skipped="0" timestamp="2022-05-26T15:17:53" time="2.247" tests="1">
-    <testcase classname="LandingContext component Should be rendered" name="LandingContext component Should be rendered" time="0.259">
+  <testsuite name="CompanyName component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:28" time="2.081" tests="1">
+    <testcase classname="CompanyName component Should be rendered" name="CompanyName component Should be rendered" time="0.398">
+    </testcase>
+  </testsuite>
+  <testsuite name="RoleIcon component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:29" time="1.703" tests="1">
+    <testcase classname="RoleIcon component Should be rendered" name="RoleIcon component Should be rendered" time="0.285">
+    </testcase>
+  </testsuite>
+  <testsuite name="Icon component" errors="0" failures="0" skipped="0" timestamp="2022-05-28T16:18:29" time="1.701" tests="1">
+    <testcase classname="Icon component Should be rendered" name="Icon component Should be rendered" time="0.265">
     </testcase>
   </testsuite>
 </testsuites>

@@ -1,12 +1,12 @@
-import { Box, Stack, Text } from "@chakra-ui/react";
-import { Column } from "../Column";
+import { Box, Stack, Text } from '@chakra-ui/react';
+import { PlayerList } from '../PlayersList';
 
 type Props = {
   id: string;
   items: string[];
 };
 
-export const PlayerColumn: React.FC<Props> = ({ id, items }) => {
+export const AvailablePlayersColumn: React.FC<Props> = ({ id, items }) => {
   return (
     <Stack w="lg" border="2px solid white" borderRadius="xl">
       <Box color="white.0" minH="12" p="4" textAlign="center">
@@ -15,7 +15,7 @@ export const PlayerColumn: React.FC<Props> = ({ id, items }) => {
         </Text>
         <Text textStyle="body-xs">{items.length} giocatori</Text>
       </Box>
-      <Column id={id} items={items} />
+      <PlayerList id={id} items={items} />
     </Stack>
   );
 };
