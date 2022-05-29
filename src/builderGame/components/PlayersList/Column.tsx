@@ -1,22 +1,22 @@
-import { Stack } from "@chakra-ui/react";
-import { useDroppable } from "@dnd-kit/core";
+import { Stack } from '@chakra-ui/react';
+import { useDroppable } from '@dnd-kit/core';
 import {
   SortableContext,
   verticalListSortingStrategy,
-} from "@dnd-kit/sortable";
-import { useMemo } from "react";
-import { ColumnPlayerItem } from "../ColumnPlayerItem";
+} from '@dnd-kit/sortable';
+import { useMemo } from 'react';
+import { DraggablePlayer } from '../DraggablePlayer';
 
 type Props = {
   id: string;
   items: string[];
 };
 
-export const Column: React.FC<Props> = ({ id, items }) => {
+export const PlayerList: React.FC<Props> = ({ id, items }) => {
   const { setNodeRef } = useDroppable({ id });
   const renderPlayerItem = useMemo(
-    () => items.map((id) => <ColumnPlayerItem key={id} id={id} />),
-    [items]
+    () => items.map(id => <DraggablePlayer key={id} id={id} />),
+    [items],
   );
   return (
     <SortableContext
@@ -29,7 +29,7 @@ export const Column: React.FC<Props> = ({ id, items }) => {
         padding="4"
         gap="4"
         w="full"
-        h="50vh"
+        h="55vh"
         overflowY="scroll"
         overflowX="hidden"
       >

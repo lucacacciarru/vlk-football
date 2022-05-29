@@ -1,9 +1,9 @@
-import { UniqueIdentifier } from "@dnd-kit/core";
-import { useSortable } from "@dnd-kit/sortable";
-import { CSS } from "@dnd-kit/utilities";
-import { useMemo } from "react";
+import { UniqueIdentifier } from '@dnd-kit/core';
+import { useSortable } from '@dnd-kit/sortable';
+import { CSS } from '@dnd-kit/utilities';
+import { useMemo } from 'react';
 
-export function useColumnPlayerItem(id: UniqueIdentifier) {
+export function useDraggablePlayer(id: UniqueIdentifier) {
   const {
     attributes,
     listeners,
@@ -20,10 +20,10 @@ export function useColumnPlayerItem(id: UniqueIdentifier) {
 
   const isDraggingBoxStyle = useMemo(
     () => ({
-      opacity: isDragging ? "0.4" : "1",
-      boxShadow: isDragging ? "lg" : "xs",
+      opacity: isDragging ? '0.4' : '1',
+      boxShadow: isDragging ? 'lg' : 'xs',
     }),
-    [isDragging]
+    [isDragging],
   );
 
   const boxProps = {

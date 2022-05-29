@@ -1,1 +1,1 @@
-export * from "./ContainerColumns";
+export * from './ColumnsContainer';

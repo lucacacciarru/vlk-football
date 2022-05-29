@@ -1,15 +1,15 @@
-import { Box, HStack, Image, Stack, Text } from "@chakra-ui/react";
-import React from "react";
-import { useGetPlayerQuery } from "../../../player/store";
-import { RoleIcon } from "../../../_shared/components/RoleIcon";
+import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
+import React from 'react';
+import { useGetPlayerQuery } from '../../../player/store';
+import { RoleIcon } from '../../../_shared/components/RoleIcon';
 
 type Props = {
   id: string;
 };
-export const ColumnPlayerContent: React.FC<Props> = ({ id }) => {
+export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
   const { player } = useGetPlayerQuery(undefined, {
     selectFromResult: ({ data }) => ({
-      player: data?.find((post) => post.id === id),
+      player: data?.find(post => post.id === id),
     }),
   });
 

@@ -1,10 +1,35 @@
-import { Player } from "../../player/store";
+import { Player } from '../../player/store';
 
 export const gameRulesMap = {
   futsal: function (players: Player[]) {
-    const numberOfGoalKeepers = players.filter(
-      (player) => player.goalkeeper
+    const gameCondition = {
+      correctNumberOfPlayers: 10,
+      maxNumberOfGoalKeepers: 2,
+    };
+
+    const numberOfSelectedGoalkeepers = players.filter(
+      player => player.goalkeeper,
     ).length;
-    return numberOfGoalKeepers <= 2 && players.length === 10 ? true : false;
+
+    const checkCorrectNumberOfPlayer =
+      players.length === gameCondition.correctNumberOfPlayers;
+    const checkMaxNumberOfGoalkeepers =
+      numberOfSelectedGoalkeepers <= gameCondition.maxNumberOfGoalKeepers;
+
+    const isDisableCheckButton = [
+      checkCorrectNumberOfPlayer,
+      checkMaxNumberOfGoalkeepers,
+    ].every(condition => condition);
+
+    const futsalRules = {
+      numberOfSelectedPlayers: players.length,
+      numberOfSelectedGoalkeepers,
+      isDisableCheckButton: !isDisableCheckButton,
+      gameCondition,
+      checkCorrectNumberOfPlayer,
+      checkMaxNumberOfGoalkeepers,
+    };
+
+    return futsalRules;
   },
 };
