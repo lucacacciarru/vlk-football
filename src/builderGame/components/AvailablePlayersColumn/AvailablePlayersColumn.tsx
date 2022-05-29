@@ -1,4 +1,5 @@
 import { Box, Stack, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import { PlayerList } from '../PlayersList';
 
 type Props = {
@@ -7,13 +8,18 @@ type Props = {
 };
 
 export const AvailablePlayersColumn: React.FC<Props> = ({ id, items }) => {
+  const { t } = useTranslation();
   return (
     <Stack w="lg" border="2px solid white" borderRadius="xl">
       <Box color="white.0" minH="12" p="4" textAlign="center">
         <Text as="h3" textStyle="h3">
-          Giocatori disponibili
+          {t('builderGame.playersColumn.availablePlayersTitle')}
         </Text>
-        <Text textStyle="body-xs">{items.length} giocatori</Text>
+        <Text textStyle="body-xs">
+          {t('builderGame.playersColumn.totalAvailablePlayers', {
+            players: items.length,
+          })}
+        </Text>
       </Box>
       <PlayerList id={id} items={items} />
     </Stack>
