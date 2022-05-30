@@ -1,12 +1,12 @@
-import { Box } from "@chakra-ui/react";
-import { Player } from "../../../player/store";
-import { Teams } from "../../types/general";
-import { PlayerBackCard } from "../PlayerBackCard";
-import { PlayerFrontCard } from "../PlayerFrontCard";
-import { usePlayerCard } from "./usePlayerCard";
+import { Box } from '@chakra-ui/react';
+import { Player } from '../../../player/store';
+import { Teams } from '../../types/general';
+import { PlayerBackCard } from '../PlayerBackCard';
+import { PlayerFrontCard } from '../PlayerFrontCard';
+import { usePlayerCard } from './usePlayerCard';
 
 type Props = Player & {
-  team: Teams;
+  team?: Teams;
 };
 
 export const PlayerCard: React.FC<Props> = ({
@@ -22,7 +22,7 @@ export const PlayerCard: React.FC<Props> = ({
   return (
     <Box
       position="relative"
-      __css={{ perspective: "100rem", transformStyle: "preserve-3d;" }}
+      __css={{ perspective: '100rem', transformStyle: 'preserve-3d;' }}
       onClick={onClick}
       userSelect="none"
     >

@@ -6,16 +6,15 @@ import {
   Image,
   Stack,
   Text,
-} from "@chakra-ui/react";
-import { Player } from "../../../player/store";
-import { Teams } from "../../types/general";
-import { Icon } from "../Icon";
-import { RoleIcon } from "../RoleIcon";
-import { useFrontCard } from "./useFrontCard";
+} from '@chakra-ui/react';
+import { Player } from '../../../player/store';
+import { Teams } from '../../types/general';
+import { RoleIcon } from '../RoleIcon';
+import { useFrontCard } from './useFrontCard';
 
 type Props = {
-  player: Omit<Player, "id" | "sports">;
-  team: Teams;
+  player: Omit<Player, 'id' | 'sports'>;
+  team?: Teams;
 } & BoxProps;
 
 export const PlayerFrontCard: React.FC<Props> = ({
@@ -24,14 +23,14 @@ export const PlayerFrontCard: React.FC<Props> = ({
   ...boxProps
 }) => {
   const { goalkeeper, name, rating, avatar } = player;
-  const { ratingText } = useFrontCard({ rating });
+  const { ratingText, renderIcon, iconColor } = useFrontCard({ rating, team });
 
   return (
     <Box {...boxProps}>
       <Stack w="full" h="full" alignItems="center">
         <HStack w="full" justifyContent="space-between">
-          <Icon name={team} size="12" />
-          <RoleIcon goalkeeper={goalkeeper} size="12" />
+          {renderIcon}
+          <RoleIcon goalkeeper={goalkeeper} size="12" color={iconColor} />
         </HStack>
         <Flex boxSize="40" borderRadius="full" overflow="hidden">
           <Image src={avatar} fit="cover" w="full" h="full" />
