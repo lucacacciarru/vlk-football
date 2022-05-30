@@ -1,3 +1,7 @@
+[![codecov](https://codecov.io/gh/lucacacciarru/vlk-football/branch/main/graph/badge.svg?token=932AEHVSYP)](https://codecov.io/gh/lucacacciarru/vlk-football)
+
+---
+
 # VLK Football
 
 ## Getting started
