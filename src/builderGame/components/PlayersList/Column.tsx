@@ -29,7 +29,7 @@ export const PlayerList: React.FC<Props> = ({ id, items }) => {
         padding="4"
         gap="4"
         w="full"
-        h="55vh"
+        h="50vh"
         overflowY="scroll"
         overflowX="hidden"
       >
