@@ -2,59 +2,84 @@ import {
   Button,
   ButtonGroup,
   HStack,
+  Input,
   ModalBody,
   ModalFooter,
+  Select,
   SimpleGrid,
+  Textarea,
 } from '@chakra-ui/react';
-import { useTranslation } from 'react-i18next';
+import { Controller } from 'react-hook-form';
 import { PlayerCard } from '../../../_shared/components';
-import { SelectInput, TextAreaInput, TextInput } from '../FormFields';
+import { InputContainer } from '../InputContainer';
+import { useAddPlayerForm } from './useAddPlayerForm';
 
-export const AddPlayerForm: React.FC = () => {
-  const { t } = useTranslation();
+type Props = {
+  onClose: () => void;
+};
+
+export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
+  const {
+    inputsPropsMap,
+    handleSubmit,
+    playerData,
+    labelAndErrorMessageMap,
+    containerProps,
+    renderOptionRatings,
+    translations,
+    addPlayerAndCloseModal,
+  } = useAddPlayerForm(onClose);
+
   return (
     <>
-      <ModalBody px="8">
-        <HStack
-          py="10"
-          gap="6"
-          alignItems="center"
-          justifyContent="space-between"
-          flexDir={{ base: 'column', lg: 'row' }}
+      <ModalBody px="8" py="6">
+        <form
+          onSubmit={handleSubmit(data => {
+            addPlayerAndCloseModal(data);
+          })}
+          style={{ width: '100%' }}
         >
-          <PlayerCard
-            goalkeeper
-            id="test"
-            name="Luca"
-            avatar="https://avatars.githubusercontent.com/u/86778250?v=4"
-            rating={12}
-          />
-          <SimpleGrid columns={{ base: 1, lg: 2 }} spacing="8">
-            <TextInput
-              label={t('builderGame.createPlayerModal.formLabels.name')}
-            />
-            <SelectInput
-              label={t('builderGame.createPlayerModal.formLabels.rating')}
-              options={[1, 2]}
-            />
-            <TextInput
-              label={t('builderGame.createPlayerModal.formLabels.avatar')}
-            />
-            <SelectInput
-              label={t('builderGame.createPlayerModal.formLabels.role')}
-              options={[1, 2]}
-            />
-            <TextAreaInput
-              label={t('builderGame.createPlayerModal.formLabels.description')}
-            />
-          </SimpleGrid>
-        </HStack>
+          <HStack {...containerProps}>
+            <PlayerCard id="test" {...playerData} />
+            <SimpleGrid w="100%" columns={{ base: 1, lg: 2 }} spacing="8">
+              <InputContainer {...labelAndErrorMessageMap.name}>
+                <Input
+                  placeholder={translations.namePlaceholder}
+                  {...inputsPropsMap.name}
+                />
+              </InputContainer>
+              <InputContainer {...labelAndErrorMessageMap.goalkeeper}>
+                <Controller {...inputsPropsMap.goalkeeper} />
+              </InputContainer>
+              <InputContainer {...labelAndErrorMessageMap.rating}>
+                <Select {...inputsPropsMap.rating}>
+                  {renderOptionRatings}
+                </Select>
+              </InputContainer>
+              <InputContainer {...labelAndErrorMessageMap.avatar}>
+                <Input
+                  placeholder={translations.avatarPlaceholder}
+                  {...inputsPropsMap.avatar}
+                />
+              </InputContainer>
+
+              <InputContainer {...labelAndErrorMessageMap.description}>
+                <Textarea
+                  placeholder={translations.descriptionPlaceholder}
+                  {...inputsPropsMap.description}
+                />
+              </InputContainer>
+            </SimpleGrid>
+          </HStack>
+
+          <ButtonGroup w="100%" justifyContent="center">
+            <Button type="submit" data-testid="addPlayerButton">
+              {translations.confirmButtonLabel}
+            </Button>
+          </ButtonGroup>
+        </form>
       </ModalBody>
-      <ModalFooter>
-        <ButtonGroup w="100%" justifyContent="center">
-          <Button>{t('builderGame.createPlayerModal.addPlayerButton')}</Button>
-        </ButtonGroup>
-      </ModalFooter>
+      <ModalFooter></ModalFooter>
     </>
   );
 };

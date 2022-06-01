@@ -35,7 +35,7 @@ export const AddPlayerModalContent: React.FC<Props> = ({ isOpen, onClose }) => {
           </Text>
         </ModalHeader>
         <ModalCloseButton />
-        <AddPlayerForm />
+        <AddPlayerForm onClose={onClose} />
       </ModalContent>
     </Modal>
   );

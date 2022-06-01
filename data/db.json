@@ -5,6 +5,7 @@
       "name": "Enrico Porceddu",
       "rating": 12,
       "goalkeeper": false,
+      "description": "Non fatemi giocare con Mauro, è una brutta persona",
       "avatar": "https://miro.medium.com/max/3150/1*t4vTd1ZPRulr8yOEj-gFzA.png"
     },
     {
@@ -12,6 +13,7 @@
       "name": "Luca Cacciarru",
       "rating": 8,
       "goalkeeper": false,
+      "description": "🐺🐺",
       "avatar": "https://avatars.githubusercontent.com/u/86778250?v=4"
     },
     {
@@ -19,70 +21,136 @@
       "name": "Mauro Erta",
       "rating": 12,
       "goalkeeper": false,
+      "description": "Speriamo non ci siano i fratelli Porceddu",
       "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4"
     },
     {
-      "id": "d1e4391d-30bc-4982-a4f9-dd",
-      "name": "Franco",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=60&raw_url=true&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500"
-    },
-    {
-      "id": "d1e4391d-30bc-4982-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-    },
-    {
-      "id": "d1e4391d-30bc-awe2-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-    },
-    {
-      "id": "d1e42391d-30bc-aq-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-    },
-    {
-      "id": "sqq-30bc-aq-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-    },
-    {
-      "id": "sqq-11-aq-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": false,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
-    },
-    {
-      "id": "sqq-11-345-a4f9-aa",
-      "name": "Giovanni",
-      "rating": 12,
+      "id": "ca0oTRBqMB0e6vc6wBgOV",
+      "name": "Gabriele Angius",
+      "rating": "8",
       "goalkeeper": true,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
+      "description": "Lorem",
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U02K3A08HCZ-0c588b00e91c-512"
     },
     {
-      "id": "sqq-11-345-12233-aa",
-      "name": "Giovanni",
-      "rating": 12,
-      "goalkeeper": true,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
+      "id": "UFE6dao4W6DDH36YIGFwa",
+      "name": "Andrea Re",
+      "rating": "12",
+      "goalkeeper": false,
+      "description": "👑👑",
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U01E61X1C73-984411a0a42c-512"
     },
     {
-      "id": "Ss-11-345-12233-aa",
-      "name": "Giovanni",
-      "rating": 12,
+      "id": "ohvvU6fLGQgZBxaQguRBe",
+      "name": "Nicolas Porreca",
+      "rating": "12",
+      "goalkeeper": false,
+      "description": "🐺🐺",
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U038USCG4LA-9ced9b524de3-512"
+    },
+    {
+      "id": "m9TuqWM-9Pjvq_Ttyyxqb",
+      "name": "Manuel Caria",
+      "rating": "12",
       "goalkeeper": true,
-      "avatar": "https://images.unsplash.com/photo-1517841905240-472988babdf9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687"
+      "description": "🐺",
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U011KKFJBFE-f379877474e5-512"
+    },
+    {
+      "id": "B0K-nmjxqF3VVudgcNpne",
+      "name": "Andrea Porceddu",
+      "rating": "12",
+      "goalkeeper": false,
+      "description": "🐺",
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-UJ240CE3S-67b511f92991-512"
+    },
+    {
+      "id": "w5NCKAI6STnK06xtEuEqb",
+      "name": "Giulio Cesare",
+      "rating": "16",
+      "goalkeeper": false,
+      "description": "Veni, vidi, vici e vado per ultimo in porta",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Caesar.jpg/220px-Caesar.jpg"
+    },
+    {
+      "id": "9iT4LPhsLkZUOfEhBr71F",
+      "name": "Luigi XVI",
+      "rating": "4",
+      "goalkeeper": false,
+      "description": "Raga perdo la testa per il calcetto",
+      "avatar": "http://baliatodaicoi.altervista.org/wp-content/uploads/2017/11/Luigi-XVI-ritratto.jpg"
+    },
+    {
+      "id": "4tG4ohuKqKzSF3p3xs9g8",
+      "name": "Elon Musk",
+      "rating": "16",
+      "goalkeeper": false,
+      "description": "Sono qua per conoscere Enrico Porceddu",
+      "avatar": "https://gsud.cdn-immedia.net/2022/04/19161063_small.jpg"
+    },
+    {
+      "id": "BXSdXA7VYjNshSBGlSmx0",
+      "name": "Cristiano",
+      "rating": "16",
+      "goalkeeper": false,
+      "description": "SIUM",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/200px-Cristiano_Ronaldo_2018.jpg"
+    },
+    {
+      "id": "-b8B-vxmdfaNAjFW9tDxf",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "name": "Test",
+      "avatar": ""
+    },
+    {
+      "id": "i4sJJv5kb79VqWfdjIabd",
+      "rating": "4",
+      "goalkeeper": false,
+      "description": "Raga giochiamo pulito però",
+      "name": "Robert Cecil Martin",
+      "avatar": "https://m.media-amazon.com/images/I/61b7VTCUEfL._SX450_.jpg"
+    },
+    {
+      "id": "239mkZm3G-RZ95NeCIBF-",
+      "rating": "12",
+      "goalkeeper": true,
+      "description": "Let's go",
+      "name": "Segun Adebayo ",
+      "avatar": "https://avatars.githubusercontent.com/u/6916170?v=4"
+    },
+    {
+      "id": "2w_LobA8dabU6W2WrATzG",
+      "name": "Evil Enrico",
+      "rating": "4",
+      "goalkeeper": false,
+      "description": "KLV è la mia vita",
+      "avatar": "https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Negative-E9G582TwxaVLensk.jpg"
+    },
+    {
+      "id": "ohcB7VlHKhn4CX2QNxiZu",
+      "name": "Evil Mauro",
+      "rating": "16",
+      "goalkeeper": false,
+      "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?",
+      "avatar": "https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Negative-y0ToyjsI69Wqo.jpg"
+    },
+    {
+      "id": "vhbQwdpz3woz1XEJcpGVS",
+      "name": "Evil Andrea Proceddu",
+      "rating": "4",
+      "goalkeeper": false,
+      "description": "Odio avere troppo finestre aperte nel mio PC",
+      "avatar": "https://www.imgonline.com.ua/result_img/imgonline-com-ua-Negative-yJ73QkBWsnbq.jpg"
+    },
+    {
+      "id": "ToYtfPpK6cjXaJUmVR1Zu",
+      "name": "Test",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
     }
   ]
 }

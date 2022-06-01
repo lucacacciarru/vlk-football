@@ -1,1 +1,1 @@
-export * from "./Column";
+export * from './PlayerList';

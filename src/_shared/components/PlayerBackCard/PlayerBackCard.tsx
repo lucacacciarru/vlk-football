@@ -1,14 +1,14 @@
-import { Box, BoxProps, Stack, Text } from "@chakra-ui/react";
-import { QuoteContainer } from "./QuoteContainer";
+import { Box, BoxProps, Stack, Text } from '@chakra-ui/react';
+import { QuoteContainer } from './QuoteContainer';
 
 type Props = {
   name: string;
-  description: string;
+  description?: string;
 } & BoxProps;
 
 export const PlayerBackCard: React.FC<Props> = ({
   name,
-  description,
+  description = 'lorem ipsum',
   ...rest
 }) => {
   return (

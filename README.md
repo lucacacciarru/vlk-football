@@ -1,8 +1,11 @@
+# VLK Football
+
 [![codecov](https://codecov.io/gh/lucacacciarru/vlk-football/branch/main/graph/badge.svg?token=932AEHVSYP)](https://codecov.io/gh/lucacacciarru/vlk-football)
+[![Codecov](https://github.com/lucacacciarru/vlk-football/actions/workflows/codecov.yml/badge.svg)](https://github.com/morfeojs/morfeo/actions/workflows/codecov.yml)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![GitHub license](https://img.shields.io/github/license/lucacacciarru/vlk-football)](https://github.com/morfeojs/morfeo/blob/main/LICENSE)
 
 ---
-
-# VLK Football
 
 ## Getting started
 
