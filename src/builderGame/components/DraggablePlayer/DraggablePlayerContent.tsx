@@ -1,6 +1,7 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import { useGetPlayerQuery } from '../../../player/store';
+import { ImageFallback } from '../../../_shared/components/ImageFallback';
 import { RoleIcon } from '../../../_shared/components/RoleIcon';
 
 type Props = {
@@ -22,7 +23,13 @@ export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
     >
       <HStack>
         <Box h="20" w="20" borderRadius="full" overflow="hidden">
-          <Image src={player?.avatar} w="full" h="full" objectFit="cover" />
+          <Image
+            src={player?.avatar}
+            w="full"
+            h="full"
+            objectFit="cover"
+            fallback={<ImageFallback />}
+          />
         </Box>
         <Stack>
           <Text>{player?.name}</Text>

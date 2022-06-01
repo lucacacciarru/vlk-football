@@ -1,7 +1,7 @@
 import { render } from '../../../_shared/testConfig/customRender';
-import { PlayerList } from './Column';
+import { PlayerList } from './PlayerList';
 
-describe('Column component', () => {
+describe('PlayerList component', () => {
   test('Should be rendered', () => {
     render(<PlayerList id="anyId" items={['1']} />);
   });

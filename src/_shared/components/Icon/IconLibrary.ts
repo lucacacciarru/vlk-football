@@ -7,6 +7,7 @@ import { ReactComponent as quoteStart } from './assets/quoteStart.svg';
 import { ReactComponent as quoteEnd } from './assets/quoteEnd.svg';
 import { ReactComponent as questionMark } from './assets/questionMark.svg';
 import { ReactComponent as add } from './assets/add.svg';
+import { ReactComponent as placeholderPlayer } from './assets/placeholderPlayer.svg';
 
 export const iconLibrary = {
   hand,
@@ -18,6 +19,7 @@ export const iconLibrary = {
   quoteEnd,
   questionMark,
   add,
+  placeholderPlayer,
 };
 
 export type IconLibrary = typeof iconLibrary;

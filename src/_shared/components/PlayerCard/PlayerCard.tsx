@@ -22,14 +22,14 @@ export const PlayerCard: React.FC<Props> = ({
   return (
     <Box
       position="relative"
+      cursor="pointer"
       __css={{ perspective: '100rem', transformStyle: 'preserve-3d;' }}
       onClick={onClick}
       userSelect="none"
     >
       <PlayerFrontCard player={player} team={team} {...frontContainerProps} />
       <PlayerBackCard
-        description="
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventor"
+        description={player.description}
         name={player.name}
         {...backContainerProps}
       />
