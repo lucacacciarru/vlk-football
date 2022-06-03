@@ -16,6 +16,10 @@ const INITIAL_STATE: BuilderGameState = {
     availablePlayers: [],
     selectedPlayers: [],
   },
+  match: {
+    vlk: { players: [], ratingsScore: 0 },
+    klv: { players: [], ratingsScore: 0 },
+  },
 };
 
 export const builderGameRootReducer = createReducer(INITIAL_STATE, builder => {
