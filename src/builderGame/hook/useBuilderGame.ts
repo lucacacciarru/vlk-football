@@ -1,6 +1,7 @@
-import { useCallback } from "react";
-import { useDispatch } from "react-redux";
-import { addSelectedPlayers } from "../store/actions";
+import { useCallback } from 'react';
+import { useDispatch } from 'react-redux';
+import { addSelectedPlayers, createMatchTeams } from '../store/actions';
+import { MatchTeams } from '../store/types';
 
 type SelectedPlayerParams = {
   availablePlayers: string[];
@@ -12,6 +13,14 @@ export function useUpdateChosenPlayers() {
   return useCallback(
     (playersList: SelectedPlayerParams) =>
       dispatch(addSelectedPlayers(playersList)),
-    [dispatch]
+    [dispatch],
+  );
+}
+
+export function useCreateTeams() {
+  const dispatch = useDispatch();
+  return useCallback(
+    (teams: MatchTeams) => dispatch(createMatchTeams(teams)),
+    [dispatch],
   );
 }

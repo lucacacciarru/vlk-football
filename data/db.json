@@ -27,7 +27,7 @@
     {
       "id": "ca0oTRBqMB0e6vc6wBgOV",
       "name": "Gabriele Angius",
-      "rating": "8",
+      "rating": 8,
       "goalkeeper": true,
       "description": "Lorem",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U02K3A08HCZ-0c588b00e91c-512"
@@ -35,7 +35,7 @@
     {
       "id": "UFE6dao4W6DDH36YIGFwa",
       "name": "Andrea Re",
-      "rating": "12",
+      "rating": 12,
       "goalkeeper": false,
       "description": "👑👑",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U01E61X1C73-984411a0a42c-512"
@@ -43,7 +43,7 @@
     {
       "id": "ohvvU6fLGQgZBxaQguRBe",
       "name": "Nicolas Porreca",
-      "rating": "12",
+      "rating": 12,
       "goalkeeper": false,
       "description": "🐺🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U038USCG4LA-9ced9b524de3-512"
@@ -51,7 +51,7 @@
     {
       "id": "m9TuqWM-9Pjvq_Ttyyxqb",
       "name": "Manuel Caria",
-      "rating": "12",
+      "rating": 12,
       "goalkeeper": true,
       "description": "🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U011KKFJBFE-f379877474e5-512"
@@ -59,7 +59,7 @@
     {
       "id": "B0K-nmjxqF3VVudgcNpne",
       "name": "Andrea Porceddu",
-      "rating": "12",
+      "rating": 12,
       "goalkeeper": false,
       "description": "🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-UJ240CE3S-67b511f92991-512"
@@ -67,7 +67,7 @@
     {
       "id": "w5NCKAI6STnK06xtEuEqb",
       "name": "Giulio Cesare",
-      "rating": "16",
+      "rating": 16,
       "goalkeeper": false,
       "description": "Veni, vidi, vici e vado per ultimo in porta",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Caesar.jpg/220px-Caesar.jpg"
@@ -75,7 +75,7 @@
     {
       "id": "9iT4LPhsLkZUOfEhBr71F",
       "name": "Luigi XVI",
-      "rating": "4",
+      "rating": 4,
       "goalkeeper": false,
       "description": "Raga perdo la testa per il calcetto",
       "avatar": "http://baliatodaicoi.altervista.org/wp-content/uploads/2017/11/Luigi-XVI-ritratto.jpg"
@@ -83,7 +83,7 @@
     {
       "id": "4tG4ohuKqKzSF3p3xs9g8",
       "name": "Elon Musk",
-      "rating": "16",
+      "rating": 16,
       "goalkeeper": false,
       "description": "Sono qua per conoscere Enrico Porceddu",
       "avatar": "https://gsud.cdn-immedia.net/2022/04/19161063_small.jpg"
@@ -91,7 +91,7 @@
     {
       "id": "BXSdXA7VYjNshSBGlSmx0",
       "name": "Cristiano",
-      "rating": "16",
+      "rating": 16,
       "goalkeeper": false,
       "description": "SIUM",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/200px-Cristiano_Ronaldo_2018.jpg"
@@ -106,7 +106,7 @@
     },
     {
       "id": "i4sJJv5kb79VqWfdjIabd",
-      "rating": "4",
+      "rating": 4,
       "goalkeeper": false,
       "description": "Raga giochiamo pulito però",
       "name": "Robert Cecil Martin",
@@ -114,7 +114,7 @@
     },
     {
       "id": "239mkZm3G-RZ95NeCIBF-",
-      "rating": "12",
+      "rating": 12,
       "goalkeeper": true,
       "description": "Let's go",
       "name": "Segun Adebayo ",
@@ -123,30 +123,83 @@
     {
       "id": "2w_LobA8dabU6W2WrATzG",
       "name": "Evil Enrico",
-      "rating": "4",
+      "rating": 4,
       "goalkeeper": false,
-      "description": "KLV è la mia vita",
-      "avatar": "https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Negative-E9G582TwxaVLensk.jpg"
+      "description": "KLV è la mia vita"
     },
     {
       "id": "ohcB7VlHKhn4CX2QNxiZu",
       "name": "Evil Mauro",
-      "rating": "16",
+      "rating": 16,
       "goalkeeper": false,
-      "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?",
-      "avatar": "https://srv2.imgonline.com.ua/result_img/imgonline-com-ua-Negative-y0ToyjsI69Wqo.jpg"
+      "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?"
     },
     {
       "id": "vhbQwdpz3woz1XEJcpGVS",
       "name": "Evil Andrea Proceddu",
-      "rating": "4",
+      "rating": 4,
       "goalkeeper": false,
-      "description": "Odio avere troppo finestre aperte nel mio PC",
-      "avatar": "https://www.imgonline.com.ua/result_img/imgonline-com-ua-Negative-yJ73QkBWsnbq.jpg"
+      "description": "Odio avere troppo finestre aperte nel mio PC"
     },
     {
       "id": "ToYtfPpK6cjXaJUmVR1Zu",
       "name": "Test",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "wNdbDzHHsUChFzpQ_fhzN",
+      "name": "Giacomino",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "v3FnupV2lWxSUU8gV0cHq",
+      "name": "Giacomino",
+      "rating": 12,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "aaZ7D-gBx7dUJSSJm6P9U",
+      "name": "Cosimo",
+      "rating": 16,
+      "goalkeeper": true,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "jHpnvaxO9Smxk_Qt2dMdo",
+      "name": "Giacomino",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "ZYUivicO6bWL1LAUhajSF",
+      "name": "Testardo",
+      "rating": 12,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "i__Xv-lDlEC2qRspQmFNc",
+      "name": "Asd",
+      "rating": 16,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "avatar": ""
+    },
+    {
+      "id": "WIU7taUl4CfDUGBD7w7Ve",
+      "name": "GiacominoAA",
       "rating": 8,
       "goalkeeper": false,
       "description": "Let's go",

@@ -6,12 +6,10 @@ import {
   useSensor,
   useSensors,
 } from '@dnd-kit/core';
-import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useGetPlayerQuery } from '../../../player/store';
 import { useUpdateChosenPlayers } from '../../hook';
 import { getChosenPlayers } from '../../store/selectors';
-import { findContainer, removeSameElementInTwoList } from '../../utils';
+import { findContainer } from '../../utils';
 
 export type ColumnList = {
   availablePlayers: string[];
@@ -19,22 +17,8 @@ export type ColumnList = {
 };
 
 export function useColumnsContainer() {
-  const { data } = useGetPlayerQuery();
   const columnList = useSelector(getChosenPlayers);
   const updateChosenPlayers = useUpdateChosenPlayers();
-
-  useEffect(() => {
-    if (data?.length) {
-      const filteredDataIds = removeSameElementInTwoList(
-        data?.map(player => player.id) || [],
-        columnList.selectedPlayers,
-      );
-      updateChosenPlayers({
-        ...columnList,
-        availablePlayers: filteredDataIds,
-      });
-    }
-  }, [data, updateChosenPlayers]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sensors = useSensors(useSensor(PointerSensor));
 

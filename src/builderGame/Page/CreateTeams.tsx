@@ -2,6 +2,7 @@ import { Button, Stack, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { ColumnsContainer } from '../components';
+import { CreateTeamButton } from '../components/CreateTeamButton';
 import { useCheckPlayer } from '../hook/useCheckPlayer';
 
 export const CreateTeams: React.FC = () => {
@@ -16,11 +17,7 @@ export const CreateTeams: React.FC = () => {
         <Text color="white.50">{t('builderGame.playersPage.body')}</Text>
       </Stack>
       <ColumnsContainer />
-      <Link to="/">
-        <Button size="lg" isDisabled={isDisableCheckButton}>
-          {t('builderGame.playersPage.createTeamsButton')}
-        </Button>
-      </Link>
+      <CreateTeamButton />
     </Stack>
   );
 };
