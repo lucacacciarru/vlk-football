@@ -3,9 +3,10 @@ import { useMemo, useState } from 'react';
 
 type Params = {
   team?: 'vlk' | 'klv';
+  size?: 'regular' | 'small';
 };
 
-export function usePlayerCard({ team }: Params) {
+export function usePlayerCard({ team, size }: Params) {
   const [showFront, setIsShowFront] = useState(true);
 
   const frontRotate = useMemo(
@@ -24,10 +25,24 @@ export function usePlayerCard({ team }: Params) {
     return team === 'vlk' ? 'brand.primary.regular' : 'brand.secondary.regular';
   }, [team]);
 
-  const containerProps: BoxProps = useMemo(
-    () => ({
+  const containerSize = useMemo(() => {
+    const containerRegularSize: BoxProps = {
       h: 'xs',
       w: '2xs',
+    };
+    const containerSmallSize: BoxProps = {
+      w: '15rem',
+      h: '18rem',
+    };
+
+    if (!size) return containerRegularSize;
+
+    return size === 'regular' ? containerRegularSize : containerSmallSize;
+  }, [size]);
+
+  const containerProps: BoxProps = useMemo(
+    () => ({
+      ...containerSize,
       borderRadius: 'xl',
       bgGradient: `linear(to-t, black.0 -20%, ${selectedTeamColor} 90%)`,
       overflow: 'hidden',
@@ -35,7 +50,7 @@ export function usePlayerCard({ team }: Params) {
       py: '4',
       transition: 'all .5s ease',
     }),
-    [selectedTeamColor],
+    [containerSize, selectedTeamColor],
   );
 
   const frontContainerProps = useMemo(

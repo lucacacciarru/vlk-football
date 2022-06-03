@@ -7,16 +7,19 @@ import { usePlayerCard } from './usePlayerCard';
 
 type Props = Player & {
   team?: Teams;
+  size?: 'regular' | 'small';
 };
 
 export const PlayerCard: React.FC<Props> = ({
   id,
   sports,
   team,
+  size,
   ...player
 }) => {
   const { backContainerProps, frontContainerProps, onClick } = usePlayerCard({
     team,
+    size,
   });
 
   return (
@@ -27,7 +30,12 @@ export const PlayerCard: React.FC<Props> = ({
       onClick={onClick}
       userSelect="none"
     >
-      <PlayerFrontCard player={player} team={team} {...frontContainerProps} />
+      <PlayerFrontCard
+        player={player}
+        team={team}
+        size={size}
+        {...frontContainerProps}
+      />
       <PlayerBackCard
         description={player.description}
         name={player.name}

@@ -4,8 +4,11 @@ import { useGetPlayerQuery } from '../../../player/store';
 import { useCreateTeams } from '../../hook';
 import { getSelectedPlayer } from '../../store/selectors';
 import { generatesBalancedTeams } from '../../utils';
+import { useNavigate } from 'react-router-dom';
+import { PATHS } from '../../../_shared/types';
 
 export function useCreateTeamButton() {
+  const history = useNavigate();
   const createMatchTeams = useCreateTeams();
   const { t } = useTranslation();
 
@@ -23,6 +26,7 @@ export function useCreateTeamButton() {
   function createTeams() {
     const teams = generatesBalancedTeams(playersIdAndRating);
     createMatchTeams(teams);
+    history(`/${PATHS.PRE_MATCH}`);
   }
   return { createTeams, buttonText };
 }
