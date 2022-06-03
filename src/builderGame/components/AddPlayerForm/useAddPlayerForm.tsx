@@ -96,6 +96,7 @@ export function useAddPlayerForm(onClose: () => void) {
     addPlayer({
       id: nanoid(),
       ...player,
+      rating: +player.rating as DataPlayer['rating'],
     });
     onClose();
   }
