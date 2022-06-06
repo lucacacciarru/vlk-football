@@ -1,13 +1,11 @@
-import { configureStore } from "@reduxjs/toolkit";
-import { CustomOptions } from "./types";
-import { configureStoreOptions, store } from "../store";
-import { DefaultRootState } from "react-redux";
+import { configureStore } from '@reduxjs/toolkit';
+import { CustomOptions } from './types';
+import { configureStoreOptions } from '../store';
 
-export function getStoreForTesting(options?: CustomOptions) {
-  const state = { store, ...options?.mocks };
-
+export function getStoreForTesting(options?: Pick<CustomOptions, 'mocks'>) {
   const storeTesting = configureStore({
     ...configureStoreOptions,
+    preloadedState: options?.mocks,
   });
 
   return storeTesting;

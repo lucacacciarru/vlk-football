@@ -1,17 +1,19 @@
-import { render } from "@testing-library/react";
-import { ReactElement } from "react";
-import { TestWrapper } from "./TestWrapper";
-import { DefaultRootState } from "react-redux";
+import { render, RenderOptions } from '@testing-library/react';
+import { ReactElement } from 'react';
+import { TestWrapper } from './TestWrapper';
+import { CustomOptions } from './types';
+
+type CustomRenderOptions = CustomOptions & RenderOptions;
 
 function customRender(
   ui: ReactElement,
-  options?: { mocks?: Partial<DefaultRootState> }
+  { initialRoutes, mocks, ...options }: CustomRenderOptions = {},
 ) {
   return render(ui, {
-    wrapper: (args) => TestWrapper({ ...args }),
+    wrapper: args => TestWrapper({ initialRoutes, mocks, ...args }),
     ...options,
   });
 }
 
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 export { customRender as render };

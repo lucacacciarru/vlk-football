@@ -1,11 +1,14 @@
 import { Button, ButtonProps } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import { useCreateTeamButton } from './useCreateTeamButton';
 
 export const CreateTeamButton: React.FC<ButtonProps> = props => {
-  const { createTeams, buttonText } = useCreateTeamButton();
+  const { createTeams } = useCreateTeamButton();
+  const { t } = useTranslation();
+
   return (
     <Button size="lg" onClick={createTeams} {...props}>
-      {buttonText}
+      {t('builderGame.playersPage.createTeamsButton')}
     </Button>
   );
 };
