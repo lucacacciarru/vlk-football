@@ -12,12 +12,9 @@ export const playerApi = createApi({
       async onQueryStarted(_, { dispatch, queryFulfilled }) {
         try {
           const { data } = await queryFulfilled;
-          console.log({ data });
           // `onSuccess` side-effect
           dispatch(populateAvailablePlayers(data));
-        } catch (err) {
-          console.log({ err });
-        }
+        } catch (err) {}
       },
       providesTags: ['Players'],
     }),

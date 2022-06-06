@@ -1,15 +1,17 @@
-import { renderHook } from "@testing-library/react";
-import { TestWrapper } from "./TestWrapper";
-import { DefaultRootState } from "react-redux";
+import { renderHook, RenderHookOptions } from '@testing-library/react';
+import { TestWrapper } from './TestWrapper';
+import { CustomOptions } from './types';
 
-function customRenderHook<TProps, TResult>(
-  callback: (props: TProps) => TResult,
-  options?: { mocks?: Partial<DefaultRootState> }
+type RenderHookCustomOptions<Props> = CustomOptions & RenderHookOptions<Props>;
+
+function customRenderHook<Props, Result>(
+  callback: (props: Props) => Result,
+  { mocks, initialRoutes, ...options }: RenderHookCustomOptions<Props> = {},
 ) {
   return renderHook(callback, {
-    wrapper: (args) => TestWrapper({ ...args }),
+    wrapper: args => TestWrapper({ mocks, initialRoutes, ...args }),
     ...options,
   });
 }
-export * from "@testing-library/react";
+export * from '@testing-library/react';
 export { customRenderHook as renderHook };

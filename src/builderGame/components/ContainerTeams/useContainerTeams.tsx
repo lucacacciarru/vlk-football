@@ -5,8 +5,12 @@ import { getTeams } from '../../store/selectors';
 import { MatchTeams } from '../../store/types';
 import { Team } from '../Team';
 
+function useGetTeams() {
+  return useSelector(getTeams);
+}
+
 export function useContainerTeams() {
-  const teams = useSelector(getTeams);
+  const teams = useGetTeams();
   const teamsKey = useMemo(() => Object.keys(teams || {}), [teams]);
   const renderTeam = useMemo(
     () =>

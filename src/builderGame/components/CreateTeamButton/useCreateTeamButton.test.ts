@@ -1,7 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import {
-  act,
   waitFor,
   renderHook,
 } from '../../../_shared/testConfig/customRenderHook';
@@ -22,9 +21,6 @@ const MOCK_STATE: BuilderGameState = {
 function useTestHook() {
   const location = useLocation();
   const teams = useSelector(getTeams);
-  const state = useSelector(state => state);
-
-  console.log(JSON.stringify(state));
 
   const { createTeams } = useCreateTeamButton();
   return { teams, createTeams, location };
@@ -32,7 +28,6 @@ function useTestHook() {
 
 function mockFetch(body?: Object) {
   fetchMock.resetMocks();
-
   fetchMock.mockResponse(JSON.stringify(body || {}));
 }
 
@@ -44,37 +39,42 @@ describe('useCreateTeamButton hook', () => {
         builderGame: MOCK_STATE,
       },
     });
-    act(() => result.current.createTeams());
+
     await waitFor(() => {
+      result.current.createTeams();
       expect(result.current.location.pathname).toEqual(`/${PATHS.PRE_MATCH}`);
     });
   });
 
-  describe.only('sticzz', () => {
-    beforeAll(() => {
+  describe('when players are received', () => {
+    it('should create 2 teams', async () => {
       mockFetch([
         {
           id: '1',
-          name: 'Luca Cacciarru',
+          name: 'John Doe',
           rating: 8,
           goalkeeper: false,
-          description: '🐺🐺',
-          avatar: 'https://avatars.githubusercontent.com/u/86778250?v=4',
+          description: 'any string',
+          avatar: 'any image url',
         },
         {
           id: '2',
-          name: 'Giovanni',
+          name: 'Jane Smith',
           rating: 8,
           goalkeeper: false,
-          description: '🐺🐺',
-          avatar: 'https://avatars.githubusercontent.com/u/86778250?v=4',
+          description: 'any string',
+          avatar: 'any image url',
         },
       ]);
-    });
-    test('if createTeams is called, ', async () => {
-      const { result } = renderHook(() => useTestHook());
-      act(() => result.current.createTeams());
+
+      const { result } = renderHook(() => useTestHook(), {
+        mocks: {
+          builderGame: MOCK_STATE,
+        },
+      });
+
       await waitFor(() => {
+        result.current.createTeams();
         expect(result.current.teams.klv.players).toHaveLength(1);
         expect(result.current.teams.vlk.players).toHaveLength(1);
       });
