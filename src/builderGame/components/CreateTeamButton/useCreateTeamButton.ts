@@ -20,7 +20,6 @@ export function useCreateTeamButton() {
         .map(player => ({ id: player.id, rating: player.rating })),
     }),
   });
-
   const buttonText = t('builderGame.playersPage.createTeamsButton');
 
   function createTeams() {
