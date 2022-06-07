@@ -34,10 +34,11 @@
     "wretch": "^1.7.9"
   },
   "scripts": {
+    "dev": "concurrently \"npm run start\" \"npm run json-server\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
-    "json-server": "json-server --port 7000 --watch data/db.json",
+    "json-server": "nodemon data/server.js",
     "eject": "react-scripts eject",
     "test:ci": "npm run test:coverage",
     "test:coverage": "npm run test -- --coverage",
@@ -64,7 +65,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^14.1.1"
+    "@testing-library/user-event": "^14.1.1",
+    "concurrently": "7.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "json-server": "^0.17.0",
+    "nodemon": "^2.0.16"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"

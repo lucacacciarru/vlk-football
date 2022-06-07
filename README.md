@@ -21,10 +21,10 @@ REACT_APP_API_URL=http://localhost:3001
 
 ### Run the application
 
-You need to run two commands to use the application:
+To run the application, run the command:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ```bash
