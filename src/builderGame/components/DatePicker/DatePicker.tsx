@@ -27,7 +27,11 @@ export const DatePicker: React.FC<Props> = ({ control }) => {
         render={({ field: { onChange, name, value } }) => (
           <Popover>
             <PopoverTrigger>
-              <Input value={format(value, 'dd/MM/yyyy')} name={name} />
+              <Input
+                value={format(value, 'dd/MM/yyyy')}
+                name={name}
+                onChange={() => {}}
+              />
             </PopoverTrigger>
             <PopoverContent>
               <PopoverArrow />
