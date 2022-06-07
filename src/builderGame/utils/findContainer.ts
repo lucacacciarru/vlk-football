@@ -1,5 +1,5 @@
 import { UniqueIdentifier } from '@dnd-kit/core';
-import { ColumnList } from '../components/ColumnsContainer/useColumnsContainer';
+import { ColumnList } from '../types';
 
 export function findContainer(id: UniqueIdentifier, columnList: ColumnList) {
   if (id in columnList) {

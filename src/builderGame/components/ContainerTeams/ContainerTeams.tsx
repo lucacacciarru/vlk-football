@@ -1,8 +1,24 @@
 import { Stack } from '@chakra-ui/react';
-import { useContainerTeams } from './useContainerTeams';
+import { useMemo } from 'react';
+import { TeamsName } from '../../../_shared/types/general';
+import { useGetTeams } from '../../hook';
+import { MatchTeams } from '../../store/types';
+import { Team } from '../Team';
 
 export const ContainerTeams: React.FC = () => {
-  const { renderTeam } = useContainerTeams();
+  const teams = useGetTeams();
+  const teamsKey = useMemo(() => Object.keys(teams || {}), [teams]);
+  const renderTeam = useMemo(
+    () =>
+      teamsKey.map(key => (
+        <Team
+          teamMaking={teams[key as keyof MatchTeams]}
+          team={key as TeamsName}
+          key={key}
+        />
+      )),
+    [teams, teamsKey],
+  );
   return (
     <Stack
       w="full"

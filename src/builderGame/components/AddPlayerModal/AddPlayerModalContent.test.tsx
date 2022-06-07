@@ -8,11 +8,14 @@ import { AddPlayerModalContent } from './AddPlayerModalContent';
 
 const fn = jest.fn();
 
+function mockFetch(body?: Object) {
+  fetchMock.resetMocks();
+  fetchMock.mockResponse(JSON.stringify(body || {}));
+}
+
 describe('AddPlayerModalContent component', () => {
-  test('Should be rendered', () => {
-    render(<AddPlayerModalContent isOpen={true} onClose={fn} />);
-  });
   test('Add player', async () => {
+    mockFetch();
     render(<AddPlayerModalContent isOpen={true} onClose={fn} />);
     const button = screen.getByTestId('addPlayerButton');
     fireEvent.click(button);

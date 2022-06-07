@@ -1,20 +1,20 @@
-import { createContext, useState } from "react";
-import { Teams } from "../../../_shared/types/general";
+import { createContext, useState } from 'react';
+import { TeamsName } from '../../../_shared/types/general';
 
 type ContentContext = {
-  selectedTeam: Teams;
+  selectedTeam: TeamsName;
   setSelectedTeam: Function;
 };
 
 export const LandingContext = createContext<ContentContext>({
-  selectedTeam: "vlk",
+  selectedTeam: 'vlk',
   setSelectedTeam: () => {},
 });
 
 export const LandingProvider: React.FC<React.PropsWithChildren<unknown>> = ({
   children,
 }) => {
-  const [selectedTeam, setSelectedTeam] = useState<Teams>("vlk");
+  const [selectedTeam, setSelectedTeam] = useState<TeamsName>('vlk');
 
   return (
     <LandingContext.Provider value={{ selectedTeam, setSelectedTeam }}>

@@ -8,14 +8,14 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { Player } from '../../../player/store';
-import { Teams } from '../../types/general';
+import { TeamsName } from '../../types/general';
 import { ImageFallback } from '../ImageFallback';
 import { RoleIcon } from '../RoleIcon';
 import { useFrontCard } from './useFrontCard';
 
 type Props = {
   player: Omit<Player, 'id' | 'sports'>;
-  team?: Teams;
+  team?: TeamsName;
   size?: 'regular' | 'small';
 } & BoxProps;
 

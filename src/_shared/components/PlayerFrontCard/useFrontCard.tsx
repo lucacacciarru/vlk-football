@@ -1,12 +1,12 @@
 import { BoxProps, Spacer } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Teams } from '../../types/general';
+import { TeamsName } from '../../types/general';
 import { Icon } from '../Icon';
 
 type Params = {
   rating: number;
-  team?: Teams;
+  team?: TeamsName;
   size?: 'regular' | 'small';
 };
 
