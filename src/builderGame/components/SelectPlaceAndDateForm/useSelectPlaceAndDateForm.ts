@@ -14,7 +14,7 @@ export function useSelectPlaceAndDateForm() {
   const formProps: StackProps = {
     w: '3xl',
     alignItems: 'flex-end',
-    onSubmit: handleSubmit(data => console.log(data)),
+    onSubmit: handleSubmit(data => data),
   };
 
   const placeInputProps = {
