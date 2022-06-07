@@ -15,5 +15,5 @@ export const getSelectedPlayer = createSelector(
 
 export const getTeams = createSelector(
   baseSelector,
-  builderGameState => builderGameState.match,
+  builderGameState => builderGameState.teams,
 );

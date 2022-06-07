@@ -16,7 +16,7 @@ export function useContainerTeams() {
     () =>
       teamsKey.map(key => (
         <Team
-          teamProp={teams[key as keyof MatchTeams]}
+          teamMaking={teams[key as keyof MatchTeams]}
           team={key as Teams}
           key={key}
         />

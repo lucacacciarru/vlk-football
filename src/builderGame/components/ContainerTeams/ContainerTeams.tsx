@@ -6,8 +6,8 @@ export const ContainerTeams: React.FC = () => {
   return (
     <Stack
       w="full"
-      h="100vh"
-      gap="24"
+      minH="80vh"
+      gap="12"
       alignItems="center"
       justifyContent="center"
     >

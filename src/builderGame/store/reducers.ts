@@ -40,5 +40,5 @@ export const createMatchTeamsCase: CaseReducer<
   CreateMatchTeams
 > = (state, action) => ({
   ...state,
-  match: action.payload,
+  teams: action.payload,
 });
