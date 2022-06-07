@@ -11,7 +11,7 @@ import { DayPicker } from 'react-day-picker';
 import { Control, Controller } from 'react-hook-form';
 import { InputContainer } from '../InputContainer';
 import { format } from 'date-fns';
-import { PlaceAndDate } from '../SelectPlaceAndDateForm/useSelectPlaceAndDateForm';
+import { PlaceAndDate } from '../SelectPlaceAndDateForm';
 
 type Props = {
   control: Control<PlaceAndDate, any>;
@@ -27,11 +27,7 @@ export const DatePicker: React.FC<Props> = ({ control }) => {
         render={({ field: { onChange, name, value } }) => (
           <Popover>
             <PopoverTrigger>
-              <Input
-                value={format(value, 'dd/MM/yyyy')}
-                name={name}
-                onChange={() => {}}
-              />
+              <Input value={format(value, 'dd/MM/yyyy')} name={name} />
             </PopoverTrigger>
             <PopoverContent>
               <PopoverArrow />

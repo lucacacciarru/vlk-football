@@ -1,4 +1,3 @@
-//test
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { Route, Routes } from 'react-router-dom';
@@ -6,7 +5,7 @@ import { LandingLayout } from './landing/components';
 import { Landing } from './landing/pages';
 import { initI18n } from './_shared/i18n';
 import { PATHS } from './_shared/types';
-import { CreateTeams, PreMatch } from './builderGame/Page';
+import { CreateTeams, PreMatch } from './builderGame/pages';
 
 i18n.use(initReactI18next).init(initI18n);
 
