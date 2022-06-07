@@ -7,14 +7,14 @@ export enum BUILDER_GAME_ACTION_TYPES {
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
 }
 
-export type TeamProp = {
+export type TeamMaking = {
   players: string[];
   ratingsScore: number;
 };
 
 export type MatchTeams = {
-  vlk: TeamProp;
-  klv: TeamProp;
+  vlk: TeamMaking;
+  klv: TeamMaking;
 };
 
 export type BuilderGameState = {
@@ -22,7 +22,7 @@ export type BuilderGameState = {
     availablePlayers: string[];
     selectedPlayers: string[];
   };
-  match: MatchTeams;
+  teams: MatchTeams;
 };
 
 export type PopulateAvailablePlayersPayload = Player[];

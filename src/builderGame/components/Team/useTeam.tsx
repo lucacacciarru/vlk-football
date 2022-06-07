@@ -2,17 +2,17 @@ import { useMemo } from 'react';
 import { useGetPlayerQuery } from '../../../player/store';
 import { PlayerCard } from '../../../_shared/components';
 import { Teams } from '../../../_shared/types/general';
-import { TeamProp } from '../../store/types';
+import { TeamMaking } from '../../store/types';
 
 type Params = {
-  teamProp: TeamProp;
+  teamMaking: TeamMaking;
   team: Teams;
 };
 
-export function useTeam({ team, teamProp }: Params) {
+export function useTeam({ team, teamMaking }: Params) {
   const { teamPlayers } = useGetPlayerQuery(undefined, {
     selectFromResult: ({ data }) => ({
-      teamPlayers: data?.filter(item => teamProp?.players.includes(item.id)),
+      teamPlayers: data?.filter(item => teamMaking?.players.includes(item.id)),
     }),
   });
 

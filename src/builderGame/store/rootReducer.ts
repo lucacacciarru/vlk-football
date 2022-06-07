@@ -16,7 +16,7 @@ const INITIAL_STATE: BuilderGameState = {
     availablePlayers: [],
     selectedPlayers: [],
   },
-  match: {
+  teams: {
     vlk: { players: [], ratingsScore: 0 },
     klv: { players: [], ratingsScore: 0 },
   },

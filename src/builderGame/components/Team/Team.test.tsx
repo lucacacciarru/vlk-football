@@ -1,13 +1,11 @@
+// import { Player } from '../../../player/store';
 import { Player } from '../../../player/store';
-import { render } from '../../../_shared/testConfig/customRender';
-import { ContainerTeams } from '../ContainerTeams';
+import { render, waitFor } from '../../../_shared/testConfig/customRender';
+import { Team } from './Team';
 
-function mockFetch(response?: Object) {
-  fetchMock.doMock(() =>
-    Promise.resolve({
-      body: JSON.stringify(response || {}),
-    }),
-  );
+function mockFetch(body?: Object) {
+  fetchMock.resetMocks();
+  fetchMock.mockResponse(JSON.stringify(body || {}));
 }
 
 const MOCK_PLAYER: Player = {
@@ -19,20 +17,11 @@ const MOCK_PLAYER: Player = {
 
 describe('Team component', () => {
   test('Should be rendered', async () => {
-    mockFetch([[MOCK_PLAYER]]);
-    render(<ContainerTeams />, {
-      mocks: {
-        builderGame: {
-          chosenPlayers: {
-            availablePlayers: [],
-            selectedPlayers: [],
-          },
-          match: {
-            vlk: { players: ['1'], ratingsScore: 0 },
-            klv: { players: [], ratingsScore: 0 },
-          },
-        },
-      },
+    mockFetch([MOCK_PLAYER]);
+    await waitFor(() => {
+      render(
+        <Team team="klv" teamMaking={{ players: ['1'], ratingsScore: 8 }} />,
+      );
     });
   });
 });

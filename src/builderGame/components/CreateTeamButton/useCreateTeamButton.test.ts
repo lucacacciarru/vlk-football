@@ -12,7 +12,7 @@ import fetchMock from 'jest-fetch-mock';
 
 const MOCK_STATE: BuilderGameState = {
   chosenPlayers: { availablePlayers: [], selectedPlayers: ['1', '2'] },
-  match: {
+  teams: {
     klv: { players: [], ratingsScore: 0 },
     vlk: { players: [], ratingsScore: 0 },
   },
@@ -30,7 +30,6 @@ function mockFetch(body?: Object) {
   fetchMock.resetMocks();
   fetchMock.mockResponse(JSON.stringify(body || {}));
 }
-
 describe('useCreateTeamButton hook', () => {
   test('if createTeams is called, the pathname should be change', async () => {
     mockFetch([]);

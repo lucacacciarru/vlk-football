@@ -6,8 +6,7 @@ import { LandingLayout } from './landing/components';
 import { Landing } from './landing/pages';
 import { initI18n } from './_shared/i18n';
 import { PATHS } from './_shared/types';
-import { CreateTeams } from './builderGame/Page';
-import { ContainerTeams } from './builderGame/components/ContainerTeams';
+import { CreateTeams, PreMatch } from './builderGame/Page';
 
 i18n.use(initReactI18next).init(initI18n);
 
@@ -19,7 +18,7 @@ function App() {
           <Route index element={<Landing />} />
         </Route>
         <Route path={PATHS.CREATE_TEAM} element={<CreateTeams />} />
-        <Route path={PATHS.PRE_MATCH} element={<ContainerTeams />} />
+        <Route path={PATHS.PRE_MATCH} element={<PreMatch />} />
         <Route path={PATHS.PREVIEW_MATCH} element={<>Preview Match</>} />
       </Routes>
     </div>
