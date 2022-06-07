@@ -1,11 +1,11 @@
+import { useForm } from 'react-hook-form';
 import { render } from '../../../_shared/testConfig/customRender';
-import { renderHook } from '../../../_shared/testConfig/customRenderHook';
-import { useSelectPlaceAndDateForm } from '../SelectPlaceAndDateForm/useSelectPlaceAndDateForm';
+import { PlaceAndDate } from '../SelectPlaceAndDateForm';
 import { DatePicker } from './DatePicker';
 
 describe('DatePicker component', () => {
   test('Should be rendered', () => {
-    const { result } = renderHook(() => useSelectPlaceAndDateForm());
-    render(<DatePicker control={result.current.control} />);
+    const { control } = useForm<PlaceAndDate>();
+    render(<DatePicker control={control} />);
   });
 });
