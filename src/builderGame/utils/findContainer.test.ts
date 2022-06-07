@@ -1,4 +1,4 @@
-import { ColumnList } from '../components/ColumnsContainer/useColumnsContainer';
+import { ColumnList } from '../types';
 import { findContainer } from './findContainer';
 
 const mock_columnList: ColumnList = {

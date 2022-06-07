@@ -1,12 +1,12 @@
 import { Box } from '@chakra-ui/react';
 import { Player } from '../../../player/store';
-import { Teams } from '../../types/general';
+import { TeamsName } from '../../types/general';
 import { PlayerBackCard } from '../PlayerBackCard';
 import { PlayerFrontCard } from '../PlayerFrontCard';
 import { usePlayerCard } from './usePlayerCard';
 
 type Props = Player & {
-  team?: Teams;
+  team?: TeamsName;
   size?: 'regular' | 'small';
 };
 

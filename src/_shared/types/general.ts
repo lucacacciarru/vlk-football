@@ -1,1 +1,1 @@
-export type Teams = "vlk" | "klv";
+export type TeamsName = 'vlk' | 'klv';
