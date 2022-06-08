@@ -1,18 +1,28 @@
-//TODO: Add custom render
-import App from "./App";
-import { render } from "./_shared/testConfig/customRender";
+import App from './App';
+import { Player } from './player/store';
+import { render, screen, waitFor } from './_shared/testConfig/customRender';
 
-function mockFetch(response?: Object) {
-  fetchMock.doMock(() =>
-    Promise.resolve({
-      body: JSON.stringify(response || {}),
-    })
-  );
+function mockFetch(body?: Object) {
+  fetchMock.resetMocks();
+  fetchMock.mockResponse(JSON.stringify(body || {}));
 }
 
-describe("App", () => {
-  mockFetch();
-  test("Should be rendered", () => {
+const MOCK_PLAYERS: Player[] = [
+  {
+    id: '1',
+    goalkeeper: false,
+    name: 'Test',
+    rating: 8,
+  },
+];
+
+describe('App', () => {
+  test('Should be rendered', async () => {
+    mockFetch(MOCK_PLAYERS);
     render(<App />);
+    await waitFor(() => {
+      const playerCard = screen.getByTestId('player1');
+      expect(playerCard).toBeInTheDocument();
+    });
   });
 });

@@ -36,13 +36,21 @@ export const SelectedPlayerColumn: React.FC<Props> = ({ id, items }) => {
           {t('builderGame.playersColumn.selectedPlayersTitle')}
         </Text>
         <HStack w="full" justifyContent="center" gap="2">
-          <Text textStyle="body-xs" color={colorCorrectPlayersNumber}>
+          <Text
+            textStyle="body-xs"
+            data-testid="playersLength"
+            color={colorCorrectPlayersNumber}
+          >
             {t('builderGame.playersColumn.totalPlayer', {
               players: numberOfSelectedPlayers,
               condition: gameCondition.correctNumberOfPlayers,
             })}
           </Text>
-          <Text textStyle="body-xs" color={colorCorrectGoalkeepersNumber}>
+          <Text
+            textStyle="body-xs"
+            data-testid="goalkeepersLength"
+            color={colorCorrectGoalkeepersNumber}
+          >
             {t('builderGame.playersColumn.totalGoalkeepers', {
               goalkeepers: numberOfSelectedGoalkeepers,
               condition: gameCondition.maxNumberOfGoalKeepers,
