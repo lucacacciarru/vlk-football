@@ -1,6 +1,10 @@
 // import { Player } from '../../../player/store';
 import { Player } from '../../../player/store';
-import { render, waitFor } from '../../../_shared/testConfig/customRender';
+import {
+  render,
+  waitFor,
+  screen,
+} from '../../../_shared/testConfig/customRender';
 import { Team } from './Team';
 
 function mockFetch(body?: Object) {
@@ -18,10 +22,12 @@ const MOCK_PLAYER: Player = {
 describe('Team component', () => {
   test('Should be rendered', async () => {
     mockFetch([MOCK_PLAYER]);
+    render(
+      <Team team="klv" teamMaking={{ players: ['1'], ratingsScore: 8 }} />,
+    );
     await waitFor(() => {
-      render(
-        <Team team="klv" teamMaking={{ players: ['1'], ratingsScore: 8 }} />,
-      );
+      const playerCard = screen.getByTestId('1');
+      expect(playerCard).toBeInTheDocument();
     });
   });
 });

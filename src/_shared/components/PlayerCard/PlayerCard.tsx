@@ -29,6 +29,7 @@ export const PlayerCard: React.FC<Props> = ({
       __css={{ perspective: '100rem', transformStyle: 'preserve-3d;' }}
       onClick={onClick}
       userSelect="none"
+      data-testid={id}
     >
       <PlayerFrontCard
         player={player}

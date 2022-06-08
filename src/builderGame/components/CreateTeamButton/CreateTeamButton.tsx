@@ -19,7 +19,7 @@ export const CreateTeamButton: React.FC<ButtonProps> = props => {
   }
 
   return (
-    <Button size="lg" onClick={createTeams} {...props}>
+    <Button size="lg" onClick={createTeams} {...props} role="createTeam">
       {t('builderGame.playersPage.createTeamsButton')}
     </Button>
   );

@@ -38,6 +38,7 @@ export const DraggablePlayer: React.FC<Props> = ({ id }) => {
       {...isDraggingBoxStyle}
       {...attributes}
       {...listeners}
+      data-testid={id}
     >
       <Box px="10" id={id} h="24" w="full" bg="white.0" borderRadius="lg">
         <DraggablePlayerContent id={id} />

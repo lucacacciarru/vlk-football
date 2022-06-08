@@ -1,7 +1,7 @@
 import { Player } from '../../player/store';
 
 export const gameRulesMap = {
-  futsal: function (players: Player[]) {
+  futsal: (players: Player[]) => {
     const gameCondition = {
       correctNumberOfPlayers: 10,
       maxNumberOfGoalKeepers: 2,

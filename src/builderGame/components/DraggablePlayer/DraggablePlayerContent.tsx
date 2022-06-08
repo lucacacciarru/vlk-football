@@ -1,18 +1,14 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
-import { useGetPlayerQuery } from '../../../player/store';
 import { ImageFallback } from '../../../_shared/components/ImageFallback';
 import { RoleIcon } from '../../../_shared/components/RoleIcon';
+import { useGetSinglePlayer } from '../../hook';
 
 type Props = {
   id: string;
 };
 export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
-  const { player } = useGetPlayerQuery(undefined, {
-    selectFromResult: ({ data }) => ({
-      player: data?.find(post => post.id === id),
-    }),
-  });
+  const selectedPlayer = useGetSinglePlayer(id);
 
   return (
     <HStack
@@ -24,7 +20,7 @@ export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
       <HStack>
         <Box h="20" w="20" borderRadius="full" overflow="hidden">
           <Image
-            src={player?.avatar}
+            src={selectedPlayer?.avatar}
             w="full"
             h="full"
             objectFit="cover"
@@ -32,11 +28,15 @@ export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
           />
         </Box>
         <Stack>
-          <Text>{player?.name}</Text>
-          <Text>{player?.rating}</Text>
+          <Text data-testid={selectedPlayer?.name}>{selectedPlayer?.name}</Text>
+          <Text>{selectedPlayer?.rating}</Text>
         </Stack>
       </HStack>
-      <RoleIcon goalkeeper={player?.goalkeeper} size="10" color="black.0" />
+      <RoleIcon
+        goalkeeper={selectedPlayer?.goalkeeper}
+        size="10"
+        color="black.0"
+      />
     </HStack>
   );
 };

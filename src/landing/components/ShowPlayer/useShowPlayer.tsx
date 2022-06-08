@@ -30,13 +30,14 @@ export function useShowPlayer(data: Player[] | undefined) {
                 xl: cardTranslate,
               }}
               key={`${selectedPlayer.id}${i}`}
+              data-testid={`player${i}`}
             >
               <PlayerCard {...selectedPlayer} team={selectedTeam} />
             </Box>
           );
         })
       ) : (
-        <PlayerCardSkeleton numberOfItems={4} />
+        <PlayerCardSkeleton data-testId="skeletonList" numberOfItems={4} />
       ),
     [data, pickRandomPlayer, selectedTeam],
   );
