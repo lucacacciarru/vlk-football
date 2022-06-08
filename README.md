@@ -27,10 +27,6 @@ To run the application, run the command:
 npm run dev
 ```
 
-```bash
-json-server --watch data/db.json --port 7000
-```
-
 ## Testing
 
 ### `npm run test`
