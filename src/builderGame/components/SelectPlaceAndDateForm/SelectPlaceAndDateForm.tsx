@@ -1,6 +1,7 @@
 import { Button, HStack, Input } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
 import { InputContainer } from '../../components/InputContainer';
+import { useUpdateDateAndPlaceMatch } from '../../hook';
 import { DatePicker } from '../DatePicker';
 
 export type PlaceAndDate = {
@@ -9,6 +10,8 @@ export type PlaceAndDate = {
 };
 
 export const SelectPlaceAndDateForm: React.FC = () => {
+  const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
+
   const { handleSubmit, register, control } = useForm<PlaceAndDate>({
     defaultValues: { date: new Date(), place: 'San Siro' },
   });
@@ -18,7 +21,7 @@ export const SelectPlaceAndDateForm: React.FC = () => {
       as="form"
       w="3xl"
       alignItems="flex-end"
-      onSubmit={handleSubmit(data => data)}
+      onSubmit={handleSubmit(data => updateDateAndPlaceMatch(data))}
     >
       <InputContainer label="test">
         <Input {...register('place', { required: true })} />

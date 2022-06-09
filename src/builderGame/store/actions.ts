@@ -4,6 +4,7 @@ import {
   BUILDER_GAME_ACTION_TYPES,
   CreateMatchTeamsPayload,
   PopulateAvailablePlayersPayload,
+  UpdateDateAndPlaceMatchPayload,
 } from './types';
 
 export const populateAvailablePlayers = createAction<
@@ -20,3 +21,8 @@ export const createMatchTeams = createAction<
   CreateMatchTeamsPayload,
   BUILDER_GAME_ACTION_TYPES.CREATE_MATCH_TEAMS
 >(BUILDER_GAME_ACTION_TYPES.CREATE_MATCH_TEAMS);
+
+export const updateDateAndPlaceMatch = createAction<
+  UpdateDateAndPlaceMatchPayload,
+  BUILDER_GAME_ACTION_TYPES.UPDATE_DATE_AND_PLACE_MATCH
+>(BUILDER_GAME_ACTION_TYPES.UPDATE_DATE_AND_PLACE_MATCH);
