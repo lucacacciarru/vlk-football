@@ -29,6 +29,8 @@ const MOCK_BUILDER_STATE: BuilderGameState = {
     selectedPlayers: ['1', '2'],
   },
   teams: MOCK_TEAMS,
+  date: '',
+  place: '',
 };
 
 const MOCK_PLAYER: Player[] = [

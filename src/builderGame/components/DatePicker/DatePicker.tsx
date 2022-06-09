@@ -1,9 +1,9 @@
+//TODO: Add input Onchange
 import {
   Input,
   Popover,
   PopoverArrow,
   PopoverBody,
-  PopoverCloseButton,
   PopoverContent,
   PopoverTrigger,
 } from '@chakra-ui/react';
@@ -33,11 +33,25 @@ export const DatePicker: React.FC<Props> = ({ control }) => {
                 onChange={() => {}}
               />
             </PopoverTrigger>
-            <PopoverContent>
+            <PopoverContent
+              _focus={{ borderColor: 'none' }}
+              borderRadius="none"
+            >
               <PopoverArrow />
-              <PopoverCloseButton />
               <PopoverBody color="white.0" bg="black.0">
-                <DayPicker mode="single" selected={value} onSelect={onChange} />
+                <DayPicker
+                  mode="single"
+                  selected={value}
+                  onSelect={onChange}
+                  modifiersStyles={{
+                    selected: {
+                      background: '#05C46B',
+                    },
+                  }}
+                  styles={{
+                    button: { background: 'none', border: 'none' },
+                  }}
+                />
               </PopoverBody>
             </PopoverContent>
           </Popover>

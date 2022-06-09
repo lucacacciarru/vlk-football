@@ -17,3 +17,14 @@ export const getTeams = createSelector(
   baseSelector,
   builderGameState => builderGameState.teams,
 );
+
+export const getDateAndPlaceMatch = createSelector(
+  baseSelector,
+  builderGameState => {
+    const { date, place } = builderGameState;
+    return {
+      date,
+      place,
+    };
+  },
+);

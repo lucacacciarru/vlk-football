@@ -1,4 +1,4 @@
-import { HStack, Text } from '@chakra-ui/react';
+import { Box, HStack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { PlayerCard } from '../../../_shared/components';
 import { TeamsName } from '../../../_shared/types/general';
@@ -20,12 +20,28 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
     [selectedPlayers, team],
   );
 
+  const colorTeam = useMemo(
+    () =>
+      team === 'vlk' ? 'brand.primary.regular' : 'brand.secondary.regular',
+    [team],
+  );
+
   return (
     <HStack gap="6">
       {renderPlayers}
-      <Text as="h1" textStyle="team-name" color="brand.primary.regular">
-        {team}
-      </Text>
+      <Box>
+        <Text
+          as="h1"
+          textStyle="team-name"
+          color={colorTeam}
+          textTransform="uppercase"
+        >
+          {team}
+        </Text>
+        <Text as="h3" textStyle="h3" color="white.0">
+          {teamMaking.ratingsScore} pts.
+        </Text>
+      </Box>
     </HStack>
   );
 };

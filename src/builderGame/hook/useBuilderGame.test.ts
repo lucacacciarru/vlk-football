@@ -1,20 +1,33 @@
 import { useSelector } from 'react-redux';
 import { renderHook, act } from '../../_shared/testConfig/customRenderHook';
-import { getChosenPlayers, getTeams } from '../store/selectors';
+import {
+  getChosenPlayers,
+  getDateAndPlaceMatch,
+  getTeams,
+} from '../store/selectors';
 import { MatchTeams } from '../store/types';
-import { useCreateTeams, useUpdateChosenPlayers } from './useBuilderGame';
+import {
+  DateAndPlaceFields,
+  useCreateTeams,
+  useUpdateChosenPlayers,
+  useUpdateDateAndPlaceMatch,
+} from './useBuilderGame';
 
 function useTestHook() {
   const updateChosenPlayers = useUpdateChosenPlayers();
   const createTeams = useCreateTeams();
+  const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
   const chosenPlayers = useSelector(getChosenPlayers);
   const teams = useSelector(getTeams);
+  const dateAndPlaceMatch = useSelector(getDateAndPlaceMatch);
 
   return {
     updateChosenPlayers,
     createTeams,
+    updateDateAndPlaceMatch,
     chosenPlayers,
     teams,
+    dateAndPlaceMatch,
   };
 }
 
@@ -34,6 +47,11 @@ const MOCK_TEAMS: MatchTeams = {
   },
 };
 
+const MOCK_DATE_AND_PLACE: DateAndPlaceFields = {
+  date: new Date(1995, 11, 17),
+  place: 'anyString',
+};
+
 describe('useBuilderGame hook', () => {
   test('Should update chosenPlayer', async () => {
     const { result } = renderHook(() => useTestHook());
@@ -48,5 +66,15 @@ describe('useBuilderGame hook', () => {
       result.current.createTeams(MOCK_TEAMS);
     });
     expect(result.current.teams).toEqual(MOCK_TEAMS);
+  });
+  test('Should update date and place', async () => {
+    const { result } = renderHook(() => useTestHook());
+    act(() => {
+      result.current.updateDateAndPlaceMatch(MOCK_DATE_AND_PLACE);
+    });
+    expect(result.current.dateAndPlaceMatch).toEqual({
+      date: '17/12/1995',
+      place: 'anyString',
+    });
   });
 });

@@ -5,6 +5,7 @@ import {
   BuilderGameState,
   CreateMatchTeams,
   PopulateAvailablePlayers,
+  updateDateAndPlaceMatch,
 } from './types';
 
 export const populateAvailablePlayersCase: CaseReducer<
@@ -41,4 +42,13 @@ export const createMatchTeamsCase: CaseReducer<
 > = (state, action) => ({
   ...state,
   teams: action.payload,
+});
+
+export const updateDateAndPlaceCase: CaseReducer<
+  BuilderGameState,
+  updateDateAndPlaceMatch
+> = (state, action) => ({
+  ...state,
+  date: action.payload.date,
+  place: action.payload.place,
 });

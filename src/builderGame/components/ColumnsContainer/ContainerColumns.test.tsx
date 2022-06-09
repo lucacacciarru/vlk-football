@@ -42,6 +42,8 @@ const MOCK_BUILDER_STATE: BuilderGameState = {
       ratingsScore: 0,
     },
   },
+  date: '',
+  place: '',
 };
 
 describe('ContainerColumns component', () => {
