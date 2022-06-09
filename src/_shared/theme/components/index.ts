@@ -1,11 +1,11 @@
-import { ComponentStyleConfig } from "@chakra-ui/react";
+import { ComponentStyleConfig } from '@chakra-ui/react';
 import {
   sizes,
   solid,
   outline,
   solidSecondary,
   outlineSecondary,
-} from "./Button";
+} from './Button';
 export const Button: ComponentStyleConfig = {
   sizes,
   variants: {

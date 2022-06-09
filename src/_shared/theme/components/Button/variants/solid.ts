@@ -1,13 +1,13 @@
 export const solid = {
-  color: "white.0",
-  bg: "brand.primary.regular",
+  color: 'white.0',
+  bg: 'brand.primary.regular',
   _hover: {
-    bg: "brand.primary.dark",
+    bg: 'brand.primary.dark',
     _disabled: {
-      background: "white.80",
+      background: 'white.80',
     },
   },
   _disabled: {
-    background: "white.80",
+    background: 'white.80',
   },
 };
