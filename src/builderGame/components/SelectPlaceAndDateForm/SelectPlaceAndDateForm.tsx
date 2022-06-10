@@ -1,5 +1,6 @@
 import { Button, HStack, Input } from '@chakra-ui/react';
 import { useForm } from 'react-hook-form';
+import { useTranslation } from 'react-i18next';
 import { InputContainer } from '../../components/InputContainer';
 import { useUpdateDateAndPlaceMatch } from '../../hook';
 import { DatePicker } from '../DatePicker';
@@ -10,6 +11,7 @@ export type PlaceAndDate = {
 };
 
 export const SelectPlaceAndDateForm: React.FC = () => {
+  const { t } = useTranslation();
   const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
 
   const { handleSubmit, register, control } = useForm<PlaceAndDate>({
@@ -23,11 +25,15 @@ export const SelectPlaceAndDateForm: React.FC = () => {
       alignItems="flex-end"
       onSubmit={handleSubmit(data => updateDateAndPlaceMatch(data))}
     >
-      <InputContainer label="test">
+      <InputContainer label={t('builderGame.preMatch.placeLabel')}>
         <Input {...register('place', { required: true })} />
       </InputContainer>
-      <DatePicker control={control} />
-      <Button type="submit">Create Match</Button>
+      <InputContainer label={t('builderGame.preMatch.dateLabel')}>
+        <DatePicker control={control} />
+      </InputContainer>
+      <Button type="submit">
+        {t('builderGame.preMatch.createMatchButton')}
+      </Button>
     </HStack>
   );
 };
