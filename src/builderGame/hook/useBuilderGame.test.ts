@@ -6,8 +6,8 @@ import {
   getTeams,
 } from '../store/selectors';
 import { MatchTeams } from '../store/types';
+import { DateAndPlaceMatch } from '../types';
 import {
-  DateAndPlaceFields,
   useCreateTeams,
   useUpdateChosenPlayers,
   useUpdateDateAndPlaceMatch,
@@ -47,8 +47,8 @@ const MOCK_TEAMS: MatchTeams = {
   },
 };
 
-const MOCK_DATE_AND_PLACE: DateAndPlaceFields = {
-  date: new Date(1995, 11, 17),
+const MOCK_DATE_AND_PLACE: DateAndPlaceMatch = {
+  date: '17/12/2020',
   place: 'anyString',
 };
 
@@ -73,7 +73,7 @@ describe('useBuilderGame hook', () => {
       result.current.updateDateAndPlaceMatch(MOCK_DATE_AND_PLACE);
     });
     expect(result.current.dateAndPlaceMatch).toEqual({
-      date: '17/12/1995',
+      date: '17/12/2020',
       place: 'anyString',
     });
   });

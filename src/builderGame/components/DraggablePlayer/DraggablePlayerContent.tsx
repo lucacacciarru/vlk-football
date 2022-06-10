@@ -16,6 +16,7 @@ export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
       w="full"
       alignItems="center"
       justifyContent="space-between"
+      userSelect="none"
     >
       <HStack>
         <Box h="20" w="20" borderRadius="full" overflow="hidden">

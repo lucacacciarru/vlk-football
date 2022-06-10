@@ -1,4 +1,5 @@
 import { Button, ButtonProps } from '@chakra-ui/react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { PATHS } from '../../../_shared/types';
@@ -12,14 +13,19 @@ export const CreateTeamButton: React.FC<ButtonProps> = props => {
   const navigate = useNavigate();
   const createMatchTeams = useCreateTeams();
 
-  function createTeams() {
+  const createTeams = useCallback(() => {
     const teams = generatesBalancedTeams(selectedPlayers);
     createMatchTeams(teams);
     navigate(`/${PATHS.PRE_MATCH}`);
-  }
+  }, [createMatchTeams, navigate, selectedPlayers]);
 
   return (
-    <Button size="lg" onClick={createTeams} {...props} role="createTeam">
+    <Button
+      size="lg"
+      onClick={createTeams}
+      {...props}
+      data-testid="createTeamButton"
+    >
       {t('builderGame.playersPage.createTeamsButton')}
     </Button>
   );

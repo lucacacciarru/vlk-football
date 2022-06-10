@@ -6,16 +6,11 @@ import {
   updateDateAndPlaceMatch,
 } from '../store/actions';
 import { MatchTeams } from '../store/types';
-import { formatDate } from '../utils';
+import { DateAndPlaceMatch } from '../types';
 
 type SelectedPlayerParams = {
   availablePlayers: string[];
   selectedPlayers: string[];
-};
-
-export type DateAndPlaceFields = {
-  date: Date;
-  place: string;
 };
 
 export function useUpdateChosenPlayers() {
@@ -38,12 +33,8 @@ export function useCreateTeams() {
 export function useUpdateDateAndPlaceMatch() {
   const dispatch = useDispatch();
   return useCallback(
-    (placeAndDate: DateAndPlaceFields) => {
-      const dateToString = formatDate(placeAndDate.date);
-      return dispatch(
-        updateDateAndPlaceMatch({ ...placeAndDate, date: dateToString }),
-      );
-    },
+    (placeAndDate: DateAndPlaceMatch) =>
+      dispatch(updateDateAndPlaceMatch(placeAndDate)),
     [dispatch],
   );
 }

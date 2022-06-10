@@ -29,9 +29,9 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
   );
 
   return (
-    <HStack gap="6">
+    <HStack gap="6" flexDir={{ base: 'column-reverse', xl: 'row' }}>
       {renderPlayers}
-      <Box>
+      <Box textAlign={{ base: 'center', xl: 'right' }}>
         <Text
           as="h1"
           textStyle="team-name"
