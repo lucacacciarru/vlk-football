@@ -1,6 +1,5 @@
 import { Box, Stack, Text } from '@chakra-ui/react';
 import { ContainerTeams } from '../components/ContainerTeams';
-import 'react-day-picker/dist/style.css';
 import { SelectPlaceAndDateForm } from '../components/SelectPlaceAndDateForm';
 import { useTranslation } from 'react-i18next';
 
