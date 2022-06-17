@@ -2,6 +2,7 @@ import { colors, borders, fonts, textStyles } from './style';
 import { extendTheme } from '@chakra-ui/react';
 import { Button } from './components';
 import { Modal } from './components/Modal';
+import { Avatar } from './components/Avatar';
 
 const config = {
   colors,
@@ -18,6 +19,7 @@ const config = {
   components: {
     Button,
     Modal,
+    Avatar,
   },
 };
 
