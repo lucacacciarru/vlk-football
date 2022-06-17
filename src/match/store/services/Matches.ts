@@ -12,7 +12,7 @@ export const matchesApi = createApi({
     }),
     postMatch: builder.mutation<Match, Match>({
       query: body => ({
-        url: 'players',
+        url: 'matches',
         method: 'POST',
         body,
       }),
