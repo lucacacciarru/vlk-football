@@ -1,22 +1,27 @@
 import { Stack } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import { Match } from '../../store';
 import { MatchCardFooter } from '../MatchCardFooter';
 import { MatchCardHeader } from '../MatchCardHeader';
 import { MatchCardTeamsImage } from '../MatchCardTeamsImage';
 
-export const MatchCard: React.FC<Match> = ({ teams, ...restMatch }) => {
+export const MatchCard: React.FC<Match> = ({ teams, id, ...restMatch }) => {
   return (
-    <Stack
-      w={{ base: 'full', md: 'sm', xl: 'md' }}
-      bg="black.80"
-      color="white.0"
-      p="6"
-      borderRadius="lg"
-      gap="4"
-    >
-      <MatchCardHeader {...restMatch} />
-      <MatchCardTeamsImage {...teams} />
-      <MatchCardFooter {...teams} />
-    </Stack>
+    <Link to={id}>
+      <Stack
+        bg="black.80"
+        color="white.0"
+        p="6"
+        borderRadius="lg"
+        gap="4"
+        minH="md"
+        justifyContent="center"
+        _hover={{ outline: '1px solid #686868' }}
+      >
+        <MatchCardHeader {...restMatch} />
+        <MatchCardTeamsImage {...teams} />
+        <MatchCardFooter {...teams} />
+      </Stack>
+    </Link>
   );
 };

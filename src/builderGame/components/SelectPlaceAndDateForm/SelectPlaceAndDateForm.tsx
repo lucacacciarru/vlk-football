@@ -3,11 +3,19 @@ import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { InputContainer } from '../../components/InputContainer';
-import { useUpdateDateAndPlaceMatch } from '../../hook';
+import { useGetTeams, useUpdateDateAndPlaceMatch } from '../../hook';
 import { DateAndPlaceMatch } from '../../types';
+import { usePostMatchMutation } from '../../../match/store';
+import { useGenerateId } from '../../../_shared/hook';
+import { useNavigate } from 'react-router-dom';
+import { PATHS } from '../../../_shared/types';
 
 export const SelectPlaceAndDateForm: React.FC = () => {
   const { t } = useTranslation();
+  const teams = useGetTeams();
+  const [addMatch] = usePostMatchMutation();
+  const idMatch = useGenerateId();
+  const navigate = useNavigate();
   const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
 
   const { handleSubmit, register } = useForm<DateAndPlaceMatch>({
@@ -15,8 +23,12 @@ export const SelectPlaceAndDateForm: React.FC = () => {
   });
 
   const onSubmit = useCallback(
-    (data: DateAndPlaceMatch) => updateDateAndPlaceMatch(data),
-    [updateDateAndPlaceMatch],
+    (data: DateAndPlaceMatch) => {
+      updateDateAndPlaceMatch(data);
+      addMatch({ id: idMatch, teams, ...data });
+      navigate(`/${PATHS.MATCH}/${idMatch}`);
+    },
+    [addMatch, idMatch, navigate, teams, updateDateAndPlaceMatch],
   );
 
   return (

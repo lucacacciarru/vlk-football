@@ -1,5 +1,9 @@
 import { Player } from '../../../player/store';
-import { render } from '../../../_shared/testConfig/customRender';
+import {
+  render,
+  screen,
+  waitFor,
+} from '../../../_shared/testConfig/customRender';
 import { MatchCard } from './MatchCard';
 
 function mockFetch(body?: Object) {
@@ -23,10 +27,11 @@ const MOCK_PLAYERS: Player[] = [
 ];
 
 describe('MatchCard component', () => {
-  test('Should be rendered', () => {
+  test('Should be rendered', async () => {
     mockFetch(MOCK_PLAYERS);
     render(
       <MatchCard
+        id="anyId"
         date="5 Giugno"
         place="Cagliari"
         teams={{
@@ -41,5 +46,9 @@ describe('MatchCard component', () => {
         }}
       />,
     );
+    waitFor(() => {
+      const avatar = screen.getByTestId('avatar1');
+      expect(avatar).toBeInTheDocument();
+    });
   });
 });

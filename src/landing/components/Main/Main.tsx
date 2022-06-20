@@ -1,15 +1,15 @@
-import { Button, Flex, Stack, StackProps, Text } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
-import { PATHS } from "../../../_shared/types";
-import { TeamName } from "../TeamName";
+import { Button, Flex, Stack, StackProps, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+import { PATHS } from '../../../_shared/types';
+import { TeamName } from '../TeamName';
 
 const stackProps: StackProps = {
-  gap: "4",
-  w: { base: "100%", lg: "50vw", xl: "50vw" },
-  h: "full",
-  justifyContent: "center",
-  textAlign: { base: "center", lg: "left" },
+  gap: '4',
+  w: { base: '100%', lg: '50vw', xl: '50vw' },
+  h: 'full',
+  justifyContent: 'center',
+  textAlign: { base: 'center', lg: 'left' },
 };
 
 export const Main: React.FC = () => {
@@ -17,20 +17,22 @@ export const Main: React.FC = () => {
   return (
     <Stack {...stackProps}>
       <Text color="white.0" as="h1" textStyle="main">
-        {t("landing.main.firstTitle")} <br /> <TeamName />{" "}
-        {t("landing.main.secondTitle")}
+        {t('landing.main.firstTitle')} <br /> <TeamName />{' '}
+        {t('landing.main.secondTitle')}
       </Text>
-      <Text color="white.50">{t("landing.main.body")} </Text>
+      <Text color="white.50">{t('landing.main.body')} </Text>
       <Flex
-        gap={{ base: "2", xl: "4" }}
-        flexDir={{ base: "column", xl: "row" }}
+        gap={{ base: '2', xl: '4' }}
+        flexDir={{ base: 'column', xl: 'row' }}
       >
         <Link to={PATHS.CREATE_TEAM}>
-          <Button size="xl">{t("landing.main.createTeamsButton")}</Button>
+          <Button size="xl">{t('landing.main.createTeamsButton')}</Button>
         </Link>
-        <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
-          {t("landing.main.previousGamesButton")}
-        </Button>
+        <Link to={PATHS.MATCH}>
+          <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
+            {t('landing.main.previousGamesButton')}
+          </Button>
+        </Link>
       </Flex>
     </Stack>
   );
