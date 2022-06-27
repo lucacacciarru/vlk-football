@@ -17,6 +17,7 @@ export const MatchCard: React.FC<Match> = ({ teams, id, ...restMatch }) => {
         minH="md"
         justifyContent="center"
         _hover={{ outline: '1px solid #686868' }}
+        role="matchCard"
       >
         <MatchCardHeader {...restMatch} />
         <MatchCardTeamsImage {...teams} />
