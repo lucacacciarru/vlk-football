@@ -1,11 +1,13 @@
 import { Stack, Text } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import { MatchDetails } from '../components';
 
-export const Match: React.FC = () => {
+export const MatchInfo: React.FC = () => {
+  const { t } = useTranslation();
   return (
     <Stack alignItems="center">
       <Text as="h1" color="white.0" textStyle="h1">
-        Match details
+        {t('match.matchInfo.title')}
       </Text>
       <MatchDetails />
     </Stack>

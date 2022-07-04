@@ -7,11 +7,10 @@ type Props = {
 };
 
 export const NavBar: React.FC<Props> = ({ size }) => {
-  const navigate = useNavigate();
   return (
     <PortalManager zIndex={10}>
       <Portal>
-        <Box px="16" py="10" h={size} onClick={() => navigate(-1)}>
+        <Box px="16" py="10" h={size}>
           <Icon name="logo" size="20" />
         </Box>
       </Portal>

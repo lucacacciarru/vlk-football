@@ -1,2 +1,2 @@
 export * from './Matches';
-export * from './Match';
+export * from './MatchInfo';

@@ -14,7 +14,12 @@ export const MatchCardHeader: React.FC<Props> = ({ date, place }) => {
         {t('match.matchCard.title')}
       </Text>
       <HStack>
-        <Text as="p" textStyle="body-xs" color="black.50">
+        <Text
+          as="p"
+          textStyle="body-xs"
+          color="black.50"
+          data-testid="dateLabel"
+        >
           {t('match.matchCard.dateLabel', { date })}
         </Text>
         <Text as="p" textStyle="body-xs" color="black.50">

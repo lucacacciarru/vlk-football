@@ -1,5 +1,6 @@
 import { HStack, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { Team } from '../../../builderGame/components/Team';
 import { MatchTeams } from '../../../builderGame/store/types';
@@ -8,6 +9,7 @@ import { TeamsName } from '../../../_shared/types/general';
 import { useGetSingleMatch } from '../../hook';
 
 export const MatchDetails: React.FC = () => {
+  const { t } = useTranslation();
   const { id } = useParams();
   const match = useGetSingleMatch(id as string);
   const teamNameKeys = Object.keys(match?.teams || {});
@@ -39,10 +41,10 @@ export const MatchDetails: React.FC = () => {
     <Stack gap="8">
       <HStack alignItems="center" w="full" gap="8" justifyContent="center">
         <Text as="p" color="black.50" textStyle="body-sm">
-          Date: {match?.date}
+          {t('match.matchInfo.date', { date: match?.date })}
         </Text>
         <Text as="p" color="black.50" textStyle="body-sm">
-          Place: {match?.place}
+          {t('match.matchInfo.place', { place: match?.place })}
         </Text>
       </HStack>
       <Stack gap="8" w="full" alignItems="center">
