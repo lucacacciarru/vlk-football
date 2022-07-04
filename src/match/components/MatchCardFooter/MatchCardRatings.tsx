@@ -1,4 +1,4 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, HStack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { MatchTeams } from '../../../builderGame/store/types';
@@ -29,7 +29,7 @@ export const MatchCardRatings: React.FC<MatchTeams> = teams => {
       <Text as="h4" textStyle="h4" mb="1">
         {t('match.matchCard.ratingsLabel')}
       </Text>
-      {renderNameAndRatingTeams}
+      <HStack gap="4">{renderNameAndRatingTeams}</HStack>
     </Box>
   );
 };

@@ -1,5 +1,5 @@
-import { Box, Portal, PortalManager } from "@chakra-ui/react";
-import { Icon } from "../../../_shared/components";
+import { Box, Portal, PortalManager } from '@chakra-ui/react';
+import { Icon } from '../../../_shared/components';
 
 type Props = {
   size: string;

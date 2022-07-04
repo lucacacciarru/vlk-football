@@ -18,14 +18,17 @@ export const MatchCardPlayers: React.FC<Props> = ({ playerIds }) => {
           src={player.avatar}
           key={player.id}
           color="brand.primary.regular"
+          data-testid={`avatar${player.id}`}
         />
       )),
     [selectedPlayers],
   );
   return (
     <Box>
-      <Text> {t('match.matchCard.playersLabel')}</Text>
-      <AvatarGroup max={3} size="md">
+      <Text as="h4" textStyle="h4" mb="1">
+        {t('match.matchCard.playersLabel')}
+      </Text>
+      <AvatarGroup max={3} size="md" m="0">
         {renderPlayersAvatar}
       </AvatarGroup>
     </Box>

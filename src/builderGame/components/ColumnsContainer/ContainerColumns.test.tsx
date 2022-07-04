@@ -30,7 +30,7 @@ const MOCK_PLAYER: Player[] = [
 const MOCK_BUILDER_STATE: BuilderGameState = {
   chosenPlayers: {
     availablePlayers: [],
-    selectedPlayers: ['1'],
+    selectedPlayers: ['1', '2'],
   },
   teams: {
     klv: {
@@ -55,9 +55,7 @@ describe('ContainerColumns component', () => {
 
     await waitFor(() => {
       const draggablePlayer = screen.getByTestId('1');
-      const draggablePlayer2 = screen.getByTestId('2');
       expect(draggablePlayer).toBeInTheDocument();
-      expect(draggablePlayer2).toBeInTheDocument();
     });
   });
 });
