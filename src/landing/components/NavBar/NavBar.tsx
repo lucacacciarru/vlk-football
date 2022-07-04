@@ -1,5 +1,4 @@
 import { Box, Portal, PortalManager } from '@chakra-ui/react';
-import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../../_shared/components';
 
 type Props = {
