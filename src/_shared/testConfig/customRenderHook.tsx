@@ -6,10 +6,10 @@ type RenderHookCustomOptions<Props> = CustomOptions & RenderHookOptions<Props>;
 
 function customRenderHook<Props, Result>(
   callback: (props: Props) => Result,
-  { mocks, initialRoutes, ...options }: RenderHookCustomOptions<Props> = {},
+  { mocks, history, ...options }: RenderHookCustomOptions<Props> = {},
 ) {
   return renderHook(callback, {
-    wrapper: args => TestWrapper({ mocks, initialRoutes, ...args }),
+    wrapper: args => TestWrapper({ mocks, history, ...args }),
     ...options,
   });
 }
