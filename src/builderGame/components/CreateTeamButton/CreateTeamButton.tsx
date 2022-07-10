@@ -23,8 +23,8 @@ export const CreateTeamButton: React.FC<ButtonProps> = props => {
     <Button
       size="lg"
       onClick={createTeams}
-      {...props}
       data-testid="createTeamButton"
+      {...props}
     >
       {t('builderGame.playersPage.createTeamsButton')}
     </Button>

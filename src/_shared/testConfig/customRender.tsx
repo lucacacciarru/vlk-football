@@ -7,10 +7,10 @@ type CustomRenderOptions = CustomOptions & RenderOptions;
 
 function customRender(
   ui: ReactElement,
-  { initialRoutes, mocks, ...options }: CustomRenderOptions = {},
+  { history, mocks, ...options }: CustomRenderOptions = {},
 ) {
   return render(ui, {
-    wrapper: args => TestWrapper({ initialRoutes, mocks, ...args }),
+    wrapper: args => TestWrapper({ history, mocks, ...args }),
     ...options,
   });
 }
