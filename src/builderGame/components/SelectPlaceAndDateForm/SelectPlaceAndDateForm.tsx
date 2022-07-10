@@ -26,7 +26,7 @@ export const SelectPlaceAndDateForm: React.FC = () => {
     (data: DateAndPlaceMatch) => {
       updateDateAndPlaceMatch(data);
       addMatch({ id: idMatch, teams, ...data });
-      navigate(`/${PATHS.MATCH}/${idMatch}`);
+      navigate(`/${PATHS.MATCHES}/${idMatch}`);
     },
     [addMatch, idMatch, navigate, teams, updateDateAndPlaceMatch],
   );

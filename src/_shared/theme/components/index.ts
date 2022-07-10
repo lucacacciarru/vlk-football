@@ -5,6 +5,8 @@ import {
   outline,
   solidSecondary,
   outlineSecondary,
+  unstyled,
+  solidIcon,
 } from './Button';
 export const Button: ComponentStyleConfig = {
   sizes,
@@ -13,5 +15,7 @@ export const Button: ComponentStyleConfig = {
     outline,
     solidSecondary,
     outlineSecondary,
+    unstyled,
+    solidIcon,
   },
 };

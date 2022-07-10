@@ -28,7 +28,7 @@ export const Main: React.FC = () => {
         <Link to={PATHS.CREATE_TEAM}>
           <Button size="xl">{t('landing.main.createTeamsButton')}</Button>
         </Link>
-        <Link to={PATHS.MATCH}>
+        <Link to={PATHS.MATCHES}>
           <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
             {t('landing.main.previousGamesButton')}
           </Button>

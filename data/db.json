@@ -1,33 +1,6 @@
 {
   "matches": [
     {
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV"
-          ],
-          "ratingsScore": 60
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 60
-        }
-      },
-      "date": "2022-06-23",
-      "place": "San Siro",
-      "id": 1
-    },
-    {
       "id": "2DIUKuPvxMtlqqjzyn-yR",
       "teams": {
         "vlk": {

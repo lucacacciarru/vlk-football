@@ -5,3 +5,4 @@ export * from './useSelectedPlayers';
 export * from './useGetTeams';
 export * from './useGetChosenPlayers';
 export * from './useGetSinglePlayer';
+export * from './useCheckPathnameAndChosenPlayers';

@@ -1,6 +1,7 @@
 import { DefaultRootState } from 'react-redux';
+import { MemoryHistory } from 'history';
 
 export type CustomOptions = {
   mocks?: Partial<DefaultRootState>;
-  initialRoutes?: string[];
+  history?: MemoryHistory;
 };
