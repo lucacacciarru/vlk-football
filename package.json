@@ -15,7 +15,7 @@
     "@types/node": "16.11.41",
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
-    "framer-motion": "6.3.3",
+    "framer-motion": "6.4.3",
     "i18next": "21.8.12",
     "jest-fetch-mock": "3.0.3",
     "jest-junit": "13.2.0",
