@@ -68,7 +68,7 @@
     "cors": "2.8.5",
     "dotenv": "16.0.1",
     "json-server": "0.17.0",
-    "nodemon": "2.0.16"
+    "nodemon": "2.0.19"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"
