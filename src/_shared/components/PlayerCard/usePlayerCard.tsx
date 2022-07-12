@@ -25,24 +25,10 @@ export function usePlayerCard({ team, size }: Params) {
     return team === 'vlk' ? 'brand.primary.regular' : 'brand.secondary.regular';
   }, [team]);
 
-  const containerSize = useMemo(() => {
-    const containerRegularSize: BoxProps = {
-      h: 'xs',
-      w: '2xs',
-    };
-    const containerSmallSize: BoxProps = {
-      w: '15rem',
-      h: '18rem',
-    };
-
-    if (!size) return containerRegularSize;
-
-    return size === 'regular' ? containerRegularSize : containerSmallSize;
-  }, [size]);
-
   const containerProps: BoxProps = useMemo(
     () => ({
-      ...containerSize,
+      h: { base: '2xs', '2xl': '18rem' },
+      w: { base: '3xs', '2xl': '15rem' },
       borderRadius: 'xl',
       bgGradient: `linear(to-t, black.0 -20%, ${selectedTeamColor} 90%)`,
       overflow: 'hidden',
@@ -50,7 +36,7 @@ export function usePlayerCard({ team, size }: Params) {
       py: '4',
       transition: 'all .5s ease',
     }),
-    [containerSize, selectedTeamColor],
+    [selectedTeamColor],
   );
 
   const frontContainerProps = useMemo(
@@ -61,7 +47,6 @@ export function usePlayerCard({ team, size }: Params) {
   const backContainerProps = useMemo(
     () => ({
       ...containerProps,
-
       __css: { transform: backRotate, backfaceVisibility: 'hidden' },
       position: 'absolute',
       top: '0',

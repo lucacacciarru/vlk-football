@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { TeamsName } from '../../../_shared/types/general';
 import { useGetTeams } from '../../hook';
@@ -20,14 +20,15 @@ export const ContainerTeams: React.FC = () => {
     [teams, teamsKey],
   );
   return (
-    <Stack
+    <HStack
       w="full"
       minH="80vh"
       gap="12"
       alignItems="center"
       justifyContent="center"
+      flexDirection={{ base: 'column', sm: 'row' }}
     >
       {renderTeam}
-    </Stack>
+    </HStack>
   );
 };

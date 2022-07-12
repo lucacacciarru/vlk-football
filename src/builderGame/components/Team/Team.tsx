@@ -1,4 +1,4 @@
-import { Box, HStack, Text } from '@chakra-ui/react';
+import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PlayerCard } from '../../../_shared/components';
@@ -17,7 +17,9 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
   const renderPlayers = useMemo(
     () =>
       selectedPlayers?.map(player => (
-        <PlayerCard {...player} team={team} key={player.id} size="small" />
+        <Stack key={player.id} alignItems="center" justifyContent="center">
+          <PlayerCard {...player} team={team} size="regular" />
+        </Stack>
       )),
     [selectedPlayers, team],
   );
@@ -29,9 +31,8 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
   );
 
   return (
-    <HStack gap="6" flexDir={{ base: 'column-reverse', xl: 'row' }}>
-      {renderPlayers}
-      <Box textAlign={{ base: 'center', xl: 'right' }}>
+    <Stack w="full" gap="12">
+      <Box textAlign="center" w="full">
         <Text
           as="h1"
           textStyle="team-name"
@@ -46,6 +47,13 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
           })}
         </Text>
       </Box>
-    </HStack>
+      <SimpleGrid
+        spacing={{ base: '8', sm: '12', xl: '12' }}
+        minChildWidth={{ base: '100%', sm: '150px', lg: '300px' }}
+        w="full"
+      >
+        {renderPlayers}
+      </SimpleGrid>
+    </Stack>
   );
 };

@@ -38,7 +38,7 @@ export const MatchDetails: React.FC = () => {
     [match, teamNameKeys],
   );
   return (
-    <Stack gap="8">
+    <Stack gap="8" w="full">
       <HStack alignItems="center" w="full" gap="8" justifyContent="center">
         <Text as="p" color="black.50" textStyle="body-sm">
           {t('match.matchInfo.date', { date: match?.date })}
@@ -47,9 +47,14 @@ export const MatchDetails: React.FC = () => {
           {t('match.matchInfo.place', { place: match?.place })}
         </Text>
       </HStack>
-      <Stack gap="8" w="full" alignItems="center">
+      <HStack
+        gap="8"
+        w="full"
+        alignItems="center"
+        flexDirection={{ base: 'column', sm: 'row' }}
+      >
         {renderTeams}
-      </Stack>
+      </HStack>
     </Stack>
   );
 };
