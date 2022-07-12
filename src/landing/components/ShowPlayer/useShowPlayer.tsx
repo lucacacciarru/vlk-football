@@ -45,7 +45,7 @@ export function useShowPlayer(data: Player[] | undefined) {
   const stackProps: StackProps = {
     overflow: 'hidden',
     py: '6',
-    w: { base: '100%', xl: '35%' },
+    w: { base: '100%', xl: '45%' },
     h: { base: 'auto', xl: '80vh' },
     align: 'center',
     justifyContent: 'center',

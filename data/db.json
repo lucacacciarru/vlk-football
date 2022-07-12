@@ -242,6 +242,33 @@
       },
       "date": "2022-07-22",
       "place": "San Siro"
+    },
+    {
+      "id": "_DQW0326E7YV7a_Jqcx02",
+      "teams": {
+        "vlk": {
+          "players": [
+            "a9609b8f-214d-4c02-bf57-61698383778d",
+            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+            "ohvvU6fLGQgZBxaQguRBe",
+            "B0K-nmjxqF3VVudgcNpne",
+            "9iT4LPhsLkZUOfEhBr71F"
+          ],
+          "ratingsScore": 52
+        },
+        "klv": {
+          "players": [
+            "w5NCKAI6STnK06xtEuEqb",
+            "UFE6dao4W6DDH36YIGFwa",
+            "m9TuqWM-9Pjvq_Ttyyxqb",
+            "3c8e8708-3bab-4f52-b008-211212",
+            "ca0oTRBqMB0e6vc6wBgOV"
+          ],
+          "ratingsScore": 56
+        }
+      },
+      "date": "2022-07-22",
+      "place": "San Siro"
     }
   ],
   "players": [

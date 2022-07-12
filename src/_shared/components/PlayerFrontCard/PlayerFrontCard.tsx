@@ -26,7 +26,7 @@ export const PlayerFrontCard: React.FC<Props> = ({
   ...boxProps
 }) => {
   const { goalkeeper, name, rating, avatar } = player;
-  const { ratingText, renderIcon, iconColor, boxImageSize } = useFrontCard({
+  const { ratingText, renderIcon, iconColor } = useFrontCard({
     rating,
     team,
     size,
@@ -34,12 +34,22 @@ export const PlayerFrontCard: React.FC<Props> = ({
 
   return (
     <Box {...boxProps}>
-      <Stack w="full" h="full" alignItems="center">
+      <Stack
+        w="full"
+        h="full"
+        alignItems="center"
+        justifyContent="space-between"
+      >
         <HStack w="full" justifyContent="space-between">
           {renderIcon}
           <RoleIcon goalkeeper={goalkeeper} size="8" color={iconColor} />
         </HStack>
-        <Flex boxSize={boxImageSize} borderRadius="full" overflow="hidden">
+        <Flex
+          borderRadius="full"
+          overflow="hidden"
+          h={{ base: '20', '2xl': '32' }}
+          w={{ base: '20', '2xl': '32' }}
+        >
           <Image
             src={avatar}
             fit="cover"
@@ -48,8 +58,23 @@ export const PlayerFrontCard: React.FC<Props> = ({
             fallback={<ImageFallback />}
           />
         </Flex>
-        <Box w="full">
-          <Text fontWeight="bold" textStyle="h4" color="white.0" pt="4">
+        <Box
+          w="full"
+          __css={{
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+            overflow: 'hidden',
+          }}
+        >
+          <Text
+            fontWeight="bold"
+            textStyle="h5"
+            color="white.0"
+            pt="4"
+            __css={{
+              textOverflow: 'ellipsis',
+            }}
+          >
             {name}
           </Text>
           <Text color="white.0">{ratingText}</Text>
