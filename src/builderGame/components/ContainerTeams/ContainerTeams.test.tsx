@@ -31,6 +31,7 @@ const MOCK_BUILDER_STATE: BuilderGameState = {
   teams: MOCK_TEAMS,
   date: '',
   place: '',
+  selectedSport: 'futsal',
 };
 
 const MOCK_PLAYER: Player[] = [

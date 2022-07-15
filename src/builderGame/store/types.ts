@@ -1,5 +1,6 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Player } from '../../player/store';
+import { Sports } from '../../_shared/types';
 import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {
@@ -24,6 +25,7 @@ export type BuilderGameState = {
     availablePlayers: string[];
     selectedPlayers: string[];
   };
+  selectedSport: Sports;
   teams: MatchTeams;
   date: string;
   place: string;

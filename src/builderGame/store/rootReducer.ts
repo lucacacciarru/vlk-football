@@ -22,6 +22,7 @@ const INITIAL_STATE: BuilderGameState = {
     vlk: { players: [], ratingsScore: 0 },
     klv: { players: [], ratingsScore: 0 },
   },
+  selectedSport: 'futsal',
   date: '',
   place: '',
 };

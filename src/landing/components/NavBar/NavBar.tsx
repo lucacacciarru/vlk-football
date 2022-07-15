@@ -12,7 +12,7 @@ export const NavBar: React.FC<Props> = ({ size }) => {
     <PortalManager zIndex={10}>
       <Portal>
         <Link to={PATHS.INDEX}>
-          <Box px={{ base: '8', xl: '16', '2xl': '56' }} py="10" h={size}>
+          <Box px={{ base: '8', xl: '16', '2xl': '40' }} py="10" h={size}>
             <Icon name="logo" size="20" />
           </Box>
         </Link>
