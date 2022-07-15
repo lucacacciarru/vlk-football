@@ -38,6 +38,7 @@ const MOCK_BUILDER_STATE: BuilderGameState = {
       ratingsScore: 0,
     },
   },
+  selectedSport: 'futsal',
   date: '',
   place: '',
 };

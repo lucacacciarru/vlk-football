@@ -39,7 +39,13 @@ export const MatchDetails: React.FC = () => {
   );
   return (
     <Stack gap="8" w="full">
-      <HStack alignItems="center" w="full" gap="8" justifyContent="center">
+      <HStack
+        alignItems="center"
+        w="full"
+        gap={{ base: '2', sm: '8' }}
+        justifyContent="center"
+        flexDirection={{ base: 'column', sm: 'row' }}
+      >
         <Text as="p" color="black.50" textStyle="body-sm">
           {t('match.matchInfo.date', { date: match?.date })}
         </Text>
