@@ -3,6 +3,7 @@ import { playersColumn } from './playersColumn';
 import { createPlayerModal } from './createPlayerModal';
 import { preMatch } from './preMatch';
 import { gameModCard } from './gameModeCard';
+import { selectMode } from './selectMode';
 
 export const builderGame = {
   playersColumn,
@@ -10,4 +11,5 @@ export const builderGame = {
   createPlayerModal,
   preMatch,
   gameModCard,
+  selectMode,
 };
