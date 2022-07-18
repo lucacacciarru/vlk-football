@@ -1,7 +1,8 @@
-import { Box, Stack, Text } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { ContainerTeams } from '../components/ContainerTeams';
 import { SelectPlaceAndDateForm } from '../components/SelectPlaceAndDateForm';
 import { useTranslation } from 'react-i18next';
+import { PageHeading } from '../../_shared/components';
 
 export const PreMatch: React.FC = () => {
   const { t } = useTranslation();
@@ -14,14 +15,10 @@ export const PreMatch: React.FC = () => {
         justifyContent="center"
         color="white.0"
       >
-        <Box>
-          <Text as="h1" textStyle="h1" textAlign="center">
-            {t('builderGame.preMatch.title')}
-          </Text>
-          <Text as="p" textStyle="body-s" textAlign="center">
-            {t('builderGame.preMatch.body')}
-          </Text>
-        </Box>
+        <PageHeading
+          heading={t('builderGame.preMatch.title')}
+          body={t('builderGame.preMatch.body')}
+        />
         <SelectPlaceAndDateForm />
       </Stack>
       <ContainerTeams />

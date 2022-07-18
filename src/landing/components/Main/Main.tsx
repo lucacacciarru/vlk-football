@@ -1,6 +1,6 @@
-import { Button, Flex, Stack, StackProps, Text } from '@chakra-ui/react';
+import { Flex, Stack, StackProps, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { LinkButton } from '../../../_shared/components';
 import { PATHS } from '../../../_shared/types';
 import { TeamName } from '../TeamName';
 
@@ -25,14 +25,17 @@ export const Main: React.FC = () => {
         gap={{ base: '2', xl: '4' }}
         flexDir={{ base: 'column', xl: 'row' }}
       >
-        <Link to={PATHS.CREATE_TEAM}>
-          <Button size="xl">{t('landing.main.createTeamsButton')}</Button>
-        </Link>
-        <Link to={PATHS.MATCHES}>
-          <Button marginInlineStart="0" size="xl" variant="outlineSecondary">
-            {t('landing.main.previousGamesButton')}
-          </Button>
-        </Link>
+        <LinkButton to={PATHS.SELECT_MODE} size="xl">
+          {t('landing.main.createTeamsButton')}
+        </LinkButton>
+        <LinkButton
+          to={PATHS.MATCHES}
+          marginInlineStart="0"
+          size="xl"
+          variant="outlineSecondary"
+        >
+          {t('landing.main.previousGamesButton')}
+        </LinkButton>
       </Flex>
     </Stack>
   );

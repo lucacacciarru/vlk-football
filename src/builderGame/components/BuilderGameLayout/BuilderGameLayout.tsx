@@ -15,15 +15,17 @@ export const BuilderGameLayout: React.FC = () => {
 
   return (
     <>
-      <LinkButton variant="solidIcon" to={previouslyRoute as To}>
-        <Icon
-          name="chevronLeft"
-          color="white.0"
-          size="8"
-          data-testid="backButton"
-        />
-      </LinkButton>
-      <Box pb="6">
+      <Box px={{ base: '8', xl: '16', '2xl': '32' }} pt="4">
+        <LinkButton variant="solidIcon" to={previouslyRoute as To}>
+          <Icon
+            name="chevronLeft"
+            color="white.0"
+            size="8"
+            data-testid="backButton"
+          />
+        </LinkButton>
+      </Box>
+      <Box px={{ base: '8', xl: '16', '2xl': '40' }} pb="6">
         <Outlet />
       </Box>
     </>
