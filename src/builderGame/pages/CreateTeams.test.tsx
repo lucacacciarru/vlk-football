@@ -1,15 +1,7 @@
 import { Player } from '../../player/store';
-import {
-  render,
-  waitFor,
-  screen,
-  fireEvent,
-} from '../../_shared/testConfig/customRender';
+import { render, waitFor, screen } from '../../_shared/testConfig/customRender';
 import { BuilderGameState } from '../store/types';
 import { CreateTeams } from './CreateTeams';
-import * as reactRouter from 'react-router';
-import * as useBuilderGame from '../hook/useBuilderGame';
-import * as generateTeams from '../utils/generatesBalancedTeams';
 
 function mockFetch(body?: Object) {
   fetchMock.resetMocks();

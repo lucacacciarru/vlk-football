@@ -1,5 +1,6 @@
-import { Stack, Text } from '@chakra-ui/react';
+import { Stack } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+import { PageHeading } from '../../_shared/components';
 import { ColumnsContainer } from '../components';
 import { CreateTeamButton } from '../components/CreateTeamButton';
 import { useCheckPlayer } from '../hook/useCheckPlayer';
@@ -9,12 +10,10 @@ export const CreateTeams: React.FC = () => {
   const { t } = useTranslation();
   return (
     <Stack w="full" justifyContent="center" alignItems="center">
-      <Stack justifyContent="center" textAlign="center">
-        <Text color="white.0" textStyle="h1">
-          {t('builderGame.playersPage.title')}
-        </Text>
-        <Text color="white.50">{t('builderGame.playersPage.body')}</Text>
-      </Stack>
+      <PageHeading
+        heading={t('builderGame.playersPage.title')}
+        body={t('builderGame.playersPage.body')}
+      />
       <ColumnsContainer />
       <CreateTeamButton isDisabled={isDisableCheckButton} />
     </Stack>
