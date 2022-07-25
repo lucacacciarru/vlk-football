@@ -1,4 +1,4 @@
-import { useGetMatchMode } from '.';
+import { useGetMatchMode } from './useGetMatchMode';
 import { Sports } from '../../_shared/types';
 import { gameModeMap } from '../utils/gameModeMap';
 
