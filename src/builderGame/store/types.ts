@@ -4,6 +4,7 @@ import { Sports } from '../../_shared/types';
 import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {
+  UPDATE_GAME_MODE = 'builderGame/updateGameMode',
   POPULATE_AVAILABLE_PLAYERS = 'builderGame/populateAvailablePlayers',
   ADD_SELECTED_PLAYERS = 'builderGame/addSelectedPlayers',
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
@@ -25,13 +26,14 @@ export type BuilderGameState = {
     availablePlayers: string[];
     selectedPlayers: string[];
   };
-  selectedSport: Sports;
+  selectedSport?: Sports;
   teams: MatchTeams;
   date: string;
   place: string;
 };
 
 export type PopulateAvailablePlayersPayload = Player[];
+export type UpdateGameModePayload = Sports;
 
 export type AddSelectedPlayersPayload = {
   availablePlayers: string[];
@@ -39,6 +41,11 @@ export type AddSelectedPlayersPayload = {
 };
 
 export type UpdateDateAndPlaceMatchPayload = DateAndPlaceMatch;
+
+export type UpdateGameMode = PayloadAction<
+  UpdateGameModePayload,
+  BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE
+>;
 
 export type PopulateAvailablePlayers = PayloadAction<
   PopulateAvailablePlayersPayload,

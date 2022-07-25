@@ -48,7 +48,7 @@ const playersList: PlayerRatingAndId[] = [
 
 describe('generatesBalancedTeams util', () => {
   test('', () => {
-    const result = generatesBalancedTeams(playersList);
+    const result = generatesBalancedTeams(playersList, 10);
     expect(result.klv.ratingsScore).toBe(28);
     expect(result.vlk.ratingsScore).toBe(20);
   });

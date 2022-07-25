@@ -1,9 +1,11 @@
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import { Sports } from '../../_shared/types';
 import {
   addSelectedPlayers,
   createMatchTeams,
   updateDateAndPlaceMatch,
+  updateGameMode,
 } from '../store/actions';
 import { MatchTeams } from '../store/types';
 import { DateAndPlaceMatch } from '../types';
@@ -35,6 +37,14 @@ export function useUpdateDateAndPlaceMatch() {
   return useCallback(
     (placeAndDate: DateAndPlaceMatch) =>
       dispatch(updateDateAndPlaceMatch(placeAndDate)),
+    [dispatch],
+  );
+}
+
+export function useUpdateSelectedMode() {
+  const dispatch = useDispatch();
+  return useCallback(
+    (mode: Sports) => dispatch(updateGameMode(mode)),
     [dispatch],
   );
 }

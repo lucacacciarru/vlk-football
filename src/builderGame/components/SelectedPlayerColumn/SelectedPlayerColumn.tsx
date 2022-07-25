@@ -1,6 +1,7 @@
 import { Box, HStack, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useGetChosenPlayers, useGetMatchRules } from '../../hook';
 import { useCheckPlayer } from '../../hook/useCheckPlayer';
 import { PlayerList } from '../PlayersList';
 
@@ -11,22 +12,21 @@ type Props = {
 
 export const SelectedPlayerColumn: React.FC<Props> = ({ id, items }) => {
   const { t } = useTranslation();
+  const selectedPlayers = useGetChosenPlayers().selectedPlayers;
+  const { maxNumberOfGoalkeepers, numberOfPlayers } = useGetMatchRules();
   const {
-    gameCondition,
-    numberOfSelectedGoalkeepers,
-    numberOfSelectedPlayers,
-    checkCorrectNumberOfPlayer,
-    checkMaxNumberOfGoalkeepers,
+    isRightNumberOfGoalkeepers,
+    isRightNumberOfPlayers,
+    selectedGoalKeepers,
   } = useCheckPlayer();
 
-  const colorCorrectPlayersNumber = useMemo(
-    () => (checkCorrectNumberOfPlayer ? 'brand.primary.regular' : 'red.400'),
-    [checkCorrectNumberOfPlayer],
+  const correctColorPlayersNumber = useMemo(
+    () => (isRightNumberOfPlayers ? 'brand.primary.regular' : 'red.500'),
+    [isRightNumberOfPlayers],
   );
-
-  const colorCorrectGoalkeepersNumber = useMemo(
-    () => (checkMaxNumberOfGoalkeepers ? 'brand.primary.regular' : 'red.400'),
-    [checkMaxNumberOfGoalkeepers],
+  const correctColorGoalkeepersNumber = useMemo(
+    () => (isRightNumberOfGoalkeepers ? 'brand.primary.regular' : 'red.500'),
+    [isRightNumberOfGoalkeepers],
   );
 
   return (
@@ -39,21 +39,21 @@ export const SelectedPlayerColumn: React.FC<Props> = ({ id, items }) => {
           <Text
             textStyle="body-xs"
             data-testid="playersLength"
-            color={colorCorrectPlayersNumber}
+            color={correctColorPlayersNumber}
           >
             {t('builderGame.playersColumn.totalPlayer', {
-              players: numberOfSelectedPlayers,
-              condition: gameCondition.correctNumberOfPlayers,
+              players: selectedPlayers.length,
+              condition: numberOfPlayers,
             })}
           </Text>
           <Text
             textStyle="body-xs"
             data-testid="goalkeepersLength"
-            color={colorCorrectGoalkeepersNumber}
+            color={correctColorGoalkeepersNumber}
           >
             {t('builderGame.playersColumn.totalGoalkeepers', {
-              goalkeepers: numberOfSelectedGoalkeepers,
-              condition: gameCondition.maxNumberOfGoalKeepers,
+              goalkeepers: selectedGoalKeepers.length,
+              condition: maxNumberOfGoalkeepers,
             })}
           </Text>
         </HStack>

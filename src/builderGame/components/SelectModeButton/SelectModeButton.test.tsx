@@ -1,6 +1,6 @@
-import { render } from '../../../_shared/testConfig/customRender';
+import { render, screen } from '../../../_shared/testConfig/customRender';
 import { BuilderGameState } from '../../store/types';
-import { GameModeContainer } from './GameModeContainer';
+import { SelectModeButton } from './SelectModeButton';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
@@ -19,13 +19,12 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
       ratingsScore: 0,
     },
   },
-  selectedSport: 'futsal',
 };
 
-describe('GameModeContainer component', () => {
+describe('SelectModeButton component', () => {
   test('Should be rendered', () => {
-    render(<GameModeContainer />, {
-      mocks: { builderGame: BUILDER_GAME_MOCK },
-    });
+    render(<SelectModeButton />, { mocks: { builderGame: BUILDER_GAME_MOCK } });
+    const linkButton = screen.getByTestId('LinkButton');
+    expect(linkButton).toBeDisabled();
   });
 });

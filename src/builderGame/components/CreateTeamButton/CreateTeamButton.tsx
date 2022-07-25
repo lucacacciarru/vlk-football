@@ -3,7 +3,11 @@ import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { PATHS } from '../../../_shared/types';
-import { useCreateTeams, useSelectedPlayers } from '../../hook';
+import {
+  useCreateTeams,
+  useGetMatchRules,
+  useSelectedPlayers,
+} from '../../hook';
 import { generatesBalancedTeams } from '../../utils';
 
 export const CreateTeamButton: React.FC<ButtonProps> = props => {
@@ -12,12 +16,13 @@ export const CreateTeamButton: React.FC<ButtonProps> = props => {
   const selectedPlayers = useSelectedPlayers();
   const navigate = useNavigate();
   const createMatchTeams = useCreateTeams();
+  const { numberOfPlayers } = useGetMatchRules();
 
   const createTeams = useCallback(() => {
-    const teams = generatesBalancedTeams(selectedPlayers);
+    const teams = generatesBalancedTeams(selectedPlayers, numberOfPlayers);
     createMatchTeams(teams);
     navigate(`/${PATHS.PRE_MATCH}`);
-  }, [createMatchTeams, navigate, selectedPlayers]);
+  }, [createMatchTeams, navigate, numberOfPlayers, selectedPlayers]);
 
   return (
     <Button

@@ -6,7 +6,7 @@ import { CreateTeamButton } from '../components/CreateTeamButton';
 import { useCheckPlayer } from '../hook/useCheckPlayer';
 
 export const CreateTeams: React.FC = () => {
-  const { isDisableCheckButton } = useCheckPlayer();
+  const { allConditionIsCorrect } = useCheckPlayer();
   const { t } = useTranslation();
   return (
     <Stack w="full" justifyContent="center" alignItems="center">
@@ -15,7 +15,7 @@ export const CreateTeams: React.FC = () => {
         body={t('builderGame.playersPage.body')}
       />
       <ColumnsContainer />
-      <CreateTeamButton isDisabled={isDisableCheckButton} />
+      <CreateTeamButton isDisabled={!allConditionIsCorrect} />
     </Stack>
   );
 };
