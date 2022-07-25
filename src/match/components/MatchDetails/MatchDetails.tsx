@@ -22,6 +22,7 @@ export const MatchDetails: React.FC = () => {
             <Team
               team={teamKey as TeamsName}
               teamMaking={match?.teams[teamKey as keyof MatchTeams]}
+              key={teamKey}
             />
           );
         })

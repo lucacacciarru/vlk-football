@@ -6,6 +6,7 @@ import {
   CreateMatchTeams,
   PopulateAvailablePlayers,
   updateDateAndPlaceMatch,
+  UpdateGameMode,
 } from './types';
 
 export const populateAvailablePlayersCase: CaseReducer<
@@ -51,4 +52,12 @@ export const updateDateAndPlaceCase: CaseReducer<
   ...state,
   date: action.payload.date,
   place: action.payload.place,
+});
+
+export const updateGameModeCase: CaseReducer<
+  BuilderGameState,
+  UpdateGameMode
+> = (state, action) => ({
+  ...state,
+  selectedSport: action.payload,
 });

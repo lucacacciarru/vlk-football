@@ -22,6 +22,7 @@ function pickSmallerTeam(
 
 export function generatesBalancedTeams(
   players: PlayerRatingAndId[] | undefined,
+  maxNumberOfPlayer: number,
 ) {
   const teams: MatchTeams = {
     vlk: { players: [], ratingsScore: 0 },
@@ -31,7 +32,7 @@ export function generatesBalancedTeams(
   const sortedList = players?.sort((a, b) => b.rating - a.rating);
 
   sortedList?.forEach(player => {
-    const rightTeam = pickSmallerTeam(teams, 10);
+    const rightTeam = pickSmallerTeam(teams, maxNumberOfPlayer);
     teams[rightTeam].players.push(player.id);
     teams[rightTeam].ratingsScore += player.rating;
   });

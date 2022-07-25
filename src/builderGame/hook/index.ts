@@ -6,3 +6,5 @@ export * from './useGetTeams';
 export * from './useGetChosenPlayers';
 export * from './useGetSinglePlayer';
 export * from './useCheckPathnameAndChosenPlayers';
+export * from './useGetMatchMode';
+export * from './useGetMatchRules';

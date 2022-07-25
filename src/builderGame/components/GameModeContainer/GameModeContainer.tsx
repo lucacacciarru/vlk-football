@@ -18,6 +18,7 @@ export const GameModeContainer: React.FC = () => {
     <SimpleGrid
       spacing={{ base: '16', '2xl': '40' }}
       minChildWidth={{ base: 'full', lg: '300px', '2xl': '400px' }}
+      w="full"
     >
       {renderGameModes}
     </SimpleGrid>

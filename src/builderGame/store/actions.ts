@@ -5,7 +5,13 @@ import {
   CreateMatchTeamsPayload,
   PopulateAvailablePlayersPayload,
   UpdateDateAndPlaceMatchPayload,
+  UpdateGameModePayload,
 } from './types';
+
+export const updateGameMode = createAction<
+  UpdateGameModePayload,
+  BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE
+>(BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE);
 
 export const populateAvailablePlayers = createAction<
   PopulateAvailablePlayersPayload,

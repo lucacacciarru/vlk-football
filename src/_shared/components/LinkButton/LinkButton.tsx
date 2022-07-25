@@ -11,9 +11,10 @@ export const LinkButton: React.FC<PropsWithChildren<Props>> = ({
   to,
   ...buttonProps
 }) => {
+  const specificLink = to === '/' ? to : `/${to}`;
   return (
-    <Link to={to}>
-      <Button size="lg" {...buttonProps}>
+    <Link to={specificLink}>
+      <Button size="lg" {...buttonProps} data-testid="LinkButton">
         {children}
       </Button>
     </Link>
