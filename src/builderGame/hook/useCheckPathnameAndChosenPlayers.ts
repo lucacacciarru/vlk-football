@@ -1,13 +1,13 @@
 import { PATHS } from '../../_shared/types';
 import { useGetChosenPlayers } from './useGetChosenPlayers';
-import { useGetMatchMode } from './useGetMatchMode';
+import { useGetMatchType } from './useGetMatchType';
 import { useGetMatchRules } from './useGetMatchRules';
 
 export function useCheckPathnameAndChosenPlayers(pathname: string) {
   const preMatchPath = `/${PATHS.PRE_MATCH}`;
   const createTeamPath = `/${PATHS.CREATE_TEAM}`;
   const chosenPlayer = useGetChosenPlayers().selectedPlayers;
-  const selectMatchMode = useGetMatchMode();
+  const selectMatchMode = useGetMatchType();
   const selectRules = useGetMatchRules();
 
   if (

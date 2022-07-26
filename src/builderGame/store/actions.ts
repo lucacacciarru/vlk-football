@@ -8,10 +8,10 @@ import {
   UpdateGameModePayload,
 } from './types';
 
-export const updateGameMode = createAction<
+export const updateMatchType = createAction<
   UpdateGameModePayload,
-  BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE
->(BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE);
+  BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
+>(BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE);
 
 export const populateAvailablePlayers = createAction<
   PopulateAvailablePlayersPayload,

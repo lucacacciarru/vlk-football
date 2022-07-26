@@ -1,3 +1,3 @@
 export * from './ColumnsContainer';
-export * from './GameModeContainer';
+export * from './MatchTypeContainer';
 export * from './SelectModeButton';

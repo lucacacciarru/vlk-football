@@ -10,12 +10,12 @@ import {
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../../../_shared/components';
-import { Sports } from '../../../_shared/types';
-import { useGetMatchMode, useUpdateSelectedMode } from '../../hook';
-import { gameModeMap } from '../../utils/gameModeMap';
+import { MatchType } from '../../../_shared/types';
+import { useGetMatchType, useUpdateMatchType } from '../../hook';
+import { matchTypeMap } from '../../utils/matchTypeMap';
 
 type Props = {
-  gameMode: Sports;
+  matchType: MatchType;
 };
 
 const containerProps: StackProps = {
@@ -31,35 +31,35 @@ const containerProps: StackProps = {
   cursor: 'pointer',
 };
 
-export const GameModeCard: React.FC<Props> = ({ gameMode }) => {
-  const selectedGameMode = useGetMatchMode();
+export const MatchTypeCard: React.FC<Props> = ({ matchType }) => {
+  const selectedMatchType = useGetMatchType();
   const { t } = useTranslation();
   const { maxNumberOfGoalkeepers, numberOfPlayers, iconName } =
-    gameModeMap[gameMode];
+    matchTypeMap[matchType as MatchType];
 
-  const updateGameMod = useUpdateSelectedMode();
+  const updateGameMod = useUpdateMatchType();
 
-  const isModeSelected = useMemo(
-    () => selectedGameMode === gameMode,
-    [gameMode, selectedGameMode],
+  const isTypeSelected = useMemo(
+    () => selectedMatchType === matchType,
+    [matchType, selectedMatchType],
   );
 
   const selectedModeColor = useMemo(
-    () => (isModeSelected ? 'brand.primary.dark' : 'white.50'),
-    [isModeSelected],
+    () => (isTypeSelected ? 'brand.primary.dark' : 'white.50'),
+    [isTypeSelected],
   );
 
   const borderColor = useMemo(
-    () => (isModeSelected ? 'brand.primary.dark' : 'black.0'),
-    [isModeSelected],
+    () => (isTypeSelected ? 'brand.primary.dark' : 'black.0'),
+    [isTypeSelected],
   );
 
   return (
     <Stack
       {...containerProps}
-      onClick={() => updateGameMod(gameMode)}
+      onClick={() => updateGameMod(matchType)}
       borderColor={borderColor}
-      data-testid={`gameModeCard-${gameMode}`}
+      data-testid={`matchTypeCard-${matchType}`}
     >
       <Icon size="32" name={iconName} color={selectedModeColor} />
       <Box>
@@ -70,7 +70,7 @@ export const GameModeCard: React.FC<Props> = ({ gameMode }) => {
           color={selectedModeColor}
           transition="all .5s ease"
         >
-          {t(`gameMode.${gameMode}`)}
+          {t(`matchType.${matchType}`)}
         </Text>
         <Flex mt="2">
           <UnorderedList

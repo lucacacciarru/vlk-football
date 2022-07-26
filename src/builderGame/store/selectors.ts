@@ -3,9 +3,9 @@ import { DefaultRootState } from 'react-redux';
 
 const baseSelector = (state: DefaultRootState) => state.builderGame;
 
-export const getGameMode = createSelector(
+export const getMatchType = createSelector(
   baseSelector,
-  builderGameState => builderGameState.selectedSport,
+  builderGameState => builderGameState.matchType,
 );
 export const getChosenPlayers = createSelector(
   baseSelector,

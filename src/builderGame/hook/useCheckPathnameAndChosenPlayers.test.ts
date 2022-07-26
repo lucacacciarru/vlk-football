@@ -10,7 +10,7 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
   },
   date: 'anyString',
   place: 'anyString',
-  selectedSport: 'futsal',
+  matchType: 'futsal',
 
   teams: {
     klv: { players: [], ratingsScore: 0 },

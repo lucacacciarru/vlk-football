@@ -1,10 +1,10 @@
 import { PayloadAction } from '@reduxjs/toolkit';
 import { Player } from '../../player/store';
-import { Sports } from '../../_shared/types';
+import { MatchType } from '../../_shared/types';
 import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {
-  UPDATE_GAME_MODE = 'builderGame/updateGameMode',
+  UPDATE_MATCH_TYPE = 'builderGame/updateMatchType',
   POPULATE_AVAILABLE_PLAYERS = 'builderGame/populateAvailablePlayers',
   ADD_SELECTED_PLAYERS = 'builderGame/addSelectedPlayers',
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
@@ -26,14 +26,14 @@ export type BuilderGameState = {
     availablePlayers: string[];
     selectedPlayers: string[];
   };
-  selectedSport?: Sports;
+  matchType?: MatchType;
   teams: MatchTeams;
   date: string;
   place: string;
 };
 
 export type PopulateAvailablePlayersPayload = Player[];
-export type UpdateGameModePayload = Sports;
+export type UpdateGameModePayload = MatchType;
 
 export type AddSelectedPlayersPayload = {
   availablePlayers: string[];
@@ -44,7 +44,7 @@ export type UpdateDateAndPlaceMatchPayload = DateAndPlaceMatch;
 
 export type UpdateGameMode = PayloadAction<
   UpdateGameModePayload,
-  BUILDER_GAME_ACTION_TYPES.UPDATE_GAME_MODE
+  BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
 >;
 
 export type PopulateAvailablePlayers = PayloadAction<
