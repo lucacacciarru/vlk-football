@@ -54,10 +54,10 @@ export const updateDateAndPlaceCase: CaseReducer<
   place: action.payload.place,
 });
 
-export const updateGameModeCase: CaseReducer<
+export const updateMatchTypeCase: CaseReducer<
   BuilderGameState,
   UpdateGameMode
 > = (state, action) => ({
   ...state,
-  selectedSport: action.payload,
+  matchType: action.payload,
 });

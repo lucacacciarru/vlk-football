@@ -1,6 +1,6 @@
 import { render } from '../../../_shared/testConfig/customRender';
 import { BuilderGameState } from '../../store/types';
-import { GameModeContainer } from './GameModeContainer';
+import { MatchTypeContainer } from './MatchTypeContainer';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
@@ -19,12 +19,12 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
       ratingsScore: 0,
     },
   },
-  selectedSport: 'futsal',
+  matchType: 'futsal',
 };
 
 describe('GameModeContainer component', () => {
   test('Should be rendered', () => {
-    render(<GameModeContainer />, {
+    render(<MatchTypeContainer />, {
       mocks: { builderGame: BUILDER_GAME_MOCK },
     });
   });

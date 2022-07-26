@@ -3,7 +3,7 @@ import { renderHook, act } from '../../_shared/testConfig/customRenderHook';
 import {
   getChosenPlayers,
   getDateAndPlaceMatch,
-  getGameMode,
+  getMatchType,
   getTeams,
 } from '../store/selectors';
 import { MatchTeams } from '../store/types';
@@ -12,7 +12,7 @@ import {
   useCreateTeams,
   useUpdateChosenPlayers,
   useUpdateDateAndPlaceMatch,
-  useUpdateSelectedMode,
+  useUpdateMatchType,
 } from './useBuilderGame';
 
 function useTestHook() {
@@ -22,8 +22,8 @@ function useTestHook() {
   const chosenPlayers = useSelector(getChosenPlayers);
   const teams = useSelector(getTeams);
   const dateAndPlaceMatch = useSelector(getDateAndPlaceMatch);
-  const updateGameMode = useUpdateSelectedMode();
-  const gameMode = useSelector(getGameMode);
+  const updateMatchType = useUpdateMatchType();
+  const gameMode = useSelector(getMatchType);
 
   return {
     updateChosenPlayers,
@@ -32,7 +32,7 @@ function useTestHook() {
     chosenPlayers,
     teams,
     dateAndPlaceMatch,
-    updateGameMode,
+    updateMatchType,
     gameMode,
   };
 }
@@ -83,10 +83,10 @@ describe('useBuilderGame hook', () => {
       place: 'anyString',
     });
   });
-  test('Should update selectedMode', async () => {
+  test('Should update matchType', async () => {
     const { result } = renderHook(() => useTestHook());
     act(() => {
-      result.current.updateGameMode('football');
+      result.current.updateMatchType('football');
     });
     expect(result.current.gameMode).toEqual('football');
   });

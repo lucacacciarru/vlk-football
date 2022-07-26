@@ -1,4 +1,4 @@
-export const gameMode = {
+export const matchType = {
   football: 'Calcio',
   futsal: 'Calcetto',
   three: 'Calcio a 3',

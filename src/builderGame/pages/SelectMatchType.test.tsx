@@ -1,4 +1,4 @@
-import { SelectMode } from './SelectMode';
+import { SelectMatchType } from './SelectMatchType';
 import { render } from '../../_shared/testConfig/customRender';
 import { BuilderGameState } from '../store/types';
 
@@ -19,12 +19,12 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
       ratingsScore: 0,
     },
   },
-  selectedSport: 'futsal',
+  matchType: 'futsal',
 };
 
 describe('SelectMode container', () => {
   test('Should be rendered', () => {
-    render(<SelectMode />, {
+    render(<SelectMatchType />, {
       mocks: {
         builderGame: BUILDER_GAME_MOCK,
       },

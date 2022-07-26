@@ -1,5 +1,5 @@
 import { IconLibrary } from '../../_shared/components/Icon/IconLibrary';
-import { Sports } from '../../_shared/types';
+import { MatchType } from '../../_shared/types';
 
 type GameModeOptions = {
   numberOfPlayers: number;
@@ -7,7 +7,7 @@ type GameModeOptions = {
   iconName: keyof IconLibrary;
 };
 
-export const gameModeMap: Record<Sports, GameModeOptions> = {
+export const matchTypeMap: Record<MatchType, GameModeOptions> = {
   football: {
     maxNumberOfGoalkeepers: 2,
     numberOfPlayers: 22,

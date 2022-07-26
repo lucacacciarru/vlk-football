@@ -4,7 +4,7 @@ import {
   fireEvent,
 } from '../../../_shared/testConfig/customRender';
 import { BuilderGameState } from '../../store/types';
-import { GameModeCard } from './GameModeCard';
+import { MatchTypeCard } from './MatchTypeCard';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
@@ -23,15 +23,15 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
       ratingsScore: 0,
     },
   },
-  selectedSport: 'futsal',
+  matchType: 'futsal',
 };
 
-describe('GameModeCard component', () => {
+describe('MatchTypeCard component', () => {
   test('Should be rendered', () => {
-    render(<GameModeCard gameMode="football" />, {
+    render(<MatchTypeCard matchType="football" />, {
       mocks: { builderGame: BUILDER_GAME_MOCK },
     });
-    const gameModeCard = screen.getByTestId('gameModeCard-football');
-    fireEvent.click(gameModeCard);
+    const matchCard = screen.getByTestId('matchTypeCard-football');
+    fireEvent.click(matchCard);
   });
 });

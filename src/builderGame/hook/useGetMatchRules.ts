@@ -1,8 +1,8 @@
-import { useGetMatchMode } from './useGetMatchMode';
-import { Sports } from '../../_shared/types';
-import { gameModeMap } from '../utils/gameModeMap';
+import { useGetMatchType } from './useGetMatchType';
+import { MatchType } from '../../_shared/types';
+import { matchTypeMap } from '../utils/matchTypeMap';
 
 export function useGetMatchRules() {
-  const selectedGameMode = useGetMatchMode();
-  return gameModeMap[selectedGameMode as Sports];
+  const selectedGameMode = useGetMatchType();
+  return matchTypeMap[selectedGameMode as MatchType];
 }
