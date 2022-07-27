@@ -10,6 +10,10 @@ export function useCheckPathnameAndChosenPlayers(pathname: string) {
   const selectMatchMode = useGetMatchType();
   const selectRules = useGetMatchRules();
 
+  if (pathname === preMatchPath && !selectMatchMode) {
+    return false;
+  }
+
   if (
     pathname === preMatchPath &&
     chosenPlayer.length < selectRules.numberOfPlayers

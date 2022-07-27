@@ -3,6 +3,7 @@ import {
   addSelectedPlayers,
   createMatchTeams,
   populateAvailablePlayers,
+  resetGame,
   updateDateAndPlaceMatch,
   updateMatchType,
 } from './actions';
@@ -10,6 +11,7 @@ import {
   addSelectedPlayersCase,
   createMatchTeamsCase,
   populateAvailablePlayersCase,
+  resetGameCase,
   updateDateAndPlaceCase,
   updateMatchTypeCase,
 } from './reducers';
@@ -34,5 +36,6 @@ export const builderGameRootReducer = createReducer(INITIAL_STATE, builder => {
   builder.addCase(createMatchTeams, createMatchTeamsCase);
   builder.addCase(populateAvailablePlayers, populateAvailablePlayersCase);
   builder.addCase(updateDateAndPlaceMatch, updateDateAndPlaceCase);
+  builder.addCase(resetGame, resetGameCase);
   builder.addDefaultCase(state => state);
 });

@@ -5,6 +5,7 @@ import {
   BuilderGameState,
   CreateMatchTeams,
   PopulateAvailablePlayers,
+  ResetGame,
   updateDateAndPlaceMatch,
   UpdateGameMode,
 } from './types';
@@ -60,4 +61,31 @@ export const updateMatchTypeCase: CaseReducer<
 > = (state, action) => ({
   ...state,
   matchType: action.payload,
+});
+
+export const resetGameCase: CaseReducer<
+  BuilderGameState,
+  ResetGame
+> = state => ({
+  ...state,
+  chosenPlayers: {
+    availablePlayers: [
+      ...state.chosenPlayers.selectedPlayers,
+      ...state.chosenPlayers.availablePlayers,
+    ],
+    selectedPlayers: [],
+  },
+  date: '',
+  matchType: undefined,
+  place: '',
+  teams: {
+    klv: {
+      players: [],
+      ratingsScore: 0,
+    },
+    vlk: {
+      players: [],
+      ratingsScore: 0,
+    },
+  },
 });

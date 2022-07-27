@@ -381,6 +381,52 @@
       },
       "date": "2022-07-21",
       "place": "San Siro"
+    },
+    {
+      "id": "CMn3JHCdUDg7kG_BWr0V4",
+      "teams": {
+        "vlk": {
+          "players": [
+            "a9609b8f-214d-4c02-bf57-61698383778d",
+            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+            "ohvvU6fLGQgZBxaQguRBe"
+          ],
+          "ratingsScore": 36
+        },
+        "klv": {
+          "players": [
+            "w5NCKAI6STnK06xtEuEqb",
+            "UFE6dao4W6DDH36YIGFwa",
+            "3c8e8708-3bab-4f52-b008-211212"
+          ],
+          "ratingsScore": 36
+        }
+      },
+      "date": "2022-07-30",
+      "place": "San Siro"
+    },
+    {
+      "id": "v8wMb-5d4yosGLGVKZm4x",
+      "teams": {
+        "vlk": {
+          "players": [
+            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+            "ohvvU6fLGQgZBxaQguRBe",
+            "3c8e8708-3bab-4f52-b008-211212"
+          ],
+          "ratingsScore": 32
+        },
+        "klv": {
+          "players": [
+            "a9609b8f-214d-4c02-bf57-61698383778d",
+            "UFE6dao4W6DDH36YIGFwa",
+            "B0K-nmjxqF3VVudgcNpne"
+          ],
+          "ratingsScore": 36
+        }
+      },
+      "date": "2022-07-24",
+      "place": "San Siro"
     }
   ],
   "players": [

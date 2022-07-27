@@ -1,4 +1,4 @@
-import { PayloadAction } from '@reduxjs/toolkit';
+import { Action, PayloadAction } from '@reduxjs/toolkit';
 import { Player } from '../../player/store';
 import { MatchType } from '../../_shared/types';
 import { DateAndPlaceMatch } from '../types';
@@ -9,6 +9,7 @@ export enum BUILDER_GAME_ACTION_TYPES {
   ADD_SELECTED_PLAYERS = 'builderGame/addSelectedPlayers',
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
   UPDATE_DATE_AND_PLACE_MATCH = 'builderGame/updateDateAndPlaceMatch',
+  RESET_GAME = 'builderGame/resetGame',
 }
 
 export type TeamMaking = {
@@ -68,3 +69,5 @@ export type updateDateAndPlaceMatch = PayloadAction<
   UpdateDateAndPlaceMatchPayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_DATE_AND_PLACE_MATCH
 >;
+
+export type ResetGame = Action<BUILDER_GAME_ACTION_TYPES.RESET_GAME>;

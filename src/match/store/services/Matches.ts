@@ -1,4 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import { resetGame } from '../../../builderGame/store/actions';
+import { playerApi } from '../../../player/store';
 import { Match } from '../types';
 
 export const matchesApi = createApi({
@@ -16,6 +18,11 @@ export const matchesApi = createApi({
         method: 'POST',
         body,
       }),
+      async onQueryStarted(_, { dispatch }) {
+        try {
+          dispatch(resetGame());
+        } catch (err) {}
+      },
       invalidatesTags: ['Matches'],
     }),
   }),
