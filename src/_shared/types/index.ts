@@ -1,2 +1,2 @@
-export * from './paths';
 export * from './general';
+export * from './paths';
