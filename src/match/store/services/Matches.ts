@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { resetGame } from '../../../builderGame/store/actions';
-import { playerApi } from '../../../player/store';
 import { Match } from '../types';
 
 export const matchesApi = createApi({
