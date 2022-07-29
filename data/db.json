@@ -1,432 +1,128 @@
 {
   "matches": [
     {
-      "id": "2DIUKuPvxMtlqqjzyn-yR",
+      "id": "X1NclcU9_EEnhAgapYniE",
       "teams": {
         "vlk": {
           "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
             "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "-b8B-vxmdfaNAjFW9tDxf"
+            "ohvvU6fLGQgZBxaQguRBe",
+            "3c8e8708-3bab-4f52-b008-211212"
           ],
-          "ratingsScore": 52
+          "ratingsScore": 32
         },
         "klv": {
           "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 52
-        }
-      },
-      "date": "2022-06-29",
-      "place": "Oratorio San Gino"
-    },
-    {
-      "id": "bpRRsNMaAhtJURmum26Pz",
-      "teams": {
-        "vlk": {
-          "players": [
             "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "-b8B-vxmdfaNAjFW9tDxf"
+            "UFE6dao4W6DDH36YIGFwa",
+            "B0K-nmjxqF3VVudgcNpne"
           ],
-          "ratingsScore": 52
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 52
+          "ratingsScore": 36
         }
       },
-      "date": "2022-06-30",
-      "place": "San Siro"
+      "date": "2022-07-20",
+      "place": "Carbonia",
+      "matchType": "three"
     },
     {
-      "id": "maVMJnwKySC2lr9YTahW4",
+      "id": "mxJuRFdqglADoBqQSzqiA",
       "teams": {
         "vlk": {
           "players": [
             "BXSdXA7VYjNshSBGlSmx0",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "239mkZm3G-RZ95NeCIBF-",
-            "WIU7taUl4CfDUGBD7w7Ve",
-            "i4sJJv5kb79VqWfdjIabd"
+            "ohvvU6fLGQgZBxaQguRBe",
+            "B0K-nmjxqF3VVudgcNpne",
+            "-b8B-vxmdfaNAjFW9tDxf",
+            "2w_LobA8dabU6W2WrATzG"
           ],
           "ratingsScore": 52
         },
         "klv": {
           "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
+            "w5NCKAI6STnK06xtEuEqb",
             "UFE6dao4W6DDH36YIGFwa",
+            "m9TuqWM-9Pjvq_Ttyyxqb",
+            "ca0oTRBqMB0e6vc6wBgOV",
+            "i4sJJv5kb79VqWfdjIabd"
+          ],
+          "ratingsScore": 52
+        }
+      },
+      "date": "2022-07-20",
+      "place": "Iglesias",
+      "matchType": "futsal"
+    },
+    {
+      "id": "5ygRBs-MlllK_DRHDSP7N",
+      "teams": {
+        "vlk": {
+          "players": [
+            "4tG4ohuKqKzSF3p3xs9g8",
+            "ohcB7VlHKhn4CX2QNxiZu",
+            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+            "ohvvU6fLGQgZBxaQguRBe",
             "B0K-nmjxqF3VVudgcNpne",
+            "ZYUivicO6bWL1LAUhajSF",
+            "ca0oTRBqMB0e6vc6wBgOV",
+            "ToYtfPpK6cjXaJUmVR1Zu",
+            "jHpnvaxO9Smxk_Qt2dMdo",
+            "i4sJJv5kb79VqWfdjIabd",
+            "vhbQwdpz3woz1XEJcpGVS"
+          ],
+          "ratingsScore": 112
+        },
+        "klv": {
+          "players": [
+            "w5NCKAI6STnK06xtEuEqb",
+            "BXSdXA7VYjNshSBGlSmx0",
+            "a9609b8f-214d-4c02-bf57-61698383778d",
+            "UFE6dao4W6DDH36YIGFwa",
+            "m9TuqWM-9Pjvq_Ttyyxqb",
+            "v3FnupV2lWxSUU8gV0cHq",
+            "3c8e8708-3bab-4f52-b008-211212",
+            "-b8B-vxmdfaNAjFW9tDxf",
+            "wNdbDzHHsUChFzpQ_fhzN",
+            "9iT4LPhsLkZUOfEhBr71F",
+            "2w_LobA8dabU6W2WrATzG"
+          ],
+          "ratingsScore": 112
+        }
+      },
+      "date": "2022-10-20",
+      "place": "San Siro",
+      "matchType": "football"
+    },
+    {
+      "id": "UoBDCqneKqVno0UpWRn_i",
+      "teams": {
+        "vlk": {
+          "players": [
+            "aaZ7D-gBx7dUJSSJm6P9U",
+            "a9609b8f-214d-4c02-bf57-61698383778d",
+            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
+            "v3FnupV2lWxSUU8gV0cHq",
+            "3c8e8708-3bab-4f52-b008-211212",
             "wNdbDzHHsUChFzpQ_fhzN",
             "9iT4LPhsLkZUOfEhBr71F"
           ],
-          "ratingsScore": 52
-        }
-      },
-      "date": "2024-06-19",
-      "place": "San Siro"
-    },
-    {
-      "id": "r7xv_Qj9bezNlqOGSIfi2",
-      "teams": {
-        "vlk": {
+          "ratingsScore": 72
+        },
+        "klv": {
           "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "UFE6dao4W6DDH36YIGFwa",
-            "ohvvU6fLGQgZBxaQguRBe",
+            "ohcB7VlHKhn4CX2QNxiZu",
+            "i__Xv-lDlEC2qRspQmFNc",
             "239mkZm3G-RZ95NeCIBF-",
-            "i4sJJv5kb79VqWfdjIabd"
-          ],
-          "ratingsScore": 56
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "BXSdXA7VYjNshSBGlSmx0",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
+            "ZYUivicO6bWL1LAUhajSF",
             "ToYtfPpK6cjXaJUmVR1Zu",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 56
-        }
-      },
-      "date": "2022-06-27",
-      "place": "San Siro"
-    },
-    {
-      "id": "-IJ1ZhhFg2jbf0CPYbjnP",
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV"
-          ],
-          "ratingsScore": 60
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 60
-        }
-      },
-      "date": "2022-06-07",
-      "place": "San Siro"
-    },
-    {
-      "id": "B4wOI1F7QZ1IzFqHel6v1",
-      "teams": {
-        "vlk": {
-          "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 52
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "ca0oTRBqMB0e6vc6wBgOV"
-          ],
-          "ratingsScore": 56
-        }
-      },
-      "date": "2022-07-04",
-      "place": "San Siro"
-    },
-    {
-      "id": "Vgz54C4PfJOQ0k4p041H3",
-      "teams": {
-        "vlk": {
-          "players": [
-            "i__Xv-lDlEC2qRspQmFNc",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "-b8B-vxmdfaNAjFW9tDxf",
-            "wNdbDzHHsUChFzpQ_fhzN"
-          ],
-          "ratingsScore": 52
-        },
-        "klv": {
-          "players": [
-            "BXSdXA7VYjNshSBGlSmx0",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "v3FnupV2lWxSUU8gV0cHq",
-            "ToYtfPpK6cjXaJUmVR1Zu",
-            "WIU7taUl4CfDUGBD7w7Ve"
-          ],
-          "ratingsScore": 56
-        }
-      },
-      "date": "2022-04-20",
-      "place": "San Siro"
-    },
-    {
-      "id": "cG45_HKO9pPn5LH8nuOU9",
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne"
-          ],
-          "ratingsScore": 64
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "BXSdXA7VYjNshSBGlSmx0",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 60
-        }
-      },
-      "date": "2022-07-10",
-      "place": "San Siro"
-    },
-    {
-      "id": "8Ey3f140ycK1AJzS3mY18",
-      "teams": {
-        "vlk": {
-          "players": [
-            "i__Xv-lDlEC2qRspQmFNc",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 52
-        },
-        "klv": {
-          "players": [
-            "BXSdXA7VYjNshSBGlSmx0",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "WIU7taUl4CfDUGBD7w7Ve"
-          ],
-          "ratingsScore": 56
-        }
-      },
-      "date": "2022-07-22",
-      "place": "San Siro"
-    },
-    {
-      "id": "_DQW0326E7YV7a_Jqcx02",
-      "teams": {
-        "vlk": {
-          "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "9iT4LPhsLkZUOfEhBr71F"
-          ],
-          "ratingsScore": 52
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "ca0oTRBqMB0e6vc6wBgOV"
-          ],
-          "ratingsScore": 56
-        }
-      },
-      "date": "2022-07-22",
-      "place": "San Siro"
-    },
-    {
-      "id": "FPGAcAvL_AgcmIW0-5o6l",
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV"
-          ],
-          "ratingsScore": 60
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 60
-        }
-      },
-      "date": "2022-07-27",
-      "place": "San Siro"
-    },
-    {
-      "id": "wXHkm70PEKSfh56O6ABWD",
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "ca0oTRBqMB0e6vc6wBgOV",
-            "-b8B-vxmdfaNAjFW9tDxf",
-            "9iT4LPhsLkZUOfEhBr71F",
-            "i4sJJv5kb79VqWfdjIabd"
-          ],
-          "ratingsScore": 88
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "BXSdXA7VYjNshSBGlSmx0",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 64
-        }
-      },
-      "date": "2022-07-19",
-      "place": "San Siro"
-    },
-    {
-      "id": "uDdg-tr_KTsdsoaVn52Vr",
-      "teams": {
-        "vlk": {
-          "players": [
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 32
-        },
-        "klv": {
-          "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "UFE6dao4W6DDH36YIGFwa",
-            "B0K-nmjxqF3VVudgcNpne"
-          ],
-          "ratingsScore": 36
-        }
-      },
-      "date": "2022-11-24",
-      "place": "San Siro"
-    },
-    {
-      "id": "IBPWIUxdenDNX7heAZnEk",
-      "teams": {
-        "vlk": {
-          "players": [
-            "4tG4ohuKqKzSF3p3xs9g8",
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "B0K-nmjxqF3VVudgcNpne",
-            "-b8B-vxmdfaNAjFW9tDxf",
-            "i4sJJv5kb79VqWfdjIabd"
-          ],
-          "ratingsScore": 76
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "BXSdXA7VYjNshSBGlSmx0",
-            "UFE6dao4W6DDH36YIGFwa",
-            "m9TuqWM-9Pjvq_Ttyyxqb",
-            "3c8e8708-3bab-4f52-b008-211212",
-            "ca0oTRBqMB0e6vc6wBgOV",
-            "9iT4LPhsLkZUOfEhBr71F"
+            "jHpnvaxO9Smxk_Qt2dMdo",
+            "vhbQwdpz3woz1XEJcpGVS"
           ],
           "ratingsScore": 76
         }
       },
-      "date": "2022-07-21",
-      "place": "San Siro"
-    },
-    {
-      "id": "CMn3JHCdUDg7kG_BWr0V4",
-      "teams": {
-        "vlk": {
-          "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe"
-          ],
-          "ratingsScore": 36
-        },
-        "klv": {
-          "players": [
-            "w5NCKAI6STnK06xtEuEqb",
-            "UFE6dao4W6DDH36YIGFwa",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 36
-        }
-      },
-      "date": "2022-07-30",
-      "place": "San Siro"
-    },
-    {
-      "id": "v8wMb-5d4yosGLGVKZm4x",
-      "teams": {
-        "vlk": {
-          "players": [
-            "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
-            "ohvvU6fLGQgZBxaQguRBe",
-            "3c8e8708-3bab-4f52-b008-211212"
-          ],
-          "ratingsScore": 32
-        },
-        "klv": {
-          "players": [
-            "a9609b8f-214d-4c02-bf57-61698383778d",
-            "UFE6dao4W6DDH36YIGFwa",
-            "B0K-nmjxqF3VVudgcNpne"
-          ],
-          "ratingsScore": 36
-        }
-      },
-      "date": "2022-07-24",
-      "place": "San Siro"
+      "date": "2022-08-03",
+      "place": "Camp Nou",
+      "matchType": "seven"
     }
   ],
   "players": [

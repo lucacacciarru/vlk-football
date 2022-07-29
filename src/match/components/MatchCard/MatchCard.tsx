@@ -5,7 +5,12 @@ import { MatchCardFooter } from '../MatchCardFooter';
 import { MatchCardHeader } from '../MatchCardHeader';
 import { MatchCardTeamsImage } from '../MatchCardTeamsImage';
 
-export const MatchCard: React.FC<Match> = ({ teams, id, ...restMatch }) => {
+export const MatchCard: React.FC<Match> = ({
+  teams,
+  id,
+  matchType,
+  ...restMatch
+}) => {
   return (
     <Link to={id}>
       <Stack
@@ -19,8 +24,8 @@ export const MatchCard: React.FC<Match> = ({ teams, id, ...restMatch }) => {
         _hover={{ outline: '1px solid #686868' }}
         role="matchCard"
       >
-        <MatchCardHeader {...restMatch} />
-        <MatchCardTeamsImage {...teams} />
+        <MatchCardHeader {...restMatch} matchType={matchType} />
+        <MatchCardTeamsImage teams={teams} matchType={matchType} />
         <MatchCardFooter {...teams} />
       </Stack>
     </Link>

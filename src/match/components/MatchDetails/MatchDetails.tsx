@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { Team } from '../../../builderGame/components/Team';
 import { MatchTeams } from '../../../builderGame/store/types';
 import { PlayerCardSkeleton } from '../../../_shared/components/PlayerCardSkeletonList';
-import { TeamsName } from '../../../_shared/types/general';
+import { MatchType, TeamsName } from '../../../_shared/types/general';
 import { useGetSingleMatch } from '../../hook';
 
 export const MatchDetails: React.FC = () => {
@@ -13,6 +13,7 @@ export const MatchDetails: React.FC = () => {
   const { id } = useParams();
   const match = useGetSingleMatch(id as string);
   const teamNameKeys = Object.keys(match?.teams || {});
+  const matchTypeTranslation = t(`matchType.${match?.matchType as MatchType}`);
 
   const renderTeams = useMemo(
     () =>
@@ -52,6 +53,9 @@ export const MatchDetails: React.FC = () => {
         </Text>
         <Text as="p" color="black.50" textStyle="body-sm">
           {t('match.matchInfo.place', { place: match?.place })}
+        </Text>
+        <Text as="p" color="black.50" textStyle="body-sm">
+          {t('match.matchInfo.type', { matchType: matchTypeTranslation })}
         </Text>
       </HStack>
       <HStack

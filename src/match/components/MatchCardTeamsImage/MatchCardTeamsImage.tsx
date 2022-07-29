@@ -1,6 +1,8 @@
 import { Box, BoxProps, HStack, Image, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
 import { MatchTeams } from '../../../builderGame/store/types';
+import { MatchType } from '../../../_shared/types';
+import { matchCardImageMap } from './matchCardImageMap';
 
 const containerTextsProps: BoxProps = {
   w: 'full',
@@ -22,9 +24,16 @@ const containerTextsProps: BoxProps = {
   },
 };
 
-export const MatchCardTeamsImage: React.FC<MatchTeams> = teams => {
+type Props = {
+  teams: MatchTeams;
+  matchType: MatchType;
+};
+
+export const MatchCardTeamsImage: React.FC<Props> = ({ teams, matchType }) => {
   const { t } = useTranslation();
   const teamsName = Object.keys(teams);
+  const { coverUrl } = matchCardImageMap[matchType];
+
   return (
     <Box
       h="40"
@@ -33,12 +42,7 @@ export const MatchCardTeamsImage: React.FC<MatchTeams> = teams => {
       borderRadius="lg"
       overflow="hidden"
     >
-      <Image
-        objectFit="cover"
-        h="full"
-        w="full"
-        src="https://images.unsplash.com/photo-1587384474964-3a06ce1ce699?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-      />
+      <Image objectFit="cover" h="full" w="full" src={coverUrl} />
       <Box {...containerTextsProps}>
         <HStack
           gap="4"

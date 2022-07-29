@@ -3,12 +3,16 @@ import { useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { InputContainer } from '../../components/InputContainer';
-import { useGetTeams, useUpdateDateAndPlaceMatch } from '../../hook';
+import {
+  useGetMatchType,
+  useGetTeams,
+  useUpdateDateAndPlaceMatch,
+} from '../../hook';
 import { DateAndPlaceMatch } from '../../types';
 import { usePostMatchMutation } from '../../../match/store';
 import { useGenerateId } from '../../../_shared/hook';
 import { useNavigate } from 'react-router-dom';
-import { PATHS } from '../../../_shared/types';
+import { MatchType, PATHS } from '../../../_shared/types';
 
 export const SelectPlaceAndDateForm: React.FC = () => {
   const { t } = useTranslation();
@@ -17,18 +21,19 @@ export const SelectPlaceAndDateForm: React.FC = () => {
   const idMatch = useGenerateId();
   const navigate = useNavigate();
   const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
+  const matchType = useGetMatchType() as MatchType;
 
   const { handleSubmit, register } = useForm<DateAndPlaceMatch>({
-    defaultValues: { date: '', place: 'San Siro' },
+    defaultValues: { date: '', place: '' },
   });
 
   const onSubmit = useCallback(
     (data: DateAndPlaceMatch) => {
       updateDateAndPlaceMatch(data);
-      addMatch({ id: idMatch, teams, ...data });
+      addMatch({ id: idMatch, teams, ...data, matchType });
       navigate(`/${PATHS.MATCHES}/${idMatch}`);
     },
-    [addMatch, idMatch, navigate, teams, updateDateAndPlaceMatch],
+    [addMatch, idMatch, matchType, navigate, teams, updateDateAndPlaceMatch],
   );
 
   return (
@@ -43,6 +48,7 @@ export const SelectPlaceAndDateForm: React.FC = () => {
       <InputContainer label={t('builderGame.preMatch.placeLabel')}>
         <Input
           {...register('place', { required: true })}
+          placeholder="test"
           data-testid="inputPlace"
         />
       </InputContainer>
