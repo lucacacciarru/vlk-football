@@ -1,17 +1,19 @@
 import { Box, HStack, Text } from '@chakra-ui/react';
 import { useTranslation } from 'react-i18next';
+import { Match } from '../../store';
 
-type Props = {
-  date: string;
-  place: string;
-};
+type Props = Omit<Match, 'id' | 'teams'>;
 
-export const MatchCardHeader: React.FC<Props> = ({ date, place }) => {
+export const MatchCardHeader: React.FC<Props> = ({
+  date,
+  place,
+  matchType,
+}) => {
   const { t } = useTranslation();
   return (
     <Box>
       <Text as="h2" textStyle="h2">
-        {t('match.matchCard.title')}
+        {t(`matchType.${matchType}`)}
       </Text>
       <HStack>
         <Text

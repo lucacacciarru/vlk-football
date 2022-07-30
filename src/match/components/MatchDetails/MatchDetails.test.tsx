@@ -12,6 +12,7 @@ const MOCK_MATCH: Match[] = [
     date: 'anyString',
     id: '1',
     place: 'anyString',
+    matchType: 'football',
     teams: {
       vlk: {
         players: [],

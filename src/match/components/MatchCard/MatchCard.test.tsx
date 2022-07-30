@@ -34,6 +34,7 @@ describe('MatchCard component', () => {
         id="anyId"
         date="5 Giugno"
         place="Cagliari"
+        matchType="football"
         teams={{
           klv: {
             players: ['1'],

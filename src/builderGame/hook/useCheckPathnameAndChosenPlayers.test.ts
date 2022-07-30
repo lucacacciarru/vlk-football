@@ -19,13 +19,25 @@ const BUILDER_GAME_MOCK: BuilderGameState = {
 };
 
 describe('useCheckPathnameAndChosenPlayers hook', () => {
-  test('', () => {
+  test('If the selectedPlayer is not equal than the number of players in the selected matchType. should return false', () => {
     const pathname = `/${PATHS.PRE_MATCH}`;
     const { result } = renderHook(
       () => useCheckPathnameAndChosenPlayers(pathname),
       {
         mocks: {
           builderGame: BUILDER_GAME_MOCK,
+        },
+      },
+    );
+    expect(result.current).toBeFalsy();
+  });
+  test('If matchType is undefined should return false', () => {
+    const pathname = `/${PATHS.PRE_MATCH}`;
+    const { result } = renderHook(
+      () => useCheckPathnameAndChosenPlayers(pathname),
+      {
+        mocks: {
+          builderGame: { ...BUILDER_GAME_MOCK, matchType: undefined },
         },
       },
     );

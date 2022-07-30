@@ -16,7 +16,7 @@ export function useCheckPathnameAndChosenPlayers(pathname: string) {
 
   if (
     pathname === preMatchPath &&
-    chosenPlayer.length < selectRules.numberOfPlayers
+    chosenPlayer.length !== selectRules.numberOfPlayers
   ) {
     return false;
   }
