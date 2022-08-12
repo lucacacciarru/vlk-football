@@ -1,13 +1,24 @@
-import { Player } from "../../../player/store";
-import { renderHook } from "../../../_shared/testConfig/customRenderHook";
-import { useShowPlayer } from "./useShowPlayer";
+import { renderHook } from '../../../_shared/testConfig/customRenderHook';
+import { Player } from '../../../_shared/types';
+import { useShowPlayer } from './useShowPlayer';
 
 const players: Player[] = [
-  { goalkeeper: false, id: "anyid", name: "Test", rating: 12 },
+  {
+    goalkeeper: false,
+    id: 'anyid',
+    name: 'Test',
+    rating: 12,
+    possibleMatchTypes: {
+      football: false,
+      futsal: false,
+      seven: false,
+      three: false,
+    },
+  },
 ];
 
-describe("useShowPlayer hook", () => {
-  test("If hook attributes is not undefined, renderPlayers should contains JSX element", () => {
+describe('useShowPlayer hook', () => {
+  test('If hook attributes is not undefined, renderPlayers should contains JSX element', () => {
     const { result } = renderHook(() => useShowPlayer(players));
     expect(result.current.renderPlayers).not.toBeUndefined();
   });

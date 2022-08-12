@@ -1,8 +1,8 @@
 import { Box, StackProps } from '@chakra-ui/react';
 import { useContext, useMemo } from 'react';
-import { Player } from '../../../player/store';
 import { PlayerCard } from '../../../_shared/components';
 import { PlayerCardSkeleton } from '../../../_shared/components/PlayerCardSkeletonList';
+import { Player } from '../../../_shared/types';
 import { LandingContext } from '../LandingContext';
 
 export function useShowPlayer(data: Player[] | undefined) {
