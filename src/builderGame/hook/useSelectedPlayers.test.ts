@@ -1,5 +1,5 @@
-import { Player } from '../../player/store';
 import { renderHook, waitFor } from '../../_shared/testConfig/customRenderHook';
+import { Player } from '../../_shared/types';
 import { BuilderGameState } from '../store/types';
 import { useSelectedPlayers } from './useSelectedPlayers';
 
@@ -13,6 +13,12 @@ const MOCK_PLAYER: Player = {
   id: '1',
   name: 'anyName',
   rating: 8,
+  possibleMatchTypes: {
+    football: false,
+    futsal: false,
+    seven: false,
+    three: false,
+  },
 };
 
 const MOCK_BUILDER_STATE: BuilderGameState = {

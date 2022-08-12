@@ -1,13 +1,23 @@
-import { render } from "../../testConfig/customRender";
-import { PlayerFrontCard } from "./PlayerFrontCard";
+import { render } from '../../testConfig/customRender';
+import { PlayerFrontCard } from './PlayerFrontCard';
 
-describe("PlayerFrontCard component", () => {
-  test("Should be rendered", () => {
+describe('PlayerFrontCard component', () => {
+  test('Should be rendered', () => {
     render(
       <PlayerFrontCard
-        player={{ goalkeeper: false, name: "anyString", rating: 8 }}
+        player={{
+          goalkeeper: false,
+          name: 'anyString',
+          rating: 8,
+          possibleMatchTypes: {
+            football: false,
+            futsal: false,
+            seven: false,
+            three: false,
+          },
+        }}
         team="klv"
-      />
+      />,
     );
   });
 });

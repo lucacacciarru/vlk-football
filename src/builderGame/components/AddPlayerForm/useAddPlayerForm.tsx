@@ -1,12 +1,18 @@
-import { Player } from '../../../player/store';
 import { useForm } from 'react-hook-form';
+import { Player } from '../../../_shared/types';
 
-type DataPlayer = Omit<Player, 'id' | 'sports'>;
+type DataPlayer = Omit<Player, 'id'>;
 const defaultValues: DataPlayer = {
   name: 'Franco',
   rating: 8,
   goalkeeper: false,
   description: "Let's go",
+  possibleMatchTypes: {
+    football: false,
+    futsal: true,
+    seven: false,
+    three: false,
+  },
 };
 
 export function useAddPlayerForm() {

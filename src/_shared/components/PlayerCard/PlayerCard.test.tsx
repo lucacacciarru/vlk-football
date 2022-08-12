@@ -1,8 +1,8 @@
-import { render } from "../../testConfig/customRender";
-import { PlayerCard } from "./PlayerCard";
+import { render } from '../../testConfig/customRender';
+import { PlayerCard } from './PlayerCard';
 
-describe("PlayerCard component", () => {
-  test("Should be rendered", () => {
+describe('PlayerCard component', () => {
+  test('Should be rendered', () => {
     render(
       <PlayerCard
         goalkeeper={false}
@@ -10,7 +10,13 @@ describe("PlayerCard component", () => {
         name="anyString"
         rating={12}
         team="klv"
-      />
+        possibleMatchTypes={{
+          football: false,
+          futsal: false,
+          seven: false,
+          three: false,
+        }}
+      />,
     );
   });
 });

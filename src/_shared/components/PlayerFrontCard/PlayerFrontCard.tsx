@@ -7,8 +7,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import { Player } from '../../../player/store';
-import { TeamsName } from '../../types/general';
+import { Player, TeamsName } from '../../types/general';
 import { ImageFallback } from '../ImageFallback';
 import { RoleIcon } from '../RoleIcon';
 import { useFrontCard } from './useFrontCard';

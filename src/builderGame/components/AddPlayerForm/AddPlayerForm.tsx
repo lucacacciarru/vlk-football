@@ -2,6 +2,7 @@ import {
   Button,
   ButtonGroup,
   Checkbox,
+  CheckboxGroup,
   HStack,
   Input,
   ModalBody,
@@ -13,8 +14,10 @@ import { nanoid } from '@reduxjs/toolkit';
 import { useMemo } from 'react';
 import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import { Player, usePostPlayerMutation } from '../../../player/store';
+import { usePostPlayerMutation } from '../../../player/store';
 import { PlayerCard } from '../../../_shared/components';
+import { MatchType, Player } from '../../../_shared/types';
+import { matchTypeMap } from '../../utils/matchTypeMap';
 import { InputContainer } from '../InputContainer';
 import { useAddPlayerForm } from './useAddPlayerForm';
 
@@ -25,6 +28,7 @@ type Props = {
 export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
   const { t } = useTranslation();
   const [addPlayer] = usePostPlayerMutation();
+  const allMatchTypes = Object.keys(matchTypeMap);
 
   const { inputsPropsMap, handleSubmit, playerData, errors, control } =
     useAddPlayerForm();
@@ -37,6 +41,35 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
       </option>
     ));
   }, [t]);
+
+  const checkMatchTypeCheckbox = useMemo(() => {
+    const checkboxValues = Object.values(playerData.possibleMatchTypes);
+    return checkboxValues.every(value => !value);
+  }, [playerData]);
+
+  const renderMatchTypeOptions = useMemo(
+    () =>
+      allMatchTypes.map(matchType => (
+        <Controller
+          name={`possibleMatchTypes.${matchType as MatchType}`}
+          control={control}
+          rules={{ required: checkMatchTypeCheckbox }}
+          key={matchType}
+          render={({ field: { onChange, value, ref } }) => (
+            <Checkbox
+              color="white.0"
+              marginInlineStart="0"
+              onChange={onChange}
+              isChecked={value}
+              ref={ref}
+            >
+              {t(`matchType.${matchType as MatchType}`)}
+            </Checkbox>
+          )}
+        />
+      )),
+    [allMatchTypes, checkMatchTypeCheckbox, control, t],
+  );
 
   function addPlayerAndCloseModal(playerWithoutId: Omit<Player, 'id'>) {
     addPlayer({
@@ -125,6 +158,18 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
                   )}
                   {...inputsPropsMap.description}
                 />
+              </InputContainer>
+              <InputContainer
+                label={t(
+                  'builderGame.createPlayerModal.formLabels.description',
+                )}
+                errorMessage={errors.possibleMatchTypes?.message}
+              >
+                <CheckboxGroup>
+                  <SimpleGrid gap="6" columns={2}>
+                    {renderMatchTypeOptions}
+                  </SimpleGrid>
+                </CheckboxGroup>
               </InputContainer>
             </SimpleGrid>
           </HStack>

@@ -1,9 +1,9 @@
-import { Player } from '../../../player/store';
 import {
   render,
   screen,
   waitFor,
 } from '../../../_shared/testConfig/customRender';
+import { Player } from '../../../_shared/types';
 import { ShowPlayer } from './ShowPlayer';
 
 function mockFetch(body?: Object) {
@@ -17,6 +17,12 @@ const MOCK_TEAMS: Player[] = [
     goalkeeper: false,
     name: 'Test',
     rating: 8,
+    possibleMatchTypes: {
+      football: false,
+      futsal: false,
+      seven: false,
+      three: false,
+    },
   },
 ];
 

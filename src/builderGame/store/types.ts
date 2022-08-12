@@ -1,6 +1,5 @@
 import { Action, PayloadAction } from '@reduxjs/toolkit';
-import { Player } from '../../player/store';
-import { MatchType } from '../../_shared/types';
+import { MatchType, Player } from '../../_shared/types';
 import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {

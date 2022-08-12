@@ -1,4 +1,4 @@
-import { Player } from '../../player/store';
+import { Player } from '../../_shared/types';
 import { MatchTeams } from '../store/types';
 
 type PlayerRatingAndId = Pick<Player, 'id' | 'rating'>;

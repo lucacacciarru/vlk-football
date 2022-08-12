@@ -1,4 +1,5 @@
-import { Player, useGetPlayerQuery } from '../../player/store';
+import { useGetPlayerQuery } from '../../player/store';
+import { Player } from '../../_shared/types';
 
 export function useGetSinglePlayer(id: string) {
   const { player } = useGetPlayerQuery(undefined, {

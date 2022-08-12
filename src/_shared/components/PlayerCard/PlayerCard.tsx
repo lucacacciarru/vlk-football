@@ -1,6 +1,5 @@
 import { Box } from '@chakra-ui/react';
-import { Player } from '../../../player/store';
-import { TeamsName } from '../../types/general';
+import { Player, TeamsName } from '../../types/general';
 import { PlayerBackCard } from '../PlayerBackCard';
 import { PlayerFrontCard } from '../PlayerFrontCard';
 import { usePlayerCard } from './usePlayerCard';
@@ -10,13 +9,7 @@ type Props = Player & {
   size?: 'regular' | 'small';
 };
 
-export const PlayerCard: React.FC<Props> = ({
-  id,
-  sports,
-  team,
-  size,
-  ...player
-}) => {
+export const PlayerCard: React.FC<Props> = ({ id, team, size, ...player }) => {
   const { backContainerProps, frontContainerProps, onClick } = usePlayerCard({
     team,
     size,

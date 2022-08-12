@@ -1,9 +1,9 @@
-import { Player } from '../../../player/store';
 import {
   render,
   waitFor,
   screen,
 } from '../../../_shared/testConfig/customRender';
+import { Player } from '../../../_shared/types';
 import { BuilderGameState, MatchTeams } from '../../store/types';
 import { ContainerTeams } from './ContainerTeams';
 
@@ -40,12 +40,24 @@ const MOCK_PLAYER: Player[] = [
     id: '1',
     name: 'anyName',
     rating: 8,
+    possibleMatchTypes: {
+      football: false,
+      futsal: false,
+      seven: false,
+      three: false,
+    },
   },
   {
     goalkeeper: true,
     id: '2',
     name: 'anyName',
     rating: 8,
+    possibleMatchTypes: {
+      football: false,
+      futsal: false,
+      seven: false,
+      three: false,
+    },
   },
 ];
 

@@ -1,10 +1,10 @@
 // import { Player } from '../../../player/store';
-import { Player } from '../../../player/store';
 import {
   render,
   waitFor,
   screen,
 } from '../../../_shared/testConfig/customRender';
+import { Player } from '../../../_shared/types';
 import { Team } from './Team';
 
 function mockFetch(body?: Object) {
@@ -17,6 +17,12 @@ const MOCK_PLAYER: Player = {
   id: '1',
   name: 'anyName',
   rating: 8,
+  possibleMatchTypes: {
+    football: false,
+    futsal: false,
+    seven: false,
+    three: false,
+  },
 };
 
 describe('Team component', () => {
