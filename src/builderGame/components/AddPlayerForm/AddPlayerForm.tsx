@@ -30,8 +30,14 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
   const [addPlayer] = usePostPlayerMutation();
   const allMatchTypes = Object.keys(matchTypeMap);
 
-  const { inputsPropsMap, handleSubmit, playerData, errors, control } =
-    useAddPlayerForm();
+  const {
+    inputsPropsMap,
+    handleSubmit,
+    playerData,
+    errors,
+    control,
+    checkMatchTypeCheckbox,
+  } = useAddPlayerForm();
 
   const renderOptionRatings = useMemo(() => {
     const ratingsList: Player['rating'][] = [4, 8, 12, 16];
@@ -41,11 +47,6 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
       </option>
     ));
   }, [t]);
-
-  const checkMatchTypeCheckbox = useMemo(() => {
-    const checkboxValues = Object.values(playerData.possibleMatchTypes);
-    return checkboxValues.every(value => !value);
-  }, [playerData]);
 
   const renderMatchTypeOptions = useMemo(
     () =>
@@ -100,7 +101,7 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
             <SimpleGrid w="100%" columns={{ base: 1, lg: 2 }} spacing="8">
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.name')}
-                errorMessage={errors.name?.message}
+                error={errors.name}
               >
                 <Input
                   placeholder={t(
@@ -111,7 +112,6 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
               </InputContainer>
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.role')}
-                errorMessage={errors.goalkeeper?.message}
               >
                 <Controller
                   name="goalkeeper"
@@ -128,7 +128,6 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
               </InputContainer>
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.rating')}
-                errorMessage={errors.rating?.message}
               >
                 <Select {...inputsPropsMap.rating}>
                   {renderOptionRatings}
@@ -136,7 +135,6 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
               </InputContainer>
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.avatar')}
-                errorMessage={errors.avatar?.message}
               >
                 <Input
                   placeholder={t(
@@ -150,7 +148,6 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
                 label={t(
                   'builderGame.createPlayerModal.formLabels.description',
                 )}
-                errorMessage={errors.description?.message}
               >
                 <Textarea
                   placeholder={t(
@@ -160,10 +157,12 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
                 />
               </InputContainer>
               <InputContainer
-                label={t(
-                  'builderGame.createPlayerModal.formLabels.description',
-                )}
-                errorMessage={errors.possibleMatchTypes?.message}
+                label={t('builderGame.createPlayerModal.formLabels.matchType')}
+                isInvalid={checkMatchTypeCheckbox}
+                error={{
+                  type: 'required',
+                  message: t('builderGame.createPlayerModal.errors.matchType'),
+                }}
               >
                 <CheckboxGroup>
                   <SimpleGrid gap="6" columns={2}>

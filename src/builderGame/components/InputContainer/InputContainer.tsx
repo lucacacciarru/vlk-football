@@ -1,21 +1,28 @@
-import { FormControl, FormErrorMessage, FormLabel } from '@chakra-ui/react';
+import {
+  FormControl,
+  FormControlProps,
+  FormErrorMessage,
+  FormLabel,
+} from '@chakra-ui/react';
 import { PropsWithChildren } from 'react';
+import { FieldError } from 'react-hook-form';
 
 type Props = {
   label: string;
-  errorMessage?: string;
-};
+  error?: FieldError;
+} & FormControlProps;
 
 export const InputContainer: React.FC<PropsWithChildren<Props>> = ({
   label,
-  errorMessage,
+  error,
   children,
+  ...formControlProps
 }) => {
   return (
-    <FormControl w="full">
+    <FormControl isInvalid={!!error} w="full" {...formControlProps}>
       <FormLabel>{label}</FormLabel>
-      <FormErrorMessage>{errorMessage}</FormErrorMessage>
       {children}
+      <FormErrorMessage>{error?.message}</FormErrorMessage>
     </FormControl>
   );
 };
