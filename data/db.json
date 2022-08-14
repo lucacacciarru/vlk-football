@@ -266,6 +266,34 @@
       "rating": 4,
       "goalkeeper": false,
       "description": "Odio avere troppo finestre aperte nel mio PC"
+    },
+    {
+      "id": "vOjW6BWTA-Q3c3D0_tzCS",
+      "name": "Franco",
+      "rating": 8,
+      "goalkeeper": false,
+      "description": "Let's go",
+      "possibleMatchTypes": {
+        "football": false,
+        "futsal": true,
+        "seven": false,
+        "three": false
+      },
+      "avatar": ""
+    },
+    {
+      "id": "aMU59e6cl_-BCWhEuFbBe",
+      "name": "sss",
+      "rating": 8,
+      "goalkeeper": true,
+      "description": "Let's go",
+      "possibleMatchTypes": {
+        "football": false,
+        "futsal": true,
+        "seven": false,
+        "three": false
+      },
+      "avatar": ""
     }
   ]
 }

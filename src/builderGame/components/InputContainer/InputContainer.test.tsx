@@ -3,6 +3,6 @@ import { InputContainer } from './InputContainer';
 
 describe('FormFields components', () => {
   test(' should be rendered', () => {
-    render(<InputContainer label="anyString" errorMessage="anyError" />);
+    render(<InputContainer label="anyString" />);
   });
 });

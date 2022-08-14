@@ -6,8 +6,9 @@ export const createPlayerModal = {
     name: 'Nome*',
     rating: 'Valutazione*',
     avatar: 'Immagine (solo src)',
-    role: 'Portiere*',
+    role: 'Portiere',
     description: 'Descrizione',
+    matchType: 'Tipologie di partita*',
   },
   ratings: {
     '4': 'Debole (4 pt.)',
@@ -19,5 +20,10 @@ export const createPlayerModal = {
     name: 'Aggiungi nome',
     avatar: "Aggiungi src dell'immagine",
     description: 'Aggiungi descrizione',
+  },
+  errors: {
+    name: 'Inserisci un nome',
+    rating: 'Seleziona la valutazione',
+    matchType: 'Seleziona almeno una tipologia',
   },
 };
