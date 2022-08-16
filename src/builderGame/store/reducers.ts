@@ -5,6 +5,7 @@ import {
   BuilderGameState,
   CreateMatchTeams,
   PopulateAvailablePlayers,
+  ReplayMatch,
   ResetGame,
   updateDateAndPlaceMatch,
   UpdateGameMode,
@@ -89,3 +90,23 @@ export const resetGameCase: CaseReducer<
     },
   },
 });
+
+export const replayMatchCase: CaseReducer<BuilderGameState, ReplayMatch> = (
+  state,
+  action,
+) => {
+  return {
+    ...state,
+    chosenPlayers: {
+      availablePlayers: state.chosenPlayers.availablePlayers,
+      selectedPlayers: [
+        ...action.payload.teams.klv.players,
+        ...action.payload.teams.vlk.players,
+      ],
+    },
+    date: '',
+    place: '',
+    teams: action.payload.teams,
+    matchType: action.payload.matchType,
+  };
+};

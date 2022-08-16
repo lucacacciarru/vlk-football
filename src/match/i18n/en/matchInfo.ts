@@ -3,5 +3,6 @@ export const matchInfo = {
   date: 'Date: {{date}}',
   place: 'Place: {{place}}',
   type: 'Type: {{matchType}}',
-  goToMatches: 'See all matches',
+  goToMatchesButton: 'See all matches',
+  replayButton: 'Replay this match',
 };

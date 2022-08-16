@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import { Match } from '../../match/store';
 import { renderHook, act } from '../../_shared/testConfig/customRenderHook';
 import {
   getChosenPlayers,
@@ -10,6 +11,7 @@ import { MatchTeams } from '../store/types';
 import { DateAndPlaceMatch } from '../types';
 import {
   useCreateTeams,
+  useReplayMatch,
   useUpdateChosenPlayers,
   useUpdateDateAndPlaceMatch,
   useUpdateMatchType,
@@ -24,6 +26,7 @@ function useTestHook() {
   const dateAndPlaceMatch = useSelector(getDateAndPlaceMatch);
   const updateMatchType = useUpdateMatchType();
   const gameMode = useSelector(getMatchType);
+  const replayMatch = useReplayMatch();
 
   return {
     updateChosenPlayers,
@@ -34,6 +37,7 @@ function useTestHook() {
     dateAndPlaceMatch,
     updateMatchType,
     gameMode,
+    replayMatch,
   };
 }
 
@@ -89,5 +93,32 @@ describe('useBuilderGame hook', () => {
       result.current.updateMatchType('football');
     });
     expect(result.current.gameMode).toEqual('football');
+  });
+  test('Should populate the builderState with the attributes of selected Match', async () => {
+    const MOCK_MATCH: Match = {
+      date: 'anyString',
+      id: '1',
+      matchType: 'three',
+      place: 'anyString',
+      teams: {
+        klv: {
+          players: ['1', '2', '3'],
+          ratingsScore: 0,
+        },
+        vlk: {
+          players: ['4', '5', '6'],
+          ratingsScore: 0,
+        },
+      },
+    };
+    const { result } = renderHook(() => useTestHook());
+    act(() => {
+      result.current.replayMatch(MOCK_MATCH);
+    });
+    expect(result.current.chosenPlayers.selectedPlayers).toEqual([
+      ...MOCK_MATCH.teams.klv.players,
+      ...MOCK_MATCH.teams.vlk.players,
+    ]);
+    expect(result.current.teams).toEqual(MOCK_MATCH.teams);
   });
 });
