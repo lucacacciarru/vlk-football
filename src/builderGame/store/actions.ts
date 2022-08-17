@@ -4,6 +4,7 @@ import {
   BUILDER_GAME_ACTION_TYPES,
   CreateMatchTeamsPayload,
   PopulateAvailablePlayersPayload,
+  ReplayMatchPayload,
   UpdateDateAndPlaceMatchPayload,
   UpdateGameModePayload,
 } from './types';
@@ -32,5 +33,10 @@ export const updateDateAndPlaceMatch = createAction<
   UpdateDateAndPlaceMatchPayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_DATE_AND_PLACE_MATCH
 >(BUILDER_GAME_ACTION_TYPES.UPDATE_DATE_AND_PLACE_MATCH);
+
+export const replayMatch = createAction<
+  ReplayMatchPayload,
+  BUILDER_GAME_ACTION_TYPES.REPLAY_MATCH
+>(BUILDER_GAME_ACTION_TYPES.REPLAY_MATCH);
 
 export const resetGame = createAction(BUILDER_GAME_ACTION_TYPES.RESET_GAME);

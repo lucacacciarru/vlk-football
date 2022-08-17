@@ -1,9 +1,12 @@
 import { useCallback } from 'react';
 import { useDispatch } from 'react-redux';
+import { Match } from '../../match/store';
+import { useGenerateId } from '../../_shared/hook';
 import { MatchType } from '../../_shared/types';
 import {
   addSelectedPlayers,
   createMatchTeams,
+  replayMatch,
   updateDateAndPlaceMatch,
   updateMatchType,
 } from '../store/actions';
@@ -46,5 +49,17 @@ export function useUpdateMatchType() {
   return useCallback(
     (mode: MatchType) => dispatch(updateMatchType(mode)),
     [dispatch],
+  );
+}
+
+export function useReplayMatch() {
+  const dispatch = useDispatch();
+  const id = useGenerateId();
+  return useCallback(
+    (match: Match) =>
+      dispatch(
+        replayMatch({ matchType: match.matchType, teams: match.teams, id }),
+      ),
+    [dispatch, id],
   );
 }
