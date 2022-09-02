@@ -1,22 +1,29 @@
-import { IconButton, useDisclosure } from '@chakra-ui/react';
+import { Button, Text, useDisclosure } from '@chakra-ui/react';
+import { useTranslation } from 'react-i18next';
 import { Icon } from '../../../_shared/components';
 import { AddPlayerModalContent } from './AddPlayerModalContent';
 
 export const AddPlayerModal: React.FC = () => {
+  const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <IconButton
-        position="absolute"
-        top="-5%"
-        right="-5%"
-        aria-label="test"
-        minW="14"
-        minH="14"
-        borderRadius="full"
-        icon={<Icon name="add" boxSize="6" />}
+      <Button
+        h="40"
+        w="full"
+        bg="black.80"
+        borderRadius="lg"
+        minH="20"
         onClick={onOpen}
-      />
+        _hover={{
+          bg: 'black.80',
+          border: '1px solid',
+          borderColor: 'white.80',
+        }}
+      >
+        <Icon name="add" size="6" color="white.0" mr="2" />
+        <Text> {t('builderGame.createPlayerModal.openButtonLabel')}</Text>
+      </Button>
       <AddPlayerModalContent isOpen={isOpen} onClose={onClose} />
     </>
   );

@@ -1,4 +1,4 @@
-export const playersColumn = {
+export const listOfPlayers = {
   availablePlayersTitle: 'Giocatori disponibili',
   selectedPlayersTitle: 'Giocatori selezionati',
   totalPlayer: '{{players}}/{{condition}} giocatori totali',

@@ -7,7 +7,7 @@ import { useGetSinglePlayer } from '../../hook';
 type Props = {
   id: string;
 };
-export const DraggablePlayerContent: React.FC<Props> = ({ id }) => {
+export const ListCardPlayerContent: React.FC<Props> = ({ id }) => {
   const selectedPlayer = useGetSinglePlayer(id);
 
   return (

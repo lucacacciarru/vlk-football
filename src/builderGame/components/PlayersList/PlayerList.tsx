@@ -1,40 +1,51 @@
-import { Stack } from '@chakra-ui/react';
-import { useDroppable } from '@dnd-kit/core';
-import {
-  SortableContext,
-  verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
+import { Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
-import { DraggablePlayer } from '../DraggablePlayer';
+import { useTranslation } from 'react-i18next';
+import { useGetAllPlayersId } from '../../../player/hook/';
+import { AddPlayerModal } from '../AddPlayerModal';
+import { ListCardPlayer } from '../ListCardPlayer';
 
-type Props = {
-  id: string;
-  items: string[];
-};
-
-export const PlayerList: React.FC<Props> = ({ id, items }) => {
-  const { setNodeRef } = useDroppable({ id });
-  const renderPlayerItem = useMemo(
-    () => items.map(id => <DraggablePlayer key={id} id={id} />),
-    [items],
-  );
+export const PlayerList: React.FC = () => {
+  const { t } = useTranslation();
+  const allPlayersId = useGetAllPlayersId();
+  const renderPlayerItem = useMemo(() => {
+    if (allPlayersId) {
+      return allPlayersId.map(id => <ListCardPlayer key={id} id={id} />);
+    }
+  }, [allPlayersId]);
   return (
-    <SortableContext
-      id={id}
-      items={items}
-      strategy={verticalListSortingStrategy}
+    <Stack
+      alignItems="center"
+      w={{ base: '30vw', '2xl': '22vw' }}
+      h="88vh"
+      borderRight="1px solid white"
+      pr="8"
     >
+      <Text textStyle="h3" color="white.0">
+        {t('builderGame.listOfPlayers.availablePlayersTitle')}
+      </Text>
       <Stack
-        ref={setNodeRef}
+        w="full"
         padding="4"
         gap="4"
-        w="full"
-        h="50vh"
         overflowY="scroll"
         overflowX="hidden"
+        css={{
+          '&::-webkit-scrollbar': {
+            width: '4px',
+          },
+          '&::-webkit-scrollbar-track': {
+            width: '6px',
+          },
+          '&::-webkit-scrollbar-thumb': {
+            background: '#fafafa',
+            borderRadius: '24px',
+          },
+        }}
       >
+        <AddPlayerModal />
         {renderPlayerItem}
       </Stack>
-    </SortableContext>
+    </Stack>
   );
 };

@@ -1,10 +1,10 @@
 //TODO Add Player carousel from mobile version
-import { SimpleGrid, Stack } from "@chakra-ui/react";
-import { useGetPlayerQuery } from "../../../player/store";
-import { useShowPlayer } from "./useShowPlayer";
+import { SimpleGrid, Stack } from '@chakra-ui/react';
+import { useGetPlayersQuery } from '../../../player/store';
+import { useShowPlayer } from './useShowPlayer';
 
 export const ShowPlayer: React.FC = () => {
-  const { data } = useGetPlayerQuery();
+  const { data } = useGetPlayersQuery();
   const { renderPlayers, stackProps } = useShowPlayer(data);
 
   return (

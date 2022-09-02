@@ -8,7 +8,7 @@ export const playerApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API_URL }),
   tagTypes: ['Players'],
   endpoints: builder => ({
-    getPlayer: builder.query<Player[], void>({
+    getPlayers: builder.query<Player[], void>({
       query: () => '/players',
       async onQueryStarted(_, { dispatch, queryFulfilled }) {
         try {
@@ -32,4 +32,4 @@ export const playerApi = createApi({
   }),
 });
 
-export const { useGetPlayerQuery, usePostPlayerMutation } = playerApi;
+export const { useGetPlayersQuery, usePostPlayerMutation } = playerApi;

@@ -62,7 +62,7 @@ const MOCK_BUILDER_STATE: BuilderGameState = {
 describe('PlayerList component', () => {
   test('Should be rendered', async () => {
     mockFetch(MOCK_PLAYERS);
-    render(<PlayerList id="selectedPlayers" items={['1']} />, {
+    render(<PlayerList />, {
       mocks: { builderGame: MOCK_BUILDER_STATE },
     });
     await waitFor(() => {
