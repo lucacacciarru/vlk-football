@@ -24,7 +24,7 @@ export const BuilderGameLayout: React.FC = () => {
           />
         </LinkButton>
       </Box>
-      <Box px={{ base: '8', xl: '16', '2xl': '40' }} pb="6">
+      <Box px={{ base: '8', xl: '16', '2xl': '40' }}>
         <Outlet />
       </Box>
     </>

@@ -1,7 +1,7 @@
-import { useGetPlayerQuery } from '../../player/store';
+import { useGetPlayersQuery } from '../../player/store';
 
 export function useFilteredPlayers(idList: string[]) {
-  const { filteredPlayers } = useGetPlayerQuery(undefined, {
+  const { filteredPlayers } = useGetPlayersQuery(undefined, {
     selectFromResult: ({ data }) => ({
       filteredPlayers: data?.filter(player => idList.includes(player.id)),
     }),
