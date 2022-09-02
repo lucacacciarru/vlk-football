@@ -1,4 +1,5 @@
 export const createPlayerModal = {
+  openButtonLabel: 'Add player',
   title: 'Create player',
   body: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos, minus!',
   addPlayerButton: 'Add this player',
