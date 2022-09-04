@@ -4,11 +4,15 @@ import { Icon } from '../Icon';
 import { IconLibrary } from '../Icon/IconLibrary';
 
 type Props = {
-  goalkeeper?: boolean;
+  goalkeeper: boolean;
   size: string;
 } & Omit<IconProps, 'name'>;
 
-export const RoleIcon: React.FC<Props> = ({ goalkeeper, size, ...rest }) => {
+export const PlayerRoleIcon: React.FC<Props> = ({
+  goalkeeper,
+  size,
+  ...rest
+}) => {
   const selectedRoleIcon = useMemo(
     (): keyof IconLibrary => (goalkeeper ? 'hand' : 'ball'),
     [goalkeeper],
