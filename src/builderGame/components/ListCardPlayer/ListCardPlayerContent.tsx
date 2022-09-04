@@ -1,7 +1,7 @@
 import { Box, HStack, Image, Stack, Text } from '@chakra-ui/react';
 import React from 'react';
 import { ImageFallback } from '../../../_shared/components/ImageFallback';
-import { RoleIcon } from '../../../_shared/components/RoleIcon';
+import { PlayerRoleIcon } from '../../../_shared/components';
 import { useGetSinglePlayer } from '../../hook';
 
 type Props = {
@@ -33,7 +33,7 @@ export const ListCardPlayerContent: React.FC<Props> = ({ id }) => {
           <Text>{selectedPlayer?.rating}</Text>
         </Stack>
       </HStack>
-      <RoleIcon
+      <PlayerRoleIcon
         goalkeeper={selectedPlayer?.goalkeeper}
         size="10"
         color="black.0"

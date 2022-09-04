@@ -18,7 +18,7 @@ export const Team: React.FC<Props> = ({ teamMaking, team }) => {
     () =>
       selectedPlayers?.map(player => (
         <Stack key={player.id} alignItems="center" justifyContent="center">
-          <PlayerCard {...player} team={team} size="regular" />
+          <PlayerCard {...player} team={team} />
         </Stack>
       )),
     [selectedPlayers, team],
