@@ -1,10 +1,12 @@
-import { Stack } from '@chakra-ui/react';
+import { HStack } from '@chakra-ui/react';
 import { PlayerList } from '../components/PlayersList';
+import { SelectedPlayersArea } from '../components/SelectedPlayersArea';
 
 export const CreateTeam: React.FC = () => {
   return (
-    <Stack justifyContent="left">
+    <HStack justifyContent="space-between">
       <PlayerList />
-    </Stack>
+      <SelectedPlayersArea />
+    </HStack>
   );
 };

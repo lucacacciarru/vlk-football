@@ -26,7 +26,7 @@ export const PlayerList: React.FC = () => {
       </Text>
       <Stack
         w="full"
-        padding="4"
+        p="4"
         gap="4"
         overflowY="scroll"
         overflowX="hidden"
