@@ -1,5 +1,4 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { populateAvailablePlayers } from '../../../builderGame/store/actions';
 import { matchesApi } from '../../../match/store';
 import { Player } from '../../../_shared/types';
 
@@ -10,10 +9,8 @@ export const playerApi = createApi({
   endpoints: builder => ({
     getPlayers: builder.query<Player[], void>({
       query: () => '/players',
-      async onQueryStarted(_, { dispatch, queryFulfilled }) {
+      async onQueryStarted(_, { dispatch }) {
         try {
-          const { data } = await queryFulfilled;
-          dispatch(populateAvailablePlayers(data));
           dispatch(matchesApi.endpoints.getMatches.initiate());
         } catch (err) {}
       },

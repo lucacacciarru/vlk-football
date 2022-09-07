@@ -5,7 +5,6 @@ import { useCheckPathnameAndChosenPlayers } from './useCheckPathnameAndChosenPla
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
-    availablePlayers: [],
     selectedPlayers: [],
   },
   date: 'anyString',

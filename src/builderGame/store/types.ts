@@ -5,7 +5,6 @@ import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {
   UPDATE_MATCH_TYPE = 'builderGame/updateMatchType',
-  POPULATE_AVAILABLE_PLAYERS = 'builderGame/populateAvailablePlayers',
   ADD_SELECTED_PLAYERS = 'builderGame/addSelectedPlayers',
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
   UPDATE_DATE_AND_PLACE_MATCH = 'builderGame/updateDateAndPlaceMatch',
@@ -25,7 +24,6 @@ export type MatchTeams = {
 
 export type BuilderGameState = {
   chosenPlayers: {
-    availablePlayers: string[];
     selectedPlayers: string[];
   };
   matchType?: MatchType;
@@ -37,22 +35,13 @@ export type BuilderGameState = {
 export type PopulateAvailablePlayersPayload = Player[];
 export type UpdateGameModePayload = MatchType;
 
-export type AddSelectedPlayersPayload = {
-  availablePlayers: string[];
-  selectedPlayers: string[];
-};
-
+export type AddSelectedPlayersPayload = string;
 export type UpdateDateAndPlaceMatchPayload = DateAndPlaceMatch;
 export type ReplayMatchPayload = Omit<Match, 'date' | 'place'>;
 
 export type UpdateGameMode = PayloadAction<
   UpdateGameModePayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
->;
-
-export type PopulateAvailablePlayers = PayloadAction<
-  PopulateAvailablePlayersPayload,
-  BUILDER_GAME_ACTION_TYPES.POPULATE_AVAILABLE_PLAYERS
 >;
 
 export type AddSelectedPlayers = PayloadAction<

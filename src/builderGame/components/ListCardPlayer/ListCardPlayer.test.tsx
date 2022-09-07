@@ -1,11 +1,32 @@
 import {
   render,
-  waitFor,
+  fireEvent,
   screen,
 } from '../../../_shared/testConfig/customRender';
 import { Player } from '../../../_shared/types';
-import { BuilderGameState } from '../../store/types';
-import { PlayerList } from './PlayerList';
+import { BuilderGameState, MatchTeams } from '../../store/types';
+import { ListCardPlayer } from './ListCardPlayer';
+
+const MOCK_TEAMS: MatchTeams = {
+  klv: {
+    players: ['1'],
+    ratingsScore: 8,
+  },
+  vlk: {
+    players: ['2'],
+    ratingsScore: 8,
+  },
+};
+
+const MOCK_BUILDER_STATE: BuilderGameState = {
+  chosenPlayers: {
+    selectedPlayers: [],
+  },
+  teams: MOCK_TEAMS,
+  date: '',
+  place: '',
+  matchType: 'three',
+};
 
 function mockFetch(body?: Object) {
   fetchMock.resetMocks();
@@ -22,7 +43,7 @@ const MOCK_PLAYERS: Player[] = [
       football: false,
       futsal: true,
       seven: false,
-      three: false,
+      three: true,
     },
   },
   {
@@ -34,39 +55,18 @@ const MOCK_PLAYERS: Player[] = [
       football: false,
       futsal: true,
       seven: false,
-      three: false,
+      three: true,
     },
   },
 ];
 
-const MOCK_BUILDER_STATE: BuilderGameState = {
-  chosenPlayers: {
-    selectedPlayers: ['1', '2'],
-  },
-  teams: {
-    klv: {
-      players: [],
-      ratingsScore: 0,
-    },
-    vlk: {
-      players: [],
-      ratingsScore: 0,
-    },
-  },
-  matchType: 'futsal',
-  date: '',
-  place: '',
-};
-
-describe('PlayerList component', () => {
-  test('Should be rendered', async () => {
+describe('ListCardPlayer component', () => {
+  test('Should be rendered', () => {
     mockFetch(MOCK_PLAYERS);
-    render(<PlayerList />, {
+    render(<ListCardPlayer id="1" />, {
       mocks: { builderGame: MOCK_BUILDER_STATE },
     });
-    await waitFor(() => {
-      const draggablePlayerName = screen.getByTestId('anyName');
-      expect(draggablePlayerName).toBeInTheDocument();
-    });
+    const playerCard = screen.getByTestId('1');
+    fireEvent.click(playerCard);
   });
 });

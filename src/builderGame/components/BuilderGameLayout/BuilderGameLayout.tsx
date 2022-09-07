@@ -14,7 +14,7 @@ export const BuilderGameLayout: React.FC = () => {
 
   return (
     <>
-      <Box px={{ base: '8', xl: '16', '2xl': '32' }} pt="4">
+      <Box px={{ base: '8', xl: '12', '2xl': '8' }} pt="4">
         <LinkButton variant="solidIcon" to={previouslyRoute as To}>
           <Icon
             name="chevronLeft"
@@ -24,7 +24,7 @@ export const BuilderGameLayout: React.FC = () => {
           />
         </LinkButton>
       </Box>
-      <Box px={{ base: '8', xl: '16', '2xl': '40' }}>
+      <Box px={{ base: '8', xl: '16', '2xl': '16' }}>
         <Outlet />
       </Box>
     </>

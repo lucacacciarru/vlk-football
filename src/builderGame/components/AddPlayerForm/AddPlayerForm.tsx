@@ -97,7 +97,7 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
             justifyContent="space-between"
             flexDir={{ base: 'column', lg: 'row' }}
           >
-            <PlayerCard id="test" {...playerData} />
+            <PlayerCard {...playerData} id="builtPlayer" />
             <SimpleGrid w="100%" columns={{ base: 1, lg: 2 }} spacing="8">
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.name')}

@@ -12,13 +12,13 @@ import { DateAndPlaceMatch } from '../types';
 import {
   useCreateTeams,
   useReplayMatch,
-  useUpdateChosenPlayers,
+  useAddSelectedPlayer,
   useUpdateDateAndPlaceMatch,
   useUpdateMatchType,
 } from './useBuilderGame';
 
 function useTestHook() {
-  const updateChosenPlayers = useUpdateChosenPlayers();
+  const addSelectedPlayer = useAddSelectedPlayer();
   const createTeams = useCreateTeams();
   const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
   const chosenPlayers = useSelector(getChosenPlayers);
@@ -29,7 +29,7 @@ function useTestHook() {
   const replayMatch = useReplayMatch();
 
   return {
-    updateChosenPlayers,
+    addSelectedPlayer,
     createTeams,
     updateDateAndPlaceMatch,
     chosenPlayers,
@@ -41,10 +41,7 @@ function useTestHook() {
   };
 }
 
-const MOCK_CHOSEN_PLAYERS = {
-  availablePlayers: ['1'],
-  selectedPlayers: ['2'],
-};
+const MOCK_CHOSEN_PLAYERS = '2';
 
 const MOCK_TEAMS: MatchTeams = {
   klv: {
@@ -66,9 +63,11 @@ describe('useBuilderGame hook', () => {
   test('Should update chosenPlayer', async () => {
     const { result } = renderHook(() => useTestHook());
     act(() => {
-      result.current.updateChosenPlayers(MOCK_CHOSEN_PLAYERS);
+      result.current.addSelectedPlayer(MOCK_CHOSEN_PLAYERS);
     });
-    expect(result.current.chosenPlayers).toEqual(MOCK_CHOSEN_PLAYERS);
+    expect(result.current.chosenPlayers.selectedPlayers).toEqual([
+      MOCK_CHOSEN_PLAYERS,
+    ]);
   });
   test('Should update teams', async () => {
     const { result } = renderHook(() => useTestHook());

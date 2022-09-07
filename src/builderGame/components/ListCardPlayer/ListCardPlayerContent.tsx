@@ -34,7 +34,7 @@ export const ListCardPlayerContent: React.FC<Props> = ({ id }) => {
         </Stack>
       </HStack>
       <PlayerRoleIcon
-        goalkeeper={selectedPlayer?.goalkeeper}
+        goalkeeper={selectedPlayer?.goalkeeper as boolean}
         size="10"
         color="black.0"
       />
