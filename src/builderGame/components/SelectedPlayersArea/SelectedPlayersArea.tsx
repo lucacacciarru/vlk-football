@@ -1,10 +1,18 @@
 import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 import { FetchedPlayerCard } from '../../../_shared/components/FetchedPlayerCard';
-import { useGetChosenPlayers, useGetMatchRules } from '../../hook';
+import { MatchType } from '../../../_shared/types';
+import {
+  useGetChosenPlayers,
+  useGetMatchRules,
+  useGetMatchType,
+} from '../../hook';
 import { EmptyPlayerCard } from '../EmptyPlayerCard';
 
 export const SelectedPlayersArea: React.FC = () => {
+  const selectedMatchType = useGetMatchType();
+  const { t } = useTranslation();
   const { numberOfPlayers } = useGetMatchRules();
   const { selectedPlayers } = useGetChosenPlayers();
 
@@ -33,9 +41,11 @@ export const SelectedPlayersArea: React.FC = () => {
     >
       <Box textAlign="center">
         <Text color="white.0" textStyle="h2">
-          Calcetto
+          {t(`matchType.${selectedMatchType as MatchType}`)}
         </Text>
-        <Text color="white.0">Change match type</Text>
+        <Text color="white.0">
+          {t('builderGame.listOfPlayers.changeMatchType')}
+        </Text>
       </Box>
       <SimpleGrid
         minChildWidth="200px"

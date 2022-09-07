@@ -4,4 +4,5 @@ export const listOfPlayers = {
   totalPlayer: '{{players}}/{{condition}} total players',
   totalGoalkeepers: '{{goalkeepers}}/{{condition}} total goalkeepers',
   totalAvailablePlayers: '{{players}} players',
+  changeMatchType: 'Change match type',
 };
