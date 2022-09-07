@@ -8,7 +8,6 @@ import { MatchTypeCard } from './MatchTypeCard';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
-    availablePlayers: [],
     selectedPlayers: [],
   },
   date: 'anyString',

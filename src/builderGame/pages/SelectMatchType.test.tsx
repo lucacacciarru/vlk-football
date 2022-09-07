@@ -4,7 +4,6 @@ import { BuilderGameState } from '../store/types';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
-    availablePlayers: [],
     selectedPlayers: [],
   },
   date: 'anyString',

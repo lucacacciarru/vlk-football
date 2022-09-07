@@ -3,7 +3,6 @@ import {
   AddSelectedPlayersPayload,
   BUILDER_GAME_ACTION_TYPES,
   CreateMatchTeamsPayload,
-  PopulateAvailablePlayersPayload,
   ReplayMatchPayload,
   UpdateDateAndPlaceMatchPayload,
   UpdateGameModePayload,
@@ -13,11 +12,6 @@ export const updateMatchType = createAction<
   UpdateGameModePayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
 >(BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE);
-
-export const populateAvailablePlayers = createAction<
-  PopulateAvailablePlayersPayload,
-  BUILDER_GAME_ACTION_TYPES.POPULATE_AVAILABLE_PLAYERS
->(BUILDER_GAME_ACTION_TYPES.POPULATE_AVAILABLE_PLAYERS);
 
 export const addSelectedPlayers = createAction<
   AddSelectedPlayersPayload,

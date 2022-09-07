@@ -132,7 +132,13 @@
       "rating": 12,
       "goalkeeper": false,
       "description": "Non fatemi giocare con Mauro, è una brutta persona",
-      "avatar": "https://miro.medium.com/max/3150/1*t4vTd1ZPRulr8yOEj-gFzA.png"
+      "avatar": "https://miro.medium.com/max/3150/1*t4vTd1ZPRulr8yOEj-gFzA.png",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": false
+      }
     },
     {
       "id": "3c8e8708-3bab-4f52-b008-211212",
@@ -140,7 +146,13 @@
       "rating": 8,
       "goalkeeper": false,
       "description": "🐺🐺",
-      "avatar": "https://avatars.githubusercontent.com/u/86778250?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/86778250?v=4",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": false,
+        "three": false
+      }
     },
     {
       "id": "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
@@ -148,7 +160,13 @@
       "rating": 12,
       "goalkeeper": false,
       "description": "Speriamo non ci siano i fratelli Porceddu",
-      "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": false
+      }
     },
     {
       "id": "ca0oTRBqMB0e6vc6wBgOV",
@@ -156,7 +174,13 @@
       "rating": 8,
       "goalkeeper": true,
       "description": "Lorem",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U02K3A08HCZ-0c588b00e91c-512"
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U02K3A08HCZ-0c588b00e91c-512",
+      "possibleMatchTypes": {
+        "football": false,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "UFE6dao4W6DDH36YIGFwa",
@@ -164,7 +188,13 @@
       "rating": 12,
       "goalkeeper": false,
       "description": "👑👑",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U01E61X1C73-984411a0a42c-512"
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U01E61X1C73-984411a0a42c-512",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "ohvvU6fLGQgZBxaQguRBe",
@@ -172,7 +202,13 @@
       "rating": 12,
       "goalkeeper": false,
       "description": "🐺🐺",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U038USCG4LA-9ced9b524de3-512"
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U038USCG4LA-9ced9b524de3-512",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "m9TuqWM-9Pjvq_Ttyyxqb",
@@ -180,7 +216,13 @@
       "rating": 12,
       "goalkeeper": true,
       "description": "🐺",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U011KKFJBFE-f379877474e5-512"
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U011KKFJBFE-f379877474e5-512",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "B0K-nmjxqF3VVudgcNpne",
@@ -188,7 +230,13 @@
       "rating": 12,
       "goalkeeper": false,
       "description": "🐺",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-UJ240CE3S-67b511f92991-512"
+      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-UJ240CE3S-67b511f92991-512",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "w5NCKAI6STnK06xtEuEqb",
@@ -196,7 +244,13 @@
       "rating": 16,
       "goalkeeper": false,
       "description": "Veni, vidi, vici e vado per ultimo in porta",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Caesar.jpg/220px-Caesar.jpg"
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Caesar.jpg/220px-Caesar.jpg",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "9iT4LPhsLkZUOfEhBr71F",
@@ -204,7 +258,13 @@
       "rating": 4,
       "goalkeeper": false,
       "description": "Raga perdo la testa per il calcetto",
-      "avatar": "http://baliatodaicoi.altervista.org/wp-content/uploads/2017/11/Luigi-XVI-ritratto.jpg"
+      "avatar": "http://baliatodaicoi.altervista.org/wp-content/uploads/2017/11/Luigi-XVI-ritratto.jpg",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "4tG4ohuKqKzSF3p3xs9g8",
@@ -212,7 +272,13 @@
       "rating": 16,
       "goalkeeper": false,
       "description": "Sono qua per conoscere Enrico Porceddu",
-      "avatar": "https://gsud.cdn-immedia.net/2022/04/19161063_small.jpg"
+      "avatar": "https://gsud.cdn-immedia.net/2022/04/19161063_small.jpg",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "BXSdXA7VYjNshSBGlSmx0",
@@ -220,7 +286,13 @@
       "rating": 16,
       "goalkeeper": false,
       "description": "SIUM",
-      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/200px-Cristiano_Ronaldo_2018.jpg"
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/200px-Cristiano_Ronaldo_2018.jpg",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "-b8B-vxmdfaNAjFW9tDxf",
@@ -228,7 +300,13 @@
       "goalkeeper": false,
       "description": "Let's go",
       "name": "Test",
-      "avatar": ""
+      "avatar": "",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "i4sJJv5kb79VqWfdjIabd",
@@ -236,7 +314,13 @@
       "goalkeeper": false,
       "description": "Raga giochiamo pulito però",
       "name": "Robert Cecil Martin",
-      "avatar": "https://m.media-amazon.com/images/I/61b7VTCUEfL._SX450_.jpg"
+      "avatar": "https://m.media-amazon.com/images/I/61b7VTCUEfL._SX450_.jpg",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "239mkZm3G-RZ95NeCIBF-",
@@ -244,28 +328,52 @@
       "goalkeeper": true,
       "description": "Let's go",
       "name": "Segun Adebayo ",
-      "avatar": "https://avatars.githubusercontent.com/u/6916170?v=4"
+      "avatar": "https://avatars.githubusercontent.com/u/6916170?v=4",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "2w_LobA8dabU6W2WrATzG",
       "name": "Evil Enrico",
       "rating": 4,
       "goalkeeper": false,
-      "description": "KLV è la mia vita"
+      "description": "KLV è la mia vita",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "ohcB7VlHKhn4CX2QNxiZu",
       "name": "Evil Mauro",
       "rating": 16,
       "goalkeeper": false,
-      "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?"
+      "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "vhbQwdpz3woz1XEJcpGVS",
       "name": "Evil Andrea Proceddu",
       "rating": 4,
       "goalkeeper": false,
-      "description": "Odio avere troppo finestre aperte nel mio PC"
+      "description": "Odio avere troppo finestre aperte nel mio PC",
+      "possibleMatchTypes": {
+        "football": true,
+        "futsal": true,
+        "seven": true,
+        "three": true
+      }
     },
     {
       "id": "vOjW6BWTA-Q3c3D0_tzCS",

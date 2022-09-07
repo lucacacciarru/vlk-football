@@ -1,32 +1,13 @@
 import { CaseReducer } from '@reduxjs/toolkit';
-import { removeSameElementInTwoList } from '../utils';
 import {
   AddSelectedPlayers,
   BuilderGameState,
   CreateMatchTeams,
-  PopulateAvailablePlayers,
   ReplayMatch,
   ResetGame,
   updateDateAndPlaceMatch,
   UpdateGameMode,
 } from './types';
-
-export const populateAvailablePlayersCase: CaseReducer<
-  BuilderGameState,
-  PopulateAvailablePlayers
-> = (state, action) => {
-  const playersIdList = action.payload.map(player => player.id);
-  return {
-    ...state,
-    chosenPlayers: {
-      ...state.chosenPlayers,
-      availablePlayers: removeSameElementInTwoList(
-        playersIdList,
-        state.chosenPlayers.selectedPlayers,
-      ),
-    },
-  };
-};
 
 export const addSelectedPlayersCase: CaseReducer<
   BuilderGameState,
@@ -34,8 +15,8 @@ export const addSelectedPlayersCase: CaseReducer<
 > = (state, action) => ({
   ...state,
   chosenPlayers: {
-    availablePlayers: action.payload.availablePlayers,
-    selectedPlayers: action.payload.selectedPlayers,
+    ...state.chosenPlayers,
+    selectedPlayers: [...state.chosenPlayers.selectedPlayers, action.payload],
   },
 });
 
@@ -70,10 +51,7 @@ export const resetGameCase: CaseReducer<
 > = state => ({
   ...state,
   chosenPlayers: {
-    availablePlayers: [
-      ...state.chosenPlayers.selectedPlayers,
-      ...state.chosenPlayers.availablePlayers,
-    ],
+    availablePlayers: [...state.chosenPlayers.selectedPlayers],
     selectedPlayers: [],
   },
   date: '',
@@ -98,7 +76,6 @@ export const replayMatchCase: CaseReducer<BuilderGameState, ReplayMatch> = (
   return {
     ...state,
     chosenPlayers: {
-      availablePlayers: state.chosenPlayers.availablePlayers,
       selectedPlayers: [
         ...action.payload.teams.klv.players,
         ...action.payload.teams.vlk.players,

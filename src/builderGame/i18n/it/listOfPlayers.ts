@@ -4,4 +4,5 @@ export const listOfPlayers = {
   totalPlayer: '{{players}}/{{condition}} giocatori totali',
   totalGoalkeepers: '{{goalkeepers}}/{{condition}} portieri massimi',
   totalAvailablePlayers: '{{players}} giocatori',
+  changeMatchType: 'Cambia la modalità',
 };

@@ -4,7 +4,6 @@ import { MatchTypeContainer } from './MatchTypeContainer';
 
 const BUILDER_GAME_MOCK: BuilderGameState = {
   chosenPlayers: {
-    availablePlayers: [],
     selectedPlayers: [],
   },
   date: 'anyString',

@@ -38,6 +38,8 @@ export const PlayerCard: React.FC<Props> = ({
     return team === 'vlk' ? 'brand.primary.regular' : 'brand.secondary.regular';
   }, [team]);
 
+  const iconColor = useMemo(() => (team ? 'white.0' : 'black.0'), [team]);
+
   return (
     <Stack
       w="52"
@@ -51,8 +53,8 @@ export const PlayerCard: React.FC<Props> = ({
       data-testid={id}
     >
       <HStack w="full" justifyContent="space-between">
-        <Icon name={selectedTeamIcon} size="8" color="white.0" />
-        <PlayerRoleIcon goalkeeper={goalkeeper} size="6" />
+        <Icon name={selectedTeamIcon} size="8" color={iconColor} />
+        <PlayerRoleIcon goalkeeper={goalkeeper} size="6" color={iconColor} />
       </HStack>
       <Stack w="24" h="24" borderRadius="full" overflow="hidden">
         <Image

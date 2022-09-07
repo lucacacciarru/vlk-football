@@ -13,16 +13,10 @@ import {
 import { MatchTeams } from '../store/types';
 import { DateAndPlaceMatch } from '../types';
 
-type SelectedPlayerParams = {
-  availablePlayers: string[];
-  selectedPlayers: string[];
-};
-
-export function useUpdateChosenPlayers() {
+export function useAddSelectedPlayer() {
   const dispatch = useDispatch();
   return useCallback(
-    (playersList: SelectedPlayerParams) =>
-      dispatch(addSelectedPlayers(playersList)),
+    (playerId: string) => dispatch(addSelectedPlayers(playerId)),
     [dispatch],
   );
 }
