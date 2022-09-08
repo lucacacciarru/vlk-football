@@ -4,6 +4,7 @@ import {
   useAddSelectedPlayer,
   useCheckPlayer,
   useGetChosenPlayers,
+  useRemoveSelectedPlayer,
 } from '../../hook';
 import { ListCardPlayerContent } from './ListCardPlayerContent';
 
@@ -13,29 +14,33 @@ type Props = {
 
 export const ListCardPlayer: React.FC<Props> = ({ id }) => {
   const addSelectedPlayer = useAddSelectedPlayer();
+  const removeSelectedPlayer = useRemoveSelectedPlayer();
   const { isRightNumberOfPlayers } = useCheckPlayer();
   const { selectedPlayers } = useGetChosenPlayers();
   const isSelected = selectedPlayers.includes(id);
+
   const addPlayer = useCallback(
     () => addSelectedPlayer(id),
     [addSelectedPlayer, id],
   );
 
-  const onClick = useMemo(
-    //TODO: add notification function to show toast when it will be created
-    () => {
-      if (isRightNumberOfPlayers) {
-        return () => {};
-      }
-
-      if (isSelected) {
-        return () => {};
-      }
-
-      return addPlayer;
-    },
-    [addPlayer, isSelected, isRightNumberOfPlayers],
+  const removePlayer = useCallback(
+    () => removeSelectedPlayer(id),
+    [id, removeSelectedPlayer],
   );
+
+  const onClick = useMemo(() => {
+    if (!isSelected && isRightNumberOfPlayers) {
+      //TODO: add notification function to show toast when it will be created
+      return undefined;
+    }
+
+    if (isSelected) {
+      return removePlayer;
+    }
+
+    return addPlayer;
+  }, [isRightNumberOfPlayers, isSelected, addPlayer, removePlayer]);
 
   const boxOpacity: BoxProps['opacity'] = useMemo(
     () => (isSelected ? '0.3' : '1'),

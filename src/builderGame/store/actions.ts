@@ -1,8 +1,9 @@
 import { createAction } from '@reduxjs/toolkit';
 import {
-  AddSelectedPlayersPayload,
+  AddSelectedPlayerPayload,
   BUILDER_GAME_ACTION_TYPES,
   CreateMatchTeamsPayload,
+  RemoveSelectedPlayerPayload,
   ReplayMatchPayload,
   UpdateDateAndPlaceMatchPayload,
   UpdateGameModePayload,
@@ -14,9 +15,14 @@ export const updateMatchType = createAction<
 >(BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE);
 
 export const addSelectedPlayers = createAction<
-  AddSelectedPlayersPayload,
-  BUILDER_GAME_ACTION_TYPES.ADD_SELECTED_PLAYERS
->(BUILDER_GAME_ACTION_TYPES.ADD_SELECTED_PLAYERS);
+  AddSelectedPlayerPayload,
+  BUILDER_GAME_ACTION_TYPES.ADD_SELECTED_PLAYER
+>(BUILDER_GAME_ACTION_TYPES.ADD_SELECTED_PLAYER);
+
+export const removeSelectedPlayers = createAction<
+  RemoveSelectedPlayerPayload,
+  BUILDER_GAME_ACTION_TYPES.REMOVE_SELECTED_PLAYER
+>(BUILDER_GAME_ACTION_TYPES.REMOVE_SELECTED_PLAYER);
 
 export const createMatchTeams = createAction<
   CreateMatchTeamsPayload,
