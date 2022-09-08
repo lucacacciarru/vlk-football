@@ -15,10 +15,12 @@ import {
   useAddSelectedPlayer,
   useUpdateDateAndPlaceMatch,
   useUpdateMatchType,
+  useRemoveSelectedPlayer,
 } from './useBuilderGame';
 
 function useTestHook() {
   const addSelectedPlayer = useAddSelectedPlayer();
+  const removeSelectedPlayer = useRemoveSelectedPlayer();
   const createTeams = useCreateTeams();
   const updateDateAndPlaceMatch = useUpdateDateAndPlaceMatch();
   const chosenPlayers = useSelector(getChosenPlayers);
@@ -30,6 +32,7 @@ function useTestHook() {
 
   return {
     addSelectedPlayer,
+    removeSelectedPlayer,
     createTeams,
     updateDateAndPlaceMatch,
     chosenPlayers,
@@ -68,6 +71,16 @@ describe('useBuilderGame hook', () => {
     expect(result.current.chosenPlayers.selectedPlayers).toEqual([
       MOCK_CHOSEN_PLAYERS,
     ]);
+  });
+  test('Should remove a specific selected player', async () => {
+    const { result } = renderHook(() => useTestHook());
+    act(() => {
+      result.current.addSelectedPlayer(MOCK_CHOSEN_PLAYERS);
+      result.current.removeSelectedPlayer(MOCK_CHOSEN_PLAYERS);
+    });
+    expect(result.current.chosenPlayers.selectedPlayers).not.toContain(
+      MOCK_CHOSEN_PLAYERS,
+    );
   });
   test('Should update teams', async () => {
     const { result } = renderHook(() => useTestHook());

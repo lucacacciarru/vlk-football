@@ -1,22 +1,36 @@
 import { CaseReducer } from '@reduxjs/toolkit';
 import {
-  AddSelectedPlayers,
+  AddSelectedPlayer,
   BuilderGameState,
   CreateMatchTeams,
+  RemoveSelectedPlayer,
   ReplayMatch,
   ResetGame,
   updateDateAndPlaceMatch,
   UpdateGameMode,
 } from './types';
 
-export const addSelectedPlayersCase: CaseReducer<
+export const addSelectedPlayerCase: CaseReducer<
   BuilderGameState,
-  AddSelectedPlayers
+  AddSelectedPlayer
 > = (state, action) => ({
   ...state,
   chosenPlayers: {
     ...state.chosenPlayers,
     selectedPlayers: [...state.chosenPlayers.selectedPlayers, action.payload],
+  },
+});
+
+export const removeSelectedPlayerCase: CaseReducer<
+  BuilderGameState,
+  RemoveSelectedPlayer
+> = (state, action) => ({
+  ...state,
+  chosenPlayers: {
+    ...state.chosenPlayers,
+    selectedPlayers: state.chosenPlayers.selectedPlayers.filter(
+      player => player !== action.payload,
+    ),
   },
 });
 

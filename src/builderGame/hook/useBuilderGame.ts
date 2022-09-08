@@ -6,6 +6,7 @@ import { MatchType } from '../../_shared/types';
 import {
   addSelectedPlayers,
   createMatchTeams,
+  removeSelectedPlayers,
   replayMatch,
   updateDateAndPlaceMatch,
   updateMatchType,
@@ -17,6 +18,14 @@ export function useAddSelectedPlayer() {
   const dispatch = useDispatch();
   return useCallback(
     (playerId: string) => dispatch(addSelectedPlayers(playerId)),
+    [dispatch],
+  );
+}
+
+export function useRemoveSelectedPlayer() {
+  const dispatch = useDispatch();
+  return useCallback(
+    (playerId: string) => dispatch(removeSelectedPlayers(playerId)),
     [dispatch],
   );
 }

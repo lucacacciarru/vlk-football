@@ -2,14 +2,16 @@ import { createReducer } from '@reduxjs/toolkit';
 import {
   addSelectedPlayers,
   createMatchTeams,
+  removeSelectedPlayers,
   replayMatch,
   resetGame,
   updateDateAndPlaceMatch,
   updateMatchType,
 } from './actions';
 import {
-  addSelectedPlayersCase,
+  addSelectedPlayerCase,
   createMatchTeamsCase,
+  removeSelectedPlayerCase,
   replayMatchCase,
   resetGameCase,
   updateDateAndPlaceCase,
@@ -31,7 +33,8 @@ const INITIAL_STATE: BuilderGameState = {
 
 export const builderGameRootReducer = createReducer(INITIAL_STATE, builder => {
   builder.addCase(updateMatchType, updateMatchTypeCase);
-  builder.addCase(addSelectedPlayers, addSelectedPlayersCase);
+  builder.addCase(addSelectedPlayers, addSelectedPlayerCase);
+  builder.addCase(removeSelectedPlayers, removeSelectedPlayerCase);
   builder.addCase(createMatchTeams, createMatchTeamsCase);
   builder.addCase(updateDateAndPlaceMatch, updateDateAndPlaceCase);
   builder.addCase(resetGame, resetGameCase);
