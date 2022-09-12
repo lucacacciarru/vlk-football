@@ -13,6 +13,9 @@ import { ReactComponent as shirt_three } from './assets/shirt-3.svg';
 import { ReactComponent as shirt_futsal } from './assets/shirt-5.svg';
 import { ReactComponent as shirt_seven } from './assets/shirt-7.svg';
 import { ReactComponent as shirt_football } from './assets/shirt-11.svg';
+import { ReactComponent as threeDots } from './assets/ThreeDots.svg';
+import { ReactComponent as deleteCircle } from './assets/CloseCircle.svg';
+import { ReactComponent as details } from './assets/Details.svg';
 
 export const iconLibrary = {
   hand,
@@ -30,6 +33,9 @@ export const iconLibrary = {
   shirt_three,
   shirt_futsal,
   shirt_seven,
+  threeDots,
+  deleteCircle,
+  details,
 };
 
 export type IconLibrary = typeof iconLibrary;

@@ -169,20 +169,6 @@
       }
     },
     {
-      "id": "ca0oTRBqMB0e6vc6wBgOV",
-      "name": "Gabriele Angius",
-      "rating": 8,
-      "goalkeeper": true,
-      "description": "Lorem",
-      "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U02K3A08HCZ-0c588b00e91c-512",
-      "possibleMatchTypes": {
-        "football": false,
-        "futsal": true,
-        "seven": true,
-        "three": true
-      }
-    },
-    {
       "id": "UFE6dao4W6DDH36YIGFwa",
       "name": "Andrea Re",
       "rating": 12,
@@ -363,19 +349,6 @@
       }
     },
     {
-      "id": "vhbQwdpz3woz1XEJcpGVS",
-      "name": "Evil Andrea Proceddu",
-      "rating": 4,
-      "goalkeeper": false,
-      "description": "Odio avere troppo finestre aperte nel mio PC",
-      "possibleMatchTypes": {
-        "football": true,
-        "futsal": true,
-        "seven": true,
-        "three": true
-      }
-    },
-    {
       "id": "vOjW6BWTA-Q3c3D0_tzCS",
       "name": "Franco",
       "rating": 8,
@@ -419,34 +392,6 @@
     },
     {
       "id": "JGLjo0PaNHSWmF8Z-Mj3W",
-      "name": "Franco",
-      "rating": 8,
-      "goalkeeper": false,
-      "description": "Let's go",
-      "possibleMatchTypes": {
-        "football": true,
-        "futsal": true,
-        "seven": true,
-        "three": true
-      },
-      "avatar": ""
-    },
-    {
-      "id": "aPbBEE-WA7X63asajwPp-",
-      "name": "Franco",
-      "rating": 8,
-      "goalkeeper": false,
-      "description": "Let's go",
-      "possibleMatchTypes": {
-        "football": true,
-        "futsal": true,
-        "seven": true,
-        "three": true
-      },
-      "avatar": ""
-    },
-    {
-      "id": "uNCmFYYJ3fIdPO9H3C9WN",
       "name": "Franco",
       "rating": 8,
       "goalkeeper": false,

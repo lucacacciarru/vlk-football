@@ -4,6 +4,7 @@ import { createPlayerModal } from './createPlayerModal';
 import { preMatch } from './preMatch';
 import { gameModCard } from './gameModeCard';
 import { selectMode } from './selectMode';
+import { listPlayerCard } from './listPlayerCard';
 
 export const builderGame = {
   listOfPlayers,
@@ -12,4 +13,5 @@ export const builderGame = {
   preMatch,
   gameModCard,
   selectMode,
+  listPlayerCard,
 };

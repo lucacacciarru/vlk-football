@@ -52,7 +52,7 @@ export const SelectedPlayersArea: React.FC = () => {
         w="full"
         h="full"
         spacing="8"
-        overflowY="scroll"
+        overflowY="auto"
         px="6"
         alignItems="center"
       >

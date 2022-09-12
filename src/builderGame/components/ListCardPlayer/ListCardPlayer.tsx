@@ -7,6 +7,7 @@ import {
   useRemoveSelectedPlayer,
 } from '../../hook';
 import { ListCardPlayerContent } from './ListCardPlayerContent';
+import { OptionDropdown } from './OptionDropdown';
 
 type Props = {
   id: string;
@@ -48,7 +49,7 @@ export const ListCardPlayer: React.FC<Props> = ({ id }) => {
   );
 
   return (
-    <Box data-testid={id} onClick={onClick}>
+    <Box data-testid={id} position="relative">
       <Box
         px="10"
         id={id}
@@ -57,9 +58,11 @@ export const ListCardPlayer: React.FC<Props> = ({ id }) => {
         bg="white.0"
         borderRadius="lg"
         opacity={boxOpacity}
+        onClick={onClick}
       >
         <ListCardPlayerContent id={id} />
       </Box>
+      <OptionDropdown id={id} />
     </Box>
   );
 };
