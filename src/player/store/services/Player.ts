@@ -23,10 +23,20 @@ export const playerApi = createApi({
         method: 'POST',
         body,
       }),
-
+      invalidatesTags: ['Players'],
+    }),
+    deletePlayer: builder.mutation<{ success: boolean; id: string }, string>({
+      query: id => ({
+        url: `players/${id}`,
+        method: 'DELETE',
+      }),
       invalidatesTags: ['Players'],
     }),
   }),
 });
 
-export const { useGetPlayersQuery, usePostPlayerMutation } = playerApi;
+export const {
+  useGetPlayersQuery,
+  usePostPlayerMutation,
+  useDeletePlayerMutation,
+} = playerApi;
