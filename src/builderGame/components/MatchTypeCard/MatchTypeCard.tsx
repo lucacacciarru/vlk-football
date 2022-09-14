@@ -81,12 +81,12 @@ export const MatchTypeCard: React.FC<Props> = ({ matchType }) => {
             gap="8"
           >
             <ListItem>
-              {t('builderGame.gameModCard.numberOfPlayer', {
+              {t('builderGame.matchTypeRules.numberOfPlayer', {
                 count: numberOfPlayers,
               })}
             </ListItem>
             <ListItem>
-              {t('builderGame.gameModCard.maxNumberGoalkeepers', {
+              {t('builderGame.matchTypeRules.maxNumberGoalkeepers', {
                 count: maxNumberOfGoalkeepers,
               })}
             </ListItem>

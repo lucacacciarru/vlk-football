@@ -6,9 +6,10 @@ import { useDeletePlayer } from '../../../_shared/hook/useDeletePlayer';
 
 type Props = {
   id: string;
+  isDisabled: boolean;
 };
 
-export const OptionDropdown: React.FC<Props> = ({ id }) => {
+export const OptionDropdown: React.FC<Props> = ({ id, isDisabled }) => {
   const { t } = useTranslation();
 
   const deletePlayer = useDeletePlayer();
@@ -19,7 +20,7 @@ export const OptionDropdown: React.FC<Props> = ({ id }) => {
 
   return (
     <Menu>
-      <MenuButton position="absolute" right="0" top="5%">
+      <MenuButton disabled={isDisabled} position="absolute" right="0" top="5%">
         <Icon name="threeDots" size="6" color="black.0" />
       </MenuButton>
       <MenuList>

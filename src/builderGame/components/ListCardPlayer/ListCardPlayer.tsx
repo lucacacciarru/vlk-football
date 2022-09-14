@@ -49,7 +49,7 @@ export const ListCardPlayer: React.FC<Props> = ({ id }) => {
   );
 
   return (
-    <Box data-testid={id} position="relative">
+    <Box data-testid={id} position="relative" cursor="pointer">
       <Box
         px="10"
         id={id}
@@ -62,7 +62,7 @@ export const ListCardPlayer: React.FC<Props> = ({ id }) => {
       >
         <ListCardPlayerContent id={id} />
       </Box>
-      <OptionDropdown id={id} />
+      <OptionDropdown isDisabled={isSelected} id={id} />
     </Box>
   );
 };

@@ -1,9 +1,10 @@
 import { Button, ButtonProps } from '@chakra-ui/react';
 import { useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { Icon } from '../../../_shared/components';
 import { PATHS } from '../../../_shared/types';
 import {
+  useCheckPlayer,
   useCreateTeams,
   useGetMatchRules,
   useSelectedPlayers,
@@ -11,8 +12,6 @@ import {
 import { generatesBalancedTeams } from '../../utils';
 
 export const CreateTeamButton: React.FC<ButtonProps> = props => {
-  const { t } = useTranslation();
-
   const selectedPlayers = useSelectedPlayers();
   const navigate = useNavigate();
   const createMatchTeams = useCreateTeams();
@@ -24,14 +23,21 @@ export const CreateTeamButton: React.FC<ButtonProps> = props => {
     navigate(`/${PATHS.PRE_MATCH}`);
   }, [createMatchTeams, navigate, numberOfPlayers, selectedPlayers]);
 
+  const { allConditionIsCorrect } = useCheckPlayer();
+
   return (
     <Button
+      variant="solidIcon"
       size="lg"
       onClick={createTeams}
       data-testid="createTeamButton"
+      position="absolute"
+      bottom="0"
+      right="0"
+      isDisabled={!allConditionIsCorrect}
       {...props}
     >
-      {t('builderGame.playersPage.createTeamsButton')}
+      <Icon name="arrowRight" size="8" color="white.0" />
     </Button>
   );
 };
