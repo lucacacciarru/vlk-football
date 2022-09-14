@@ -1,22 +1,40 @@
-import { Box, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { Box, HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FetchedPlayerCard } from '../../../_shared/components/FetchedPlayerCard';
 import { MatchType } from '../../../_shared/types';
 import {
+  useCheckPlayer,
   useGetChosenPlayers,
   useGetMatchRules,
   useGetMatchType,
 } from '../../hook';
+import { CreateTeamButton } from '../CreateTeamButton';
 import { EmptyPlayerCard } from '../EmptyPlayerCard';
 
 export const SelectedPlayersArea: React.FC = () => {
-  const selectedMatchType = useGetMatchType();
   const { t } = useTranslation();
-  const { numberOfPlayers } = useGetMatchRules();
-  const { selectedPlayers } = useGetChosenPlayers();
 
-  const renderEmptyPlayerCard = useMemo(() => {
+  const selectedMatchType = useGetMatchType();
+  const { numberOfPlayers, maxNumberOfGoalkeepers } = useGetMatchRules();
+  const { selectedPlayers } = useGetChosenPlayers();
+  const {
+    selectedGoalKeepers,
+    isRightNumberOfGoalkeepers,
+    isRightNumberOfPlayers,
+  } = useCheckPlayer();
+
+  const textGoalKeepersConditionColor = useMemo(
+    () => (isRightNumberOfGoalkeepers ? 'green.400' : 'red.400'),
+    [isRightNumberOfGoalkeepers],
+  );
+
+  const textPlayersConditionColor = useMemo(
+    () => (isRightNumberOfPlayers ? 'green.400' : 'red.400'),
+    [isRightNumberOfPlayers],
+  );
+
+  const renderSelectedPlayers = useMemo(() => {
     const numberPlayersList = Array.from(Array(numberOfPlayers).keys());
     const selectedPlayersLength = selectedPlayers.length;
     return numberPlayersList.map((player, i) =>
@@ -38,14 +56,35 @@ export const SelectedPlayersArea: React.FC = () => {
       justifyContent="center"
       alignItems="center"
       gap="8"
+      position="relative"
     >
       <Box textAlign="center">
-        <Text color="white.0" textStyle="h2">
+        <Text color="white.0" textStyle="h3">
           {t(`matchType.${selectedMatchType as MatchType}`)}
         </Text>
-        <Text color="white.0">
-          {t('builderGame.listOfPlayers.changeMatchType')}
+        <Text textStyle="h1" color="white.0" data-testid="createTeamTitle">
+          {t('builderGame.createTeam.title')}
         </Text>
+        <HStack justifyContent="center" fontWeight="bold" gap="4">
+          <Text
+            color={textPlayersConditionColor}
+            data-testid="playerLengthCondition"
+          >
+            {t('builderGame.listOfPlayers.totalPlayer', {
+              players: selectedPlayers.length,
+              condition: numberOfPlayers,
+            })}
+          </Text>
+          <Text
+            color={textGoalKeepersConditionColor}
+            data-testid="goalkeepersLengthCondition"
+          >
+            {t('builderGame.listOfPlayers.totalGoalkeepers', {
+              goalkeepers: selectedGoalKeepers.length,
+              condition: maxNumberOfGoalkeepers,
+            })}
+          </Text>
+        </HStack>
       </Box>
       <SimpleGrid
         minChildWidth="200px"
@@ -56,8 +95,9 @@ export const SelectedPlayersArea: React.FC = () => {
         px="6"
         alignItems="center"
       >
-        {renderEmptyPlayerCard}
+        {renderSelectedPlayers}
       </SimpleGrid>
+      <CreateTeamButton />
     </Stack>
   );
 };

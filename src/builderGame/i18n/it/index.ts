@@ -1,17 +1,17 @@
-import { playersPage } from './playersPage';
+import { createTeam } from './createTeam';
 import { listOfPlayers } from './listOfPlayers';
 import { createPlayerModal } from './createPlayerModal';
 import { preMatch } from './preMatch';
-import { gameModCard } from './gameModeCard';
+import { matchTypeRules } from './matchTypeRules';
 import { selectMode } from './selectMode';
 import { listPlayerCard } from './listPlayerCard';
 
 export const builderGame = {
   listOfPlayers,
-  playersPage,
+  createTeam,
   createPlayerModal,
   preMatch,
-  gameModCard,
+  matchTypeRules,
   selectMode,
   listPlayerCard,
 };
