@@ -10,7 +10,7 @@
     "@fontsource/poppins": "4.5.9",
     "@reduxjs/toolkit": "1.8.5",
     "@types/jest": "28.1.6",
-    "@types/node": "16.11.47",
+    "@types/node": "16.11.59",
     "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
     "framer-motion": "7.2.1",
