@@ -12,13 +12,19 @@ export const textStyles = {
     fontSize: '1.125rem',
   },
   'body-md': {
+    fontWeight: 'normal',
     fontSize: { xl: '1.5rem', lg: '1.4rem', base: '1.3rem' },
+    color: 'white.80',
   },
   'body-sm': {
+    fontWeight: 'normal',
     fontSize: '1.2rem',
+    color: 'white.80',
   },
   'body-xs': {
+    fontWeight: 'normal',
     fontSize: '1rem',
+    color: 'white.80',
   },
   main: {
     fontWeight: 'bold',

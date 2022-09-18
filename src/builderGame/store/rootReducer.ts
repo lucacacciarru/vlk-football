@@ -29,6 +29,7 @@ const INITIAL_STATE: BuilderGameState = {
   },
   date: '',
   place: '',
+  matchType: 'futsal',
 };
 
 export const builderGameRootReducer = createReducer(INITIAL_STATE, builder => {

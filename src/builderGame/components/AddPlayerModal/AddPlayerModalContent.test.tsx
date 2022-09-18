@@ -18,6 +18,8 @@ describe('AddPlayerModalContent component', () => {
     mockFetch();
     render(<AddPlayerModalContent isOpen={true} onClose={fn} />);
     const button = screen.getByTestId('addPlayerButton');
+    const inputName = screen.getByTestId('nameInput');
+    fireEvent.change(inputName, { target: { value: 'anyString' } });
     fireEvent.click(button);
     await waitFor(() => {
       expect(fn).toBeCalled();

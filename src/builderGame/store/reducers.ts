@@ -69,7 +69,7 @@ export const resetGameCase: CaseReducer<
     selectedPlayers: [],
   },
   date: '',
-  matchType: undefined,
+  matchType: 'futsal',
   place: '',
   teams: {
     klv: {

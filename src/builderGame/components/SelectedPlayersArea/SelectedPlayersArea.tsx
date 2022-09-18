@@ -1,4 +1,4 @@
-import { Box, HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react';
+import { HStack, SimpleGrid, Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FetchedPlayerCard } from '../../../_shared/components/FetchedPlayerCard';
@@ -11,6 +11,7 @@ import {
 } from '../../hook';
 import { CreateTeamButton } from '../CreateTeamButton';
 import { EmptyPlayerCard } from '../EmptyPlayerCard';
+import { ChangeMatchTypeModal } from '../ChangeMatchTypeModal';
 
 export const SelectedPlayersArea: React.FC = () => {
   const { t } = useTranslation();
@@ -58,10 +59,13 @@ export const SelectedPlayersArea: React.FC = () => {
       gap="8"
       position="relative"
     >
-      <Box textAlign="center">
-        <Text color="white.0" textStyle="h3">
-          {t(`matchType.${selectedMatchType as MatchType}`)}
-        </Text>
+      <Stack alignItems="center" justifyContent="center" textAlign="center">
+        <HStack alignItems="center" justifyContent="center">
+          <Text color="white.0" textStyle="h3">
+            {t(`matchType.${selectedMatchType as MatchType}`)}
+          </Text>
+          <ChangeMatchTypeModal />
+        </HStack>
         <Text textStyle="h1" color="white.0" data-testid="createTeamTitle">
           {t('builderGame.createTeam.title')}
         </Text>
@@ -85,7 +89,7 @@ export const SelectedPlayersArea: React.FC = () => {
             })}
           </Text>
         </HStack>
-      </Box>
+      </Stack>
       <SimpleGrid
         minChildWidth="200px"
         w="full"

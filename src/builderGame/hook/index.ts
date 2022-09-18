@@ -8,3 +8,4 @@ export * from './useGetSinglePlayer';
 export * from './useCheckPathnameAndChosenPlayers';
 export * from './useGetMatchType';
 export * from './useGetMatchRules';
+export * from './useGetMatchTypesList';

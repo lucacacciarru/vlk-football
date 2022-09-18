@@ -4,3 +4,4 @@ export * from './outline';
 export * from './outlineSecondary';
 export * from './solidIcon';
 export * from './unstyled';
+export * from './unstyledIcon';
