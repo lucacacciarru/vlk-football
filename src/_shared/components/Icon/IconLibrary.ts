@@ -23,7 +23,7 @@ import { ReactComponent as arrowLeft } from './assets/ArrowLeft.svg';
 import { ReactComponent as arrowUp } from './assets/ArrowUp.svg';
 import { ReactComponent as arrowRight } from './assets/ArrowRight.svg';
 import { ReactComponent as edit } from './assets/Edit.svg';
-import { ReactComponent as hand } from './assets/Hand.svg';
+import { ReactComponent as hand } from './assets/GoalkeeperHand.svg';
 import { ReactComponent as players } from './assets/Players.svg';
 
 export const iconLibrary = {
