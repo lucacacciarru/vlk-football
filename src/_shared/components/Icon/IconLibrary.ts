@@ -1,4 +1,3 @@
-import { ReactComponent as hand } from './assets/hand.svg';
 import { ReactComponent as ball } from './assets/ball-football.svg';
 import { ReactComponent as klv } from './assets/KLV.svg';
 import { ReactComponent as vlk } from './assets/VLK.svg';
@@ -23,6 +22,9 @@ import { ReactComponent as arrowDown } from './assets/ArrowDown.svg';
 import { ReactComponent as arrowLeft } from './assets/ArrowLeft.svg';
 import { ReactComponent as arrowUp } from './assets/ArrowUp.svg';
 import { ReactComponent as arrowRight } from './assets/ArrowRight.svg';
+import { ReactComponent as edit } from './assets/Edit.svg';
+import { ReactComponent as hand } from './assets/GoalkeeperHand.svg';
+import { ReactComponent as players } from './assets/Players.svg';
 
 export const iconLibrary = {
   hand,
@@ -50,6 +52,8 @@ export const iconLibrary = {
   arrowLeft,
   arrowUp,
   arrowRight,
+  edit,
+  players,
 };
 
 export type IconLibrary = typeof iconLibrary;

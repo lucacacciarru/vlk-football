@@ -27,7 +27,7 @@ export type BuilderGameState = {
   chosenPlayers: {
     selectedPlayers: string[];
   };
-  matchType?: MatchType;
+  matchType: MatchType;
   teams: MatchTeams;
   date: string;
   place: string;

@@ -25,7 +25,7 @@ export const Main: React.FC = () => {
         gap={{ base: '2', xl: '4' }}
         flexDir={{ base: 'column', xl: 'row' }}
       >
-        <LinkButton to={PATHS.SELECT_MODE} size="xl">
+        <LinkButton to={PATHS.CREATE_TEAM} size="xl">
           {t('landing.main.createTeamsButton')}
         </LinkButton>
         <LinkButton

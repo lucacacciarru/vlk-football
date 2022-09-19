@@ -5,9 +5,6 @@ type PreviousRoute = {
 };
 
 export const previousRoutesMap: Record<string, PreviousRoute> = {
-  '/create-team': {
-    previousRoute: PATHS.SELECT_MODE,
-  },
   '/pre-match': {
     previousRoute: PATHS.CREATE_TEAM,
   },

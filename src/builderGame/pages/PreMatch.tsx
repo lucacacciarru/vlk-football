@@ -1,7 +1,6 @@
-import { Stack } from '@chakra-ui/react';
-import { ContainerTeams } from '../components/ContainerTeams';
-import { SelectPlaceAndDateForm } from '../components/SelectPlaceAndDateForm';
 import { useTranslation } from 'react-i18next';
+import { Stack } from '@chakra-ui/react';
+import { ContainerTeams, SelectPlaceAndDateForm } from '../components';
 import { PageHeading } from '../../_shared/components';
 
 export const PreMatch: React.FC = () => {

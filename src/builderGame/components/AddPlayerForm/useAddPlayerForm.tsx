@@ -5,10 +5,10 @@ import { Player } from '../../../_shared/types';
 
 type DataPlayer = Omit<Player, 'id'>;
 const defaultValues: DataPlayer = {
-  name: 'Franco',
+  name: '',
   rating: 8,
   goalkeeper: false,
-  description: "Let's go",
+  description: '',
   possibleMatchTypes: {
     football: false,
     futsal: true,

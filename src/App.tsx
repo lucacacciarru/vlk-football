@@ -5,7 +5,7 @@ import { LandingLayout } from './landing/components';
 import { Landing } from './landing/pages';
 import { initI18n } from './_shared/i18n';
 import { PATHS } from './_shared/types';
-import { CreateTeam, PreMatch, SelectMatchType } from './builderGame/pages';
+import { CreateTeam, PreMatch } from './builderGame/pages';
 import { MatchInfo, Matches } from './match/pages';
 import { BuilderGameLayout } from './builderGame/components/BuilderGameLayout';
 
@@ -23,7 +23,6 @@ function App() {
           </Route>
         </Route>
         <Route element={<BuilderGameLayout />}>
-          <Route path={PATHS.SELECT_MODE} element={<SelectMatchType />} />
           <Route path={PATHS.CREATE_TEAM} element={<CreateTeam />} />
           <Route path={PATHS.PRE_MATCH} element={<PreMatch />} />
         </Route>

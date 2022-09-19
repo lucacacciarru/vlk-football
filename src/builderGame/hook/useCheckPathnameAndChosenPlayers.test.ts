@@ -36,7 +36,7 @@ describe('useCheckPathnameAndChosenPlayers hook', () => {
       () => useCheckPathnameAndChosenPlayers(pathname),
       {
         mocks: {
-          builderGame: { ...BUILDER_GAME_MOCK, matchType: undefined },
+          builderGame: { ...BUILDER_GAME_MOCK },
         },
       },
     );

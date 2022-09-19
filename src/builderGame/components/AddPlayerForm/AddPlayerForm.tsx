@@ -1,6 +1,5 @@
 import {
   Button,
-  ButtonGroup,
   Checkbox,
   CheckboxGroup,
   HStack,
@@ -107,6 +106,7 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
                   placeholder={t(
                     'builderGame.createPlayerModal.placeholders.name',
                   )}
+                  data-testid="nameInput"
                   {...inputsPropsMap.name}
                 />
               </InputContainer>
@@ -172,12 +172,9 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
               </InputContainer>
             </SimpleGrid>
           </HStack>
-
-          <ButtonGroup w="100%" justifyContent="center">
-            <Button type="submit" data-testid="addPlayerButton">
-              {t('builderGame.createPlayerModal.addPlayerButton')}
-            </Button>
-          </ButtonGroup>
+          <Button type="submit" data-testid="addPlayerButton">
+            {t('builderGame.createPlayerModal.addPlayerButton')}
+          </Button>
         </form>
       </ModalBody>
     </>

@@ -5,6 +5,7 @@ import { preMatch } from './preMatch';
 import { matchTypeRules } from './matchTypeRules';
 import { selectMode } from './selectMode';
 import { listPlayerCard } from './listPlayerCard';
+import { changeMatchTypeModal } from './changeMatchTypeModal';
 
 export const builderGame = {
   listOfPlayers,
@@ -14,4 +15,5 @@ export const builderGame = {
   matchTypeRules,
   selectMode,
   listPlayerCard,
+  changeMatchTypeModal,
 };
