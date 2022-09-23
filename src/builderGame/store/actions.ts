@@ -3,16 +3,22 @@ import {
   AddSelectedPlayerPayload,
   BUILDER_GAME_ACTION_TYPES,
   CreateMatchTeamsPayload,
+  ChangeSelectPlayersLengthPayload,
   RemoveSelectedPlayerPayload,
   ReplayMatchPayload,
   UpdateDateAndPlaceMatchPayload,
-  UpdateGameModePayload,
+  UpdateMatchTypePayload,
 } from './types';
 
 export const updateMatchType = createAction<
-  UpdateGameModePayload,
+  UpdateMatchTypePayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
 >(BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE);
+
+export const changeSelectPlayersLength = createAction<
+  ChangeSelectPlayersLengthPayload,
+  BUILDER_GAME_ACTION_TYPES.CHANGE_SELECTED_PLAYERS_LENGTH
+>(BUILDER_GAME_ACTION_TYPES.CHANGE_SELECTED_PLAYERS_LENGTH);
 
 export const addSelectedPlayers = createAction<
   AddSelectedPlayerPayload,

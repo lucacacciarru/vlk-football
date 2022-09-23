@@ -3,6 +3,7 @@ import {
   AddSelectedPlayer,
   BuilderGameState,
   CreateMatchTeams,
+  changeSelectPlayersLength,
   RemoveSelectedPlayer,
   ReplayMatch,
   ResetGame,
@@ -99,5 +100,20 @@ export const replayMatchCase: CaseReducer<BuilderGameState, ReplayMatch> = (
     place: '',
     teams: action.payload.teams,
     matchType: action.payload.matchType,
+  };
+};
+export const changeSelectPlayersLengthCase: CaseReducer<
+  BuilderGameState,
+  changeSelectPlayersLength
+> = (state, action) => {
+  const currentSelectedPlayers = [...state.chosenPlayers.selectedPlayers];
+  currentSelectedPlayers.length = action.payload;
+
+  return {
+    ...state,
+    chosenPlayers: {
+      ...state.chosenPlayers,
+      selectedPlayers: currentSelectedPlayers,
+    },
   };
 };

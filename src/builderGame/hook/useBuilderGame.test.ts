@@ -16,6 +16,7 @@ import {
   useUpdateDateAndPlaceMatch,
   useUpdateMatchType,
   useRemoveSelectedPlayer,
+  useChangeSelectPlayersLength,
 } from './useBuilderGame';
 
 function useTestHook() {
@@ -29,6 +30,7 @@ function useTestHook() {
   const updateMatchType = useUpdateMatchType();
   const gameMode = useSelector(getMatchType);
   const replayMatch = useReplayMatch();
+  const changeSelectPlayersLength = useChangeSelectPlayersLength();
 
   return {
     addSelectedPlayer,
@@ -41,10 +43,26 @@ function useTestHook() {
     updateMatchType,
     gameMode,
     replayMatch,
+    changeSelectPlayersLength,
   };
 }
 
 const MOCK_CHOSEN_PLAYERS = '2';
+
+const MOCK_SELECTED_PLAYERS: string[] = [
+  '1',
+  '2',
+  '3',
+  '4',
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+];
+
+const EXPECTED_SELECTED_PLAYERS: string[] = ['1', '2', '3', '4', '5'];
 
 const MOCK_TEAMS: MatchTeams = {
   klv: {
@@ -132,5 +150,26 @@ describe('useBuilderGame hook', () => {
       ...MOCK_MATCH.teams.vlk.players,
     ]);
     expect(result.current.teams).toEqual(MOCK_MATCH.teams);
+  });
+  test('Should change the selectedPlayer list length', async () => {
+    const { result } = renderHook(() => useTestHook(), {
+      mocks: {
+        builderGame: {
+          chosenPlayers: {
+            selectedPlayers: MOCK_SELECTED_PLAYERS,
+          },
+          matchType: 'futsal',
+          date: 'anyString',
+          place: 'anyString',
+          teams: MOCK_TEAMS,
+        },
+      },
+    });
+    act(() => {
+      result.current.changeSelectPlayersLength(5);
+    });
+    expect(result.current.chosenPlayers.selectedPlayers).toEqual(
+      EXPECTED_SELECTED_PLAYERS,
+    );
   });
 });
