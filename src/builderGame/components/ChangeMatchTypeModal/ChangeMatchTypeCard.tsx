@@ -38,6 +38,7 @@ export const ChangeMatchTypeCard: React.FC<Props> = ({
         borderColor: 'white.80',
       }}
       onClick={onClick}
+      data-testid={`matchCard_${matchType}`}
     >
       <Text>{t(`matchType.${matchType}`)}</Text>
     </Button>

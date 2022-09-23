@@ -6,6 +6,7 @@ import { MatchType } from '../../_shared/types';
 import {
   addSelectedPlayers,
   createMatchTeams,
+  changeSelectPlayersLength,
   removeSelectedPlayers,
   replayMatch,
   updateDateAndPlaceMatch,
@@ -64,5 +65,15 @@ export function useReplayMatch() {
         replayMatch({ matchType: match.matchType, teams: match.teams, id }),
       ),
     [dispatch, id],
+  );
+}
+
+export function useChangeSelectPlayersLength() {
+  const dispatch = useDispatch();
+  return useCallback(
+    (playersNumber: number) => {
+      return dispatch(changeSelectPlayersLength(playersNumber));
+    },
+    [dispatch],
   );
 }

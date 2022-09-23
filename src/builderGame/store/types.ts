@@ -5,6 +5,7 @@ import { DateAndPlaceMatch } from '../types';
 
 export enum BUILDER_GAME_ACTION_TYPES {
   UPDATE_MATCH_TYPE = 'builderGame/updateMatchType',
+  CHANGE_SELECTED_PLAYERS_LENGTH = 'builderGame/changeSelectPlayersLength',
   ADD_SELECTED_PLAYER = 'builderGame/addSelectedPlayers',
   REMOVE_SELECTED_PLAYER = 'builderGame/removeSelectedPlayer',
   CREATE_MATCH_TEAMS = 'builderGame/createMatchTeams',
@@ -32,24 +33,29 @@ export type BuilderGameState = {
   date: string;
   place: string;
 };
-
 export type PopulateAvailablePlayersPayload = Player[];
-export type UpdateGameModePayload = MatchType;
-
+export type UpdateMatchTypePayload = MatchType;
+export type ChangeSelectPlayersLengthPayload = number;
 export type AddSelectedPlayerPayload = string;
 export type RemoveSelectedPlayerPayload = string;
 export type UpdateDateAndPlaceMatchPayload = DateAndPlaceMatch;
 export type ReplayMatchPayload = Omit<Match, 'date' | 'place'>;
 
 export type UpdateGameMode = PayloadAction<
-  UpdateGameModePayload,
+  UpdateMatchTypePayload,
   BUILDER_GAME_ACTION_TYPES.UPDATE_MATCH_TYPE
+>;
+
+export type changeSelectPlayersLength = PayloadAction<
+  ChangeSelectPlayersLengthPayload,
+  BUILDER_GAME_ACTION_TYPES.CHANGE_SELECTED_PLAYERS_LENGTH
 >;
 
 export type AddSelectedPlayer = PayloadAction<
   AddSelectedPlayerPayload,
   BUILDER_GAME_ACTION_TYPES.ADD_SELECTED_PLAYER
 >;
+
 export type RemoveSelectedPlayer = PayloadAction<
   AddSelectedPlayerPayload,
   BUILDER_GAME_ACTION_TYPES.REMOVE_SELECTED_PLAYER

@@ -2,6 +2,7 @@ import {
   Button,
   Checkbox,
   CheckboxGroup,
+  Flex,
   HStack,
   Input,
   ModalBody,
@@ -172,9 +173,11 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
               </InputContainer>
             </SimpleGrid>
           </HStack>
-          <Button type="submit" data-testid="addPlayerButton">
-            {t('builderGame.createPlayerModal.addPlayerButton')}
-          </Button>
+          <Flex w="full" justifyContent="center">
+            <Button type="submit" data-testid="addPlayerButton">
+              {t('builderGame.createPlayerModal.addPlayerButton')}
+            </Button>
+          </Flex>
         </form>
       </ModalBody>
     </>
