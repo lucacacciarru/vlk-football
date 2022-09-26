@@ -25,6 +25,7 @@ import { ReactComponent as arrowRight } from './assets/ArrowRight.svg';
 import { ReactComponent as edit } from './assets/Edit.svg';
 import { ReactComponent as hand } from './assets/GoalkeeperHand.svg';
 import { ReactComponent as players } from './assets/Players.svg';
+import { ReactComponent as star } from './assets/Star.svg';
 
 export const iconLibrary = {
   hand,
@@ -54,6 +55,7 @@ export const iconLibrary = {
   arrowRight,
   edit,
   players,
+  star,
 };
 
 export type IconLibrary = typeof iconLibrary;

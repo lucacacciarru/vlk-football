@@ -5,8 +5,6 @@ export const unstyled = {
   minWidth: 'auto',
   _focus: {
     boxShadow: 'none',
-    border: 'none',
-    outline: 'none',
   },
   _active: {
     boxShadow: 'none',

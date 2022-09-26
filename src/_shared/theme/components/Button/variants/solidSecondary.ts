@@ -1,13 +1,16 @@
 export const solidSecondary = {
-  color: "white.0",
-  bg: "brand.secondary.regular",
+  color: 'white.0',
+  bg: 'brand.secondary.regular',
   _hover: {
-    bg: "brand.secondary.dark",
+    bg: 'brand.secondary.dark',
     _disabled: {
-      background: "white.80",
+      background: 'white.80',
     },
   },
   _disabled: {
-    background: "white.80",
+    background: 'white.80',
+  },
+  _focus: {
+    boxShadow: 'none',
   },
 };

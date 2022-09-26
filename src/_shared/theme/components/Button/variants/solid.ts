@@ -10,4 +10,7 @@ export const solid = {
   _disabled: {
     background: 'white.80',
   },
+  _focus: {
+    boxShadow: 'none',
+  },
 };

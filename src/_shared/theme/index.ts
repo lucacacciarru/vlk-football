@@ -3,6 +3,8 @@ import { extendTheme } from '@chakra-ui/react';
 import { Button } from './components';
 import { Modal } from './components/Modal';
 import { Avatar } from './components/Avatar';
+import { Accordion } from './components/Accordion';
+import { Menu } from './components/Menu';
 
 const config = {
   colors,
@@ -20,6 +22,8 @@ const config = {
     Button,
     Modal,
     Avatar,
+    Accordion,
+    Menu,
   },
 };
 
