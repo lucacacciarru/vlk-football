@@ -6,11 +6,9 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './_shared/store';
 import { createRoot } from 'react-dom/client';
-import { theme } from '@chakra-ui/react';
 
 const container = document.getElementById('root');
 const root = createRoot(container!); // createRoot(container!) if you use TypeScript
-console.log(theme.components.Menu);
 
 root.render(
   <React.StrictMode>
