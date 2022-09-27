@@ -8,7 +8,7 @@ export const previousRoutesMap: Record<string, PreviousRoute> = {
   '/pre-match': {
     previousRoute: PATHS.CREATE_TEAM,
   },
-  '/select-mode': {
+  '/create-team': {
     previousRoute: PATHS.INDEX,
   },
 };

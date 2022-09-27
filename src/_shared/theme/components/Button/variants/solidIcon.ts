@@ -16,8 +16,6 @@ export const solidIcon = {
   },
   _focus: {
     boxShadow: 'none',
-    border: 'none',
-    outline: 'none',
   },
   _active: {
     boxShadow: 'none',

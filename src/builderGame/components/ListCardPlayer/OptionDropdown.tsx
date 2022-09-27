@@ -2,7 +2,7 @@ import { Flex, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icon } from '../../../_shared/components';
-import { useDeletePlayer } from '../../../_shared/hook/useDeletePlayer';
+import { useDeletePlayer } from '../../../_shared/hook';
 
 type Props = {
   id: string;

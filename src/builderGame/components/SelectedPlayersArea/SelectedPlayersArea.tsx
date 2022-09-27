@@ -12,9 +12,11 @@ import {
 import { CreateTeamButton } from '../CreateTeamButton';
 import { EmptyPlayerCard } from '../EmptyPlayerCard';
 import { ChangeMatchTypeModal } from '../ChangeMatchTypeModal';
+import { useGetStyleCustomScrollBar } from '../../../_shared/hook';
 
 export const SelectedPlayersArea: React.FC = () => {
   const { t } = useTranslation();
+  const styleScrollBar = useGetStyleCustomScrollBar();
 
   const selectedMatchType = useGetMatchType();
   const { numberOfPlayers, maxNumberOfGoalkeepers } = useGetMatchRules();
@@ -98,6 +100,7 @@ export const SelectedPlayersArea: React.FC = () => {
         overflowY="auto"
         px="6"
         alignItems="center"
+        css={styleScrollBar}
       >
         {renderSelectedPlayers}
       </SimpleGrid>

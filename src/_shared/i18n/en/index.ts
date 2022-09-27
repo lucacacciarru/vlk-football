@@ -3,6 +3,7 @@ import { landing } from '../../../landing/i18n/en';
 import { match } from '../../../match/i18n/en';
 import { playerCard } from './playerCard';
 import { matchType } from './matchType';
+import { playerRoles } from './playerRoles';
 
 export const en = {
   translation: {
@@ -11,5 +12,6 @@ export const en = {
     landing,
     builderGame,
     match,
+    playerRoles,
   },
 };
