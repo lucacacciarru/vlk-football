@@ -12,6 +12,7 @@ export enum BUILDER_GAME_ACTION_TYPES {
   UPDATE_DATE_AND_PLACE_MATCH = 'builderGame/updateDateAndPlaceMatch',
   RESET_GAME = 'builderGame/resetGame',
   REPLAY_MATCH = 'builderGame/replayMatch',
+  POPULATE_AVAILABLE_PLAYERS = 'builderGame/populateAvailablePlayers',
 }
 
 export type TeamMaking = {
@@ -26,6 +27,7 @@ export type MatchTeams = {
 
 export type BuilderGameState = {
   chosenPlayers: {
+    availablePlayers: string[];
     selectedPlayers: string[];
   };
   matchType: MatchType;
@@ -78,4 +80,9 @@ export type ResetGame = Action<BUILDER_GAME_ACTION_TYPES.RESET_GAME>;
 export type ReplayMatch = PayloadAction<
   ReplayMatchPayload,
   BUILDER_GAME_ACTION_TYPES.REPLAY_MATCH
+>;
+
+export type PopulateAvailablePlayers = PayloadAction<
+  PopulateAvailablePlayersPayload,
+  BUILDER_GAME_ACTION_TYPES.POPULATE_AVAILABLE_PLAYERS
 >;

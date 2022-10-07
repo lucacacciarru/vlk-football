@@ -19,6 +19,7 @@ const MOCK_TEAMS: MatchTeams = {
 
 const MOCK_BUILDER_STATE: BuilderGameState = {
   chosenPlayers: {
+    availablePlayers: [],
     selectedPlayers: ['1', '2', '3', '4', '5', '6', '7'],
   },
   teams: MOCK_TEAMS,

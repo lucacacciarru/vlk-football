@@ -1,14 +1,17 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { matchesApi } from '../../../match/store';
-import { Player } from '../../../_shared/types';
+import { Filters, Player } from '../../../_shared/types';
 
 export const playerApi = createApi({
   reducerPath: 'players',
   baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_API_URL }),
   tagTypes: ['Players'],
   endpoints: builder => ({
-    getPlayers: builder.query<Player[], void>({
-      query: () => '/players',
+    getPlayers: builder.query<Player[], string | undefined>({
+      query: filter => ({
+        url: `/players/` + (filter || ''),
+        method: 'GET',
+      }),
       async onQueryStarted(_, { dispatch }) {
         try {
           dispatch(matchesApi.endpoints.getMatches.initiate());
@@ -16,10 +19,16 @@ export const playerApi = createApi({
       },
       providesTags: ['Players'],
     }),
-
+    getSinglePlayer: builder.query<Player, string>({
+      query: id => ({
+        url: `/players/${id}`,
+        method: 'GET',
+      }),
+      providesTags: ['Players'],
+    }),
     postPlayer: builder.mutation<Player, Player>({
       query: body => ({
-        url: 'players',
+        url: `players`,
         method: 'POST',
         body,
       }),
@@ -37,6 +46,7 @@ export const playerApi = createApi({
 
 export const {
   useGetPlayersQuery,
+  useGetSinglePlayerQuery,
   usePostPlayerMutation,
   useDeletePlayerMutation,
 } = playerApi;

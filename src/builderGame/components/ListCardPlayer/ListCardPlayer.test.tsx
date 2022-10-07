@@ -20,6 +20,7 @@ const MOCK_TEAMS: MatchTeams = {
 
 const MOCK_BUILDER_STATE: BuilderGameState = {
   chosenPlayers: {
+    availablePlayers: [],
     selectedPlayers: [],
   },
   teams: MOCK_TEAMS,

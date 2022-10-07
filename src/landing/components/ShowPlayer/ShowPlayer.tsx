@@ -4,7 +4,7 @@ import { useGetPlayersQuery } from '../../../player/store';
 import { useShowPlayer } from './useShowPlayer';
 
 export const ShowPlayer: React.FC = () => {
-  const { data } = useGetPlayersQuery();
+  const { data } = useGetPlayersQuery(undefined);
   const { renderPlayers, stackProps } = useShowPlayer(data);
 
   return (

@@ -3,9 +3,20 @@ import { MenuItemOption, MenuOptionGroup } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from '../../../_shared/components';
+import { useFilter } from '../../../_shared/hook/useFilter';
 
 export const RoleOptions: React.FC = () => {
   const { t } = useTranslation();
+  const updateFilters = useFilter();
+
+  function onChange(value: string | string[]) {
+    if (value === 'goalkeeper') {
+      updateFilters({ role: true });
+      return;
+    }
+    updateFilters({ role: false });
+  }
+
   const renderRoleOptions = useMemo(() => {
     const roleList: boolean[] = [true, false];
     return roleList.map(role => {
@@ -27,7 +38,9 @@ export const RoleOptions: React.FC = () => {
 
   return (
     <Dropdown iconName="add" labelButton="Ruolo" closeOnSelect={false}>
-      <MenuOptionGroup type="checkbox">{renderRoleOptions}</MenuOptionGroup>
+      <MenuOptionGroup onChange={onChange} type="radio">
+        {renderRoleOptions}
+      </MenuOptionGroup>
     </Dropdown>
   );
 };

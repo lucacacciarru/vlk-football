@@ -1,5 +1,3 @@
-import * as allHooks from '../../builderGame/hook';
-import * as useGetPlayersQuery from '../../player/store';
 import { render, waitFor, screen } from '../../_shared/testConfig/customRender';
 import { Match } from '../store';
 import { Matches } from './Matches';
