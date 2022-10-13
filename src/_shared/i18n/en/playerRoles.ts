@@ -1,4 +1,12 @@
 export const playerRoles = {
-  goalkeeper: 'Goalkeeper',
-  movementPlayer: 'Movement player',
+  GK: 'Goalkeeper',
+  DE: 'Defender',
+  CM: 'Midfielder',
+  ST: 'Striker',
+  abbreviation: {
+    GK: 'GK',
+    DE: 'DE',
+    CM: 'CM',
+    ST: 'ST',
+  },
 };

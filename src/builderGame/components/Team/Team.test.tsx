@@ -13,7 +13,12 @@ function mockFetch(body?: Object) {
 }
 
 const MOCK_PLAYER: Player = {
-  goalkeeper: true,
+  roles: {
+    CM: true,
+    DE: true,
+    GK: false,
+    ST: false,
+  },
   id: '1',
   name: 'anyName',
   rating: 8,
