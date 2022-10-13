@@ -12,7 +12,7 @@ type Props = Player & {
 };
 
 export const PlayerCard: React.FC<Props> = ({
-  goalkeeper,
+  roles,
   name,
   rating,
   avatar,
@@ -54,7 +54,7 @@ export const PlayerCard: React.FC<Props> = ({
     >
       <HStack w="full" justifyContent="space-between">
         <Icon name={selectedTeamIcon} size="8" color={iconColor} />
-        <PlayerRoleIcon goalkeeper={goalkeeper} size="6" color={iconColor} />
+        <PlayerRoleIcon goalkeeper={roles?.GK} size="6" color={iconColor} />
       </HStack>
       <Stack w="24" h="24" borderRadius="full" overflow="hidden">
         <Image

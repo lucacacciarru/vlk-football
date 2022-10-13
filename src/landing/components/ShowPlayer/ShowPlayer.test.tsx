@@ -14,7 +14,12 @@ function mockFetch(body?: Object) {
 const MOCK_TEAMS: Player[] = [
   {
     id: '1',
-    goalkeeper: false,
+    roles: {
+      CM: true,
+      DE: true,
+      GK: false,
+      ST: false,
+    },
     name: 'Test',
     rating: 8,
     possibleMatchTypes: {

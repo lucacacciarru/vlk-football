@@ -7,9 +7,9 @@ export const createPlayerModal = {
     name: 'Nome*',
     rating: 'Valutazione*',
     avatar: 'Immagine (solo src)',
-    role: 'Portiere',
     description: 'Descrizione',
     matchType: 'Tipologie di partita*',
+    roles: 'Ruoli',
   },
   ratings: {
     '4': 'Debole (4 pt.)',
@@ -26,5 +26,9 @@ export const createPlayerModal = {
     name: 'Inserisci un nome',
     rating: 'Seleziona la valutazione',
     matchType: 'Seleziona almeno una tipologia',
+    roles: {
+      unchecked: 'Devi selezionare almeno un ruolo',
+      tooManyChecked: 'Puoi selezionare solo due ruoli',
+    },
   },
 };

@@ -16,6 +16,7 @@ import { Controller } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import { usePostPlayerMutation } from '../../../player/store';
 import { PlayerCard } from '../../../_shared/components';
+import { useGetRoleList } from '../../../_shared/hook';
 import { MatchType, Player } from '../../../_shared/types';
 import { matchTypeMap } from '../../utils/matchTypeMap';
 import { InputContainer } from '../InputContainer';
@@ -29,7 +30,7 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
   const { t } = useTranslation();
   const [addPlayer] = usePostPlayerMutation();
   const allMatchTypes = Object.keys(matchTypeMap);
-
+  const allRoleList = useGetRoleList();
   const {
     inputsPropsMap,
     handleSubmit,
@@ -37,7 +38,34 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
     errors,
     control,
     checkMatchTypeCheckbox,
+    validateRolesCheckMap,
+    allRuleChecksPassed,
+    roleErrorString,
   } = useAddPlayerForm();
+
+  const renderRolesOptions = useMemo(() => {
+    return allRoleList.map(role => (
+      <Controller
+        name={`roles.${role}`}
+        control={control}
+        rules={{
+          validate: validateRolesCheckMap,
+        }}
+        key={role}
+        render={({ field: { onChange, value, ref } }) => (
+          <Checkbox
+            color="white.0"
+            marginInlineStart="0"
+            onChange={onChange}
+            isChecked={value}
+            ref={ref}
+          >
+            {t(`playerRoles.abbreviation.${role}`)}
+          </Checkbox>
+        )}
+      />
+    ));
+  }, [allRoleList, control, t, validateRolesCheckMap]);
 
   const renderOptionRatings = useMemo(() => {
     const ratingsList: Player['rating'][] = [4, 8, 12, 16];
@@ -112,20 +140,16 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
                 />
               </InputContainer>
               <InputContainer
-                label={t('builderGame.createPlayerModal.formLabels.role')}
+                label={t('builderGame.createPlayerModal.formLabels.roles')}
+                isInvalid={allRuleChecksPassed}
+                error={{
+                  type: 'required',
+                  message: roleErrorString,
+                }}
               >
-                <Controller
-                  name="goalkeeper"
-                  control={control}
-                  render={({ field: { onChange, value, ref } }) => (
-                    <Checkbox
-                      onChange={onChange}
-                      textTransform="capitalize"
-                      ref={ref}
-                      isChecked={!!value}
-                    />
-                  )}
-                />
+                <CheckboxGroup>
+                  <HStack gap="6">{renderRolesOptions}</HStack>
+                </CheckboxGroup>
               </InputContainer>
               <InputContainer
                 label={t('builderGame.createPlayerModal.formLabels.rating')}

@@ -4,7 +4,12 @@ import { useShowPlayer } from './useShowPlayer';
 
 const players: Player[] = [
   {
-    goalkeeper: false,
+    roles: {
+      CM: true,
+      DE: true,
+      GK: false,
+      ST: false,
+    },
     id: 'anyid',
     name: 'Test',
     rating: 12,
