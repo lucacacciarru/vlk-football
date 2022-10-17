@@ -1,17 +1,18 @@
-import { useContext } from 'react';
+import { useCallback, useContext } from 'react';
 import { BuilderContext } from '../components/FiltersContext';
+import { Filters } from '../types';
 
 export function useFilter() {
-  const { setFilters } = useContext(BuilderContext);
+  const { setFilters, ...filters } = useContext(BuilderContext);
 
-  // const updateFilters = useCallback(
-  //   (filter: Partial<keyof Filters>) => {
-  //     if (setFilters) {
-  //       setFilters(prev => ({ ...prev, [filter] : {} }));
-  //     }
-  //   },
-  //   [setFilters],
-  // );
+  const updateFilters = useCallback(
+    (filterKey: Partial<keyof Filters>, value: string[] | number[]) => {
+      if (setFilters) {
+        setFilters(prev => ({ ...prev, [filterKey]: value }));
+      }
+    },
+    [setFilters],
+  );
 
-  return { setFilters };
+  return { updateFilters, ...filters };
 }

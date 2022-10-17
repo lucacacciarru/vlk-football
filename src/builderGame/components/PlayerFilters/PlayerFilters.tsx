@@ -1,16 +1,13 @@
-import { HStack, Input, Stack } from '@chakra-ui/react';
-import { useContext } from 'react';
-import { BuilderContext } from '../../../_shared/components/FiltersContext';
+import { Flex, Input, Stack } from '@chakra-ui/react';
+import { useFilter } from '../../../_shared/hook/useFilter';
 import { InputContainer } from '../InputContainer';
 import { RatingOptions } from './RatingOptions';
 import { RoleOptions } from './RoleOptions';
 
 export const PlayerFilters: React.FC = () => {
-  const { setFilters } = useContext(BuilderContext);
+  const { updateFilters } = useFilter();
   const onClick = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (setFilters) {
-      setFilters(prev => ({ ...prev, name: e.target.value }));
-    }
+    updateFilters('name', [e.target.value]);
   };
   return (
     <Stack gap="6" alignItems="flex-start">
@@ -21,10 +18,10 @@ export const PlayerFilters: React.FC = () => {
           onChange={onClick}
         />
       </InputContainer>
-      <HStack gap="2">
+      <Flex gap="2">
         <RatingOptions />
         <RoleOptions />
-      </HStack>
+      </Flex>
     </Stack>
   );
 };

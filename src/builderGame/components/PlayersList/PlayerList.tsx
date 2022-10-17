@@ -15,7 +15,9 @@ export const PlayerList: React.FC = () => {
 
   const renderPlayerItem = useMemo(() => {
     if (allPlayersId) {
-      return allPlayersId.map(id => <ListCardPlayer key={id} id={id} />);
+      return allPlayersId.map(id => (
+        <ListCardPlayer key={id} data-testid={id} id={id} />
+      ));
     }
   }, [allPlayersId]);
   return (

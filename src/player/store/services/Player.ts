@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { matchesApi } from '../../../match/store';
-import { Filters, Player } from '../../../_shared/types';
+import { Player } from '../../../_shared/types';
 
 export const playerApi = createApi({
   reducerPath: 'players',

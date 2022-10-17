@@ -4,8 +4,6 @@ export type MatchType = 'football' | 'futsal' | 'seven' | 'three';
 export type StringRating = '4' | '8' | '12' | '16';
 export type Roles = 'GK' | 'DE' | 'CM' | 'ST';
 
-type SingleFilterMap<T extends string> = Record<T, boolean>;
-
 export type Player = {
   id: string;
   name: string;
@@ -19,6 +17,6 @@ export type Player = {
 export type Filters = {
   matchType: string[];
   ratings: number[];
-  role: string[];
+  roles: string[];
   name: string[];
 };

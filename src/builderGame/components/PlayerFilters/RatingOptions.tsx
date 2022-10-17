@@ -7,7 +7,14 @@ import { Player } from '../../../_shared/types';
 
 export const RatingOptions: React.FC = () => {
   const { t } = useTranslation();
-  const updateFilters = useFilter();
+  const { updateFilters } = useFilter();
+
+  function onChange(rating: string | string[]) {
+    const valueListToNumber = (rating as string[]).map(singleValue =>
+      parseInt(singleValue),
+    );
+    updateFilters('ratings', valueListToNumber);
+  }
 
   const renderOptionRatings = useMemo(() => {
     const ratingsList: Player['rating'][] = [4, 8, 12, 16];
@@ -18,13 +25,12 @@ export const RatingOptions: React.FC = () => {
     ));
   }, [t]);
   return (
-    <Dropdown iconName="star" labelButton="Valutazione" closeOnSelect={false}>
-      <MenuOptionGroup
-        onChange={e => {
-          updateFilters({ ratings: e as string[] });
-        }}
-        type="checkbox"
-      >
+    <Dropdown
+      iconName="star"
+      closeOnSelect={false}
+      labelButton={t('builderGame.playerFilter.rating')}
+    >
+      <MenuOptionGroup onChange={onChange} type="checkbox">
         {renderOptionRatings}
       </MenuOptionGroup>
     </Dropdown>

@@ -3,25 +3,25 @@ import {
   Dispatch,
   PropsWithChildren,
   SetStateAction,
-  useEffect,
   useState,
 } from 'react';
 import { useGetMatchType } from '../../../builderGame/hook';
 import { Filters } from '../../types';
 
 type ContentContext = {
-  setFilters?: Dispatch<SetStateAction<Partial<Filters> | undefined>>;
+  setFilters?: Dispatch<SetStateAction<Filters>>;
 } & Partial<Filters>;
 
 export const BuilderContext = createContext<ContentContext>({});
 
 export const FiltersProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const selectedMatchType = useGetMatchType();
-  const [filters, setFilters] = useState<Partial<Filters>>();
-
-  useEffect(() => {
-    setFilters(prev => ({ ...prev, matchType: [selectedMatchType] }));
-  }, [selectedMatchType]);
+  const [filters, setFilters] = useState<Filters>({
+    matchType: [selectedMatchType],
+    name: [],
+    ratings: [],
+    roles: [],
+  });
 
   return (
     <BuilderContext.Provider value={{ setFilters, ...filters }}>
