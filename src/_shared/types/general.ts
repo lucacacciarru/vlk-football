@@ -17,8 +17,8 @@ export type Player = {
 };
 
 export type Filters = {
-  matchType: SingleFilterMap<MatchType>;
-  ratings: SingleFilterMap<StringRating>;
-  roles: Player['roles'];
-  name: string;
+  matchType: string[];
+  ratings: number[];
+  role: string[];
+  name: string[];
 };
