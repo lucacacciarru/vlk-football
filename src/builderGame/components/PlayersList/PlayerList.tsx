@@ -1,11 +1,10 @@
-import { Input, Stack, Text } from '@chakra-ui/react';
+import { Stack, Text } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useGetAllPlayersId } from '../../../player/hook/';
 import { Collapsible, CollapsibleItem } from '../../../_shared/components';
 import { useGetStyleCustomScrollBar } from '../../../_shared/hook';
 import { AddPlayerModal } from '../AddPlayerModal';
-import { InputContainer } from '../InputContainer';
 import { ListCardPlayer } from '../ListCardPlayer';
 import { PlayerFilters } from '../PlayerFilters';
 
@@ -16,7 +15,9 @@ export const PlayerList: React.FC = () => {
 
   const renderPlayerItem = useMemo(() => {
     if (allPlayersId) {
-      return allPlayersId.map(id => <ListCardPlayer key={id} id={id} />);
+      return allPlayersId.map(id => (
+        <ListCardPlayer key={id} data-testid={id} id={id} />
+      ));
     }
   }, [allPlayersId]);
   return (
@@ -32,12 +33,7 @@ export const PlayerList: React.FC = () => {
       </Text>
       <Collapsible w="full" color="white.0">
         <CollapsibleItem name="Filtri">
-          <Stack gap="6" alignItems="flex-start">
-            <InputContainer label="Nome">
-              <Input size="md" placeholder="Cerca un giocatore per il nome" />
-            </InputContainer>
-            <PlayerFilters />
-          </Stack>
+          <PlayerFilters />
         </CollapsibleItem>
       </Collapsible>
       <Stack

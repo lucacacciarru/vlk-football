@@ -91,6 +91,7 @@ export const replayMatchCase: CaseReducer<BuilderGameState, ReplayMatch> = (
   return {
     ...state,
     chosenPlayers: {
+      ...state.chosenPlayers,
       selectedPlayers: [
         ...action.payload.teams.klv.players,
         ...action.payload.teams.vlk.players,

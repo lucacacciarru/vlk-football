@@ -23,6 +23,7 @@ import { BuilderGameState } from './types';
 
 const INITIAL_STATE: BuilderGameState = {
   chosenPlayers: {
+    availablePlayers: [],
     selectedPlayers: [],
   },
   teams: {

@@ -156,6 +156,7 @@ describe('useBuilderGame hook', () => {
       mocks: {
         builderGame: {
           chosenPlayers: {
+            availablePlayers: [],
             selectedPlayers: MOCK_SELECTED_PLAYERS,
           },
           matchType: 'futsal',

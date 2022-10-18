@@ -7,6 +7,7 @@ import { selectMode } from './selectMode';
 import { listPlayerCard } from './listPlayerCard';
 import { changeMatchTypeModal } from './changeMatchTypeModal';
 import { changeMatchTypeAlert } from './changeMatchTypeAlert';
+import { playerFilter } from './playerFilter';
 
 export const builderGame = {
   listOfPlayers,
@@ -18,4 +19,5 @@ export const builderGame = {
   listPlayerCard,
   changeMatchTypeModal,
   changeMatchTypeAlert,
+  playerFilter,
 };

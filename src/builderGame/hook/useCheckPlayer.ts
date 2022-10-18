@@ -12,7 +12,8 @@ export function useCheckPlayer() {
   );
 
   const selectedGoalKeepers = useMemo(
-    () => selectedPlayers.filter(player => player.roles.GK),
+    () => selectedPlayers.filter(player => player?.roles?.GK),
+
     [selectedPlayers],
   );
 

@@ -51,6 +51,7 @@ const MOCK_PLAYERS: Player[] = [
 
 const MOCK_BUILDER_STATE: BuilderGameState = {
   chosenPlayers: {
+    availablePlayers: [],
     selectedPlayers: ['1', '2'],
   },
   teams: {
@@ -75,7 +76,7 @@ describe('PlayerList component', () => {
       mocks: { builderGame: MOCK_BUILDER_STATE },
     });
     await waitFor(() => {
-      const draggablePlayerName = screen.getByTestId('anyName');
+      const draggablePlayerName = screen.getByTestId('1');
       expect(draggablePlayerName).toBeInTheDocument();
     });
   });

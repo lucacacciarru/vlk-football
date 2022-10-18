@@ -12,3 +12,10 @@ export type Player = {
   avatar?: string;
   description?: string;
 };
+
+export type Filters = {
+  matchType: string[];
+  ratings: number[];
+  roles: string[];
+  name: string[];
+};
