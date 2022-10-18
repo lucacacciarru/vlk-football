@@ -1,7 +1,6 @@
 export type TeamsName = 'vlk' | 'klv';
 
 export type MatchType = 'football' | 'futsal' | 'seven' | 'three';
-export type StringRating = '4' | '8' | '12' | '16';
 export type Roles = 'GK' | 'DE' | 'CM' | 'ST';
 
 export type Player = {
