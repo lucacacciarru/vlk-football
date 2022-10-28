@@ -6,7 +6,7 @@ import { useGetPlayersQuery } from '../store';
 
 export function useGetAllPlayersId() {
   const selectedMatchType = useGetMatchType() as MatchType;
-  const { setFilters, ...filters } = useContext(BuilderContext);
+  const { filters } = useContext(BuilderContext);
 
   const filterQueryMap: Record<keyof Filters, string> = {
     matchType: 'possibleMatchTypes',

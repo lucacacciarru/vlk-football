@@ -10,9 +10,10 @@ import { Filters } from '../../types';
 
 type ContentContext = {
   setFilters?: Dispatch<SetStateAction<Filters>>;
-} & Partial<Filters>;
+  filters: Partial<Filters>;
+};
 
-export const BuilderContext = createContext<ContentContext>({});
+export const BuilderContext = createContext<ContentContext>({ filters: {} });
 
 export const FiltersProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const selectedMatchType = useGetMatchType();
@@ -24,7 +25,7 @@ export const FiltersProvider: React.FC<PropsWithChildren> = ({ children }) => {
   });
 
   return (
-    <BuilderContext.Provider value={{ setFilters, ...filters }}>
+    <BuilderContext.Provider value={{ setFilters, filters }}>
       {children}
     </BuilderContext.Provider>
   );
