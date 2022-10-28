@@ -130,7 +130,12 @@
       "id": "a9609b8f-214d-4c02-bf57-61698383778d",
       "name": "Enrico Porceddu",
       "rating": 12,
-      "goalkeeper": false,
+      "roles": {
+        "CM": true,
+        "DE": true,
+
+        "ST": false
+      },
       "description": "Non fatemi giocare con Mauro, è una brutta persona",
       "avatar": "https://miro.medium.com/max/3150/1*t4vTd1ZPRulr8yOEj-gFzA.png",
       "possibleMatchTypes": {
@@ -144,7 +149,12 @@
       "id": "3c8e8708-3bab-4f52-b008-211212",
       "name": "Luca Cacciarru",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": {
+        "GK": false,
+        "CM": true,
+
+        "ST": false
+      },
       "description": "🐺🐺",
       "avatar": "https://avatars.githubusercontent.com/u/86778250?v=4",
       "possibleMatchTypes": {
@@ -158,7 +168,7 @@
       "id": "d1e4391d-30bc-4982-a4f9-013a6b7c920e",
       "name": "Mauro Erta",
       "rating": 12,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Speriamo non ci siano i fratelli Porceddu",
       "avatar": "https://avatars.githubusercontent.com/u/13780027?v=4",
       "possibleMatchTypes": {
@@ -172,7 +182,7 @@
       "id": "UFE6dao4W6DDH36YIGFwa",
       "name": "Andrea Re",
       "rating": 12,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "👑👑",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U01E61X1C73-984411a0a42c-512",
       "possibleMatchTypes": {
@@ -186,7 +196,7 @@
       "id": "ohvvU6fLGQgZBxaQguRBe",
       "name": "Nicolas Porreca",
       "rating": 12,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "🐺🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U038USCG4LA-9ced9b524de3-512",
       "possibleMatchTypes": {
@@ -200,7 +210,7 @@
       "id": "m9TuqWM-9Pjvq_Ttyyxqb",
       "name": "Manuel Caria",
       "rating": 12,
-      "goalkeeper": true,
+      "roles": { "GK": true, "DE": false, "CM": false, "ST": false },
       "description": "🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-U011KKFJBFE-f379877474e5-512",
       "possibleMatchTypes": {
@@ -214,7 +224,7 @@
       "id": "B0K-nmjxqF3VVudgcNpne",
       "name": "Andrea Porceddu",
       "rating": 12,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "🐺",
       "avatar": "https://ca.slack-edge.com/TJ47ZFADC-UJ240CE3S-67b511f92991-512",
       "possibleMatchTypes": {
@@ -228,7 +238,7 @@
       "id": "w5NCKAI6STnK06xtEuEqb",
       "name": "Giulio Cesare",
       "rating": 16,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Veni, vidi, vici e vado per ultimo in porta",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Caesar.jpg/220px-Caesar.jpg",
       "possibleMatchTypes": {
@@ -242,7 +252,7 @@
       "id": "9iT4LPhsLkZUOfEhBr71F",
       "name": "Luigi XVI",
       "rating": 4,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Raga perdo la testa per il calcetto",
       "avatar": "http://baliatodaicoi.altervista.org/wp-content/uploads/2017/11/Luigi-XVI-ritratto.jpg",
       "possibleMatchTypes": {
@@ -256,7 +266,7 @@
       "id": "4tG4ohuKqKzSF3p3xs9g8",
       "name": "Elon Musk",
       "rating": 16,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Sono qua per conoscere Enrico Porceddu",
       "avatar": "https://gsud.cdn-immedia.net/2022/04/19161063_small.jpg",
       "possibleMatchTypes": {
@@ -270,7 +280,7 @@
       "id": "BXSdXA7VYjNshSBGlSmx0",
       "name": "Cristiano",
       "rating": 16,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "SIUM",
       "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Cristiano_Ronaldo_2018.jpg/200px-Cristiano_Ronaldo_2018.jpg",
       "possibleMatchTypes": {
@@ -283,7 +293,7 @@
     {
       "id": "-b8B-vxmdfaNAjFW9tDxf",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Let's go",
       "name": "Test",
       "avatar": "",
@@ -297,7 +307,7 @@
     {
       "id": "i4sJJv5kb79VqWfdjIabd",
       "rating": 4,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Raga giochiamo pulito però",
       "name": "Robert Cecil Martin",
       "avatar": "https://m.media-amazon.com/images/I/61b7VTCUEfL._SX450_.jpg",
@@ -311,7 +321,7 @@
     {
       "id": "239mkZm3G-RZ95NeCIBF-",
       "rating": 12,
-      "goalkeeper": true,
+      "roles": { "GK": true, "DE": false, "CM": false, "ST": false },
       "description": "Let's go",
       "name": "Segun Adebayo ",
       "avatar": "https://avatars.githubusercontent.com/u/6916170?v=4",
@@ -326,7 +336,7 @@
       "id": "2w_LobA8dabU6W2WrATzG",
       "name": "Evil Enrico",
       "rating": 4,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "KLV è la mia vita",
       "possibleMatchTypes": {
         "football": true,
@@ -339,7 +349,7 @@
       "id": "ohcB7VlHKhn4CX2QNxiZu",
       "name": "Evil Mauro",
       "rating": 16,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Perché non dovrei chiamare questa funzione \"Pluto\"?",
       "possibleMatchTypes": {
         "football": true,
@@ -352,7 +362,7 @@
       "id": "vOjW6BWTA-Q3c3D0_tzCS",
       "name": "Franco",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": true, "ST": false },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": false,
@@ -366,7 +376,7 @@
       "id": "aMU59e6cl_-BCWhEuFbBe",
       "name": "sss",
       "rating": 8,
-      "goalkeeper": true,
+      "roles": { "GK": true, "DE": false, "CM": false, "ST": false },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": false,
@@ -380,7 +390,7 @@
       "id": "cBF-Dfhkjs1f7ekH-hb4y",
       "name": "Franco",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": false, "ST": true },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": true,
@@ -394,7 +404,7 @@
       "id": "JGLjo0PaNHSWmF8Z-Mj3W",
       "name": "Franco",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": true, "CM": false, "ST": true },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": true,
@@ -408,7 +418,7 @@
       "id": "p5goSxjLE3tCVfAExRU9g",
       "name": "Nuovo",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": false, "CM": true, "ST": true },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": false,
@@ -422,7 +432,7 @@
       "id": "78Zp_zGEouDvyI0YgkHSQ",
       "name": "Franco",
       "rating": 8,
-      "goalkeeper": false,
+      "roles": { "GK": false, "DE": false, "CM": false, "ST": true },
       "description": "Let's go",
       "possibleMatchTypes": {
         "football": false,
