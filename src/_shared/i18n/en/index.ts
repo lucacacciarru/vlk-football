@@ -4,6 +4,8 @@ import { match } from '../../../match/i18n/en';
 import { playerCard } from './playerCard';
 import { matchType } from './matchType';
 import { playerRoles } from './playerRoles';
+import { playerFilter } from './playerFilter';
+import { playerRatings } from './playerRatings';
 
 export const en = {
   translation: {
@@ -13,5 +15,7 @@ export const en = {
     builderGame,
     match,
     playerRoles,
+    playerFilter,
+    playerRatings,
   },
 };

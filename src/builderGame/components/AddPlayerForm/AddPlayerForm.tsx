@@ -71,7 +71,7 @@ export const AddPlayerForm: React.FC<Props> = ({ onClose }) => {
     const ratingsList: Player['rating'][] = [4, 8, 12, 16];
     return ratingsList.map(rate => (
       <option value={rate} key={rate} style={{ color: '#1b1b1b' }}>
-        {t(`builderGame.createPlayerModal.ratings.${rate}`)}
+        {t(`playerRatings.${rate}`)}
       </option>
     ));
   }, [t]);

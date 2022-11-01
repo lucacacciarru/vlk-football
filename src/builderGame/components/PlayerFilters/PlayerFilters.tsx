@@ -1,13 +1,14 @@
 import { Flex, Input, Stack } from '@chakra-ui/react';
 import { useFilter } from '../../../_shared/hook/useFilter';
+import { FilterTagList } from '../ActiveFilterTags';
 import { InputContainer } from '../InputContainer';
 import { RatingOptions } from './RatingOptions';
 import { RoleOptions } from './RoleOptions';
 
 export const PlayerFilters: React.FC = () => {
-  const { updateFilters } = useFilter();
+  const { updateFilterList } = useFilter();
   const onClick = (e: React.ChangeEvent<HTMLInputElement>) => {
-    updateFilters('name', [e.target.value]);
+    updateFilterList('name', [e.target.value]);
   };
   return (
     <Stack gap="6" alignItems="flex-start">
@@ -22,6 +23,7 @@ export const PlayerFilters: React.FC = () => {
         <RatingOptions />
         <RoleOptions />
       </Flex>
+      <FilterTagList />
     </Stack>
   );
 };
