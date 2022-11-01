@@ -4,6 +4,8 @@ import { builderGame } from '../../../builderGame/i18n/it';
 import { landing } from '../../../landing/i18n/it';
 import { match } from '../../../match/i18n/it';
 import { playerRoles } from './playerRoles';
+import { playerFilter } from './playerFilter';
+import { playerRatings } from './playerRatings';
 
 export const it = {
   translation: {
@@ -13,5 +15,7 @@ export const it = {
     builderGame,
     match,
     playerRoles,
+    playerFilter,
+    playerRatings,
   },
 };

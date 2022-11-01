@@ -8,8 +8,10 @@ import { PATHS } from './_shared/types';
 import { CreateTeam, PreMatch } from './builderGame/pages';
 import { MatchInfo, Matches } from './match/pages';
 import { BuilderGameLayout } from './builderGame/components/BuilderGameLayout';
+import { theme } from '@chakra-ui/react';
 
 i18n.use(initReactI18next).init(initI18n);
+console.log(theme.components.Tag);
 
 function App() {
   return (

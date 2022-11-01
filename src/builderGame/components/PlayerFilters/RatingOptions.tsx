@@ -1,38 +1,52 @@
-import { MenuItemOption, MenuOptionGroup } from '@chakra-ui/react';
+import { Checkbox, Stack } from '@chakra-ui/react';
 import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dropdown } from '../../../_shared/components';
+import { useGetRatingList } from '../../../_shared/hook';
 import { useFilter } from '../../../_shared/hook/useFilter';
-import { Player } from '../../../_shared/types';
 
 export const RatingOptions: React.FC = () => {
   const { t } = useTranslation();
-  const { updateFilters } = useFilter();
+  const { addFilterValue, checkIfValueIsOnFilters, removeFilterValue } =
+    useFilter();
+  const ratingList = useGetRatingList();
 
-  function onChange(rating: string | string[]) {
-    const valueListToNumber = (rating as string[]).map(singleValue =>
-      parseInt(singleValue),
-    );
-    updateFilters('ratings', valueListToNumber);
-  }
-
-  const renderOptionRatings = useMemo(() => {
-    const ratingsList: Player['rating'][] = [4, 8, 12, 16];
-    return ratingsList.map(rate => (
-      <MenuItemOption value={rate.toString()} key={rate}>
-        {t(`builderGame.createPlayerModal.ratings.${rate}`)}
-      </MenuItemOption>
+  const renderRatingOptions = useMemo(() => {
+    function onChange(event: React.ChangeEvent<HTMLInputElement>) {
+      const selectedFilterValue = event.target.value;
+      if (!checkIfValueIsOnFilters('ratings', selectedFilterValue)) {
+        addFilterValue('ratings', selectedFilterValue);
+        return;
+      }
+      removeFilterValue('ratings', selectedFilterValue);
+    }
+    return ratingList.map(rate => (
+      <Checkbox
+        color="white.0"
+        value={rate}
+        key={rate}
+        isChecked={checkIfValueIsOnFilters('ratings', rate.toString())}
+        onChange={onChange}
+      >
+        {t(`playerRatings.${rate}`)}
+      </Checkbox>
     ));
-  }, [t]);
+  }, [
+    addFilterValue,
+    checkIfValueIsOnFilters,
+    ratingList,
+    removeFilterValue,
+    t,
+  ]);
   return (
     <Dropdown
       iconName="star"
       closeOnSelect={false}
-      labelButton={t('builderGame.playerFilter.rating')}
+      labelButton={t('playerFilter.ratings')}
     >
-      <MenuOptionGroup onChange={onChange} type="checkbox">
-        {renderOptionRatings}
-      </MenuOptionGroup>
+      <Stack px="4" py="2" gap="2">
+        {renderRatingOptions}
+      </Stack>
     </Dropdown>
   );
 };

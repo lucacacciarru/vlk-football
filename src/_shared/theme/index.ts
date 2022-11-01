@@ -5,6 +5,7 @@ import { Modal } from './components/Modal';
 import { Avatar } from './components/Avatar';
 import { Accordion } from './components/Accordion';
 import { Menu } from './components/Menu';
+import { Tag } from './components/Tag';
 
 const config = {
   colors,
@@ -24,6 +25,7 @@ const config = {
     Avatar,
     Accordion,
     Menu,
+    Tag,
   },
 };
 

@@ -11,12 +11,7 @@ export const createPlayerModal = {
     matchType: 'Match type',
     roles: 'Roles',
   },
-  ratings: {
-    4: 'Weak (4 pts.)',
-    8: 'Medium (4 pts.)',
-    12: 'Strong (4 pts.)',
-    16: 'Unbelievable (4 pts.)',
-  },
+
   placeholders: {
     name: 'Add name',
     avatar: 'Add image src',
