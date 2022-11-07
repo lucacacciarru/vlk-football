@@ -6,13 +6,20 @@ import { useGetPlayersQuery } from '../store';
 
 export function useGetAllPlayersId() {
   const selectedMatchType = useGetMatchType() as MatchType;
-  const { filters } = useContext(BuilderContext);
+  const { filters, sort } = useContext(BuilderContext);
 
   const filterQueryMap: Record<keyof Filters, string> = {
     matchType: 'possibleMatchTypes',
     roles: 'roles',
     name: 'name_like',
     ratings: 'rating',
+  };
+
+  const sortQueryMap: Record<typeof sort, string> = {
+    ratingAsc: '_sort=rating',
+    ratingDesc: `_sort=rating&_order=desc`,
+    nameAsc: '_sort=name',
+    nameDesc: '_sort=name&_order=desc',
   };
 
   function getSingleQuery<T>(filter: keyof Filters, value: T) {
@@ -36,6 +43,8 @@ export function useGetAllPlayersId() {
         });
       }
     });
+
+    singleQueryList.push(sortQueryMap[sort]);
 
     const completedQuery = singleQueryList.join('&');
     return '?' + completedQuery;

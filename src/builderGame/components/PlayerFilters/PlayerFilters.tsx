@@ -1,4 +1,5 @@
 import { Flex, Input, Stack } from '@chakra-ui/react';
+import { SortPlayerOptions } from '../../../_shared/components/SortPlayerOptions';
 import { useFilter } from '../../../_shared/hook/useFilter';
 import { FilterTagList } from '../ActiveFilterTags';
 import { InputContainer } from '../InputContainer';
@@ -22,6 +23,7 @@ export const PlayerFilters: React.FC = () => {
       <Flex gap="2">
         <RatingOptions />
         <RoleOptions />
+        <SortPlayerOptions />
       </Flex>
       <FilterTagList />
     </Stack>

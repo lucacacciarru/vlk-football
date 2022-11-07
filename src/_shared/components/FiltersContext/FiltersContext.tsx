@@ -6,15 +6,18 @@ import {
   useState,
 } from 'react';
 import { useGetMatchType } from '../../../builderGame/hook';
-import { Filters } from '../../types';
+import { Filters, Sort } from '../../types';
 
 type ContentContext = {
   setFilters?: Dispatch<SetStateAction<Filters>>;
+  setSort?: Dispatch<SetStateAction<Sort>>;
   filters: Filters;
+  sort: Sort;
 };
 
 export const BuilderContext = createContext<ContentContext>({
   filters: { matchType: [], name: [], ratings: [], roles: [] },
+  sort: 'nameAsc',
 });
 
 export const FiltersProvider: React.FC<PropsWithChildren> = ({ children }) => {
@@ -25,9 +28,10 @@ export const FiltersProvider: React.FC<PropsWithChildren> = ({ children }) => {
     ratings: [],
     roles: [],
   });
+  const [sort, setSort] = useState<Sort>('nameAsc');
 
   return (
-    <BuilderContext.Provider value={{ setFilters, filters }}>
+    <BuilderContext.Provider value={{ setFilters, setSort, filters, sort }}>
       {children}
     </BuilderContext.Provider>
   );

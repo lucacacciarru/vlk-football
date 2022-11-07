@@ -19,3 +19,12 @@ export type Filters = {
   roles: string[];
   name: string[];
 };
+
+export enum SORT_OPTIONS {
+  ratingAsc = 'ratingAsc',
+  ratingDesc = 'ratingDesc',
+  nameAsc = 'nameAsc',
+  nameDesc = 'nameDesc',
+}
+
+export type Sort = keyof typeof SORT_OPTIONS;
