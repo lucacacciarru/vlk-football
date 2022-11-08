@@ -15,6 +15,7 @@ export const SortPlayerOptions: React.FC = () => {
           key={option}
           value={option}
           onClick={() => updateSort(option)}
+          data-testid={`sortOption-${option}`}
         >
           {t(`playerSort.${option}`)}
         </MenuItemOption>
@@ -27,6 +28,7 @@ export const SortPlayerOptions: React.FC = () => {
       labelButton={t('playerSort.label')}
       iconName="chevronDown"
       closeOnSelect={false}
+      data-testid="sort-menu"
     >
       <MenuOptionGroup defaultValue={sort} type="radio">
         {renderSortOptions}

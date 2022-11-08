@@ -8,6 +8,7 @@ import { customTheme } from '../theme';
 import { getStoreForTesting } from './getStoreForTesting';
 import { CustomOptions } from './types';
 import { createMemoryHistory } from 'history';
+import { FiltersProvider } from '../components';
 
 i18n.use(initReactI18next).init(initI18n);
 
@@ -22,7 +23,9 @@ export const TestWrapper: React.FC<React.PropsWithChildren<CustomOptions>> = ({
   return (
     <Provider store={store}>
       <ChakraProvider theme={customTheme}>
-        <HistoryRouter history={historyInit}>{children}</HistoryRouter>
+        <FiltersProvider>
+          <HistoryRouter history={historyInit}>{children}</HistoryRouter>
+        </FiltersProvider>
       </ChakraProvider>
     </Provider>
   );

@@ -5,3 +5,4 @@ export * from './PageHeading';
 export * from './PlayerRoleIcon';
 export * from './Collapsible';
 export * from './Dropdown';
+export * from './FiltersContext';

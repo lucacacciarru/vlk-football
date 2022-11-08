@@ -52,6 +52,7 @@ export function useFilter() {
   const generateValidFilterList = useCallback(
     ({ excludedFilterKey }: { excludedFilterKey: (keyof Filters)[] }) => {
       const filterList: { name: keyof Filters; value: string | number }[] = [];
+
       const validFilterKeys = getValidFilterKeys({ excludedFilterKey });
       validFilterKeys.forEach(filterKey => {
         const selectedFilterValue = filters[filterKey as keyof Filters];
@@ -59,6 +60,7 @@ export function useFilter() {
           filterList.push({ name: filterKey as keyof Filters, value });
         });
       });
+
       return filterList;
     },
     [filters, getValidFilterKeys],
