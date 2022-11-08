@@ -1,5 +1,5 @@
 import { HStack } from '@chakra-ui/react';
-import { FiltersProvider } from '../../_shared/components/FiltersContext';
+import { FiltersProvider } from '../../_shared/components';
 import { PlayerList, SelectedPlayersArea } from '../components';
 
 export const CreateTeam: React.FC = () => {

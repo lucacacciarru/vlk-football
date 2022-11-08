@@ -6,6 +6,7 @@ import { matchType } from './matchType';
 import { playerRoles } from './playerRoles';
 import { playerFilter } from './playerFilter';
 import { playerRatings } from './playerRatings';
+import { playerSort } from './playerSort';
 
 export const en = {
   translation: {
@@ -17,5 +18,6 @@ export const en = {
     playerRoles,
     playerFilter,
     playerRatings,
+    playerSort,
   },
 };

@@ -29,6 +29,7 @@ export const Dropdown: React.FC<PropsWithChildren<Props>> = ({
         transition="all 0.2s"
         borderRadius="md"
         borderWidth="1px"
+        data-testid="menu-button"
       >
         <HStack alignItems="center" justifyContent="center">
           <Text>{labelButton}</Text>
