@@ -8,7 +8,7 @@
     "@emotion/styled": "11.10.4",
     "@fontsource/nunito": "4.5.10",
     "@fontsource/poppins": "4.5.9",
-    "@reduxjs/toolkit": "1.8.5",
+    "@reduxjs/toolkit": "1.9.7",
     "@types/jest": "28.1.8",
     "@types/node": "16.11.59",
     "@types/react": "18.0.21",
